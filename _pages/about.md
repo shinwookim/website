@@ -1,0 +1,151 @@
+---
+title: About
+layout: page
+permalink: /about/
+published: true
+---
+
+<style>
+  ul{list-style: none;}
+</style>
+
+My name is Shinwoo Kim, and I am a student at the [University of Pittsburgh](https://pitt.edu)'s [School of Computing and Information](https://sci.pitt.edu) & [David C. Frederick Honors College](https://www.frederickhonors.pitt.edu/) where I study Computer Science and Mathematics. My current interests are in the field of **Computer Systems, Operating Systems, and Computer Architecture**, although there are very few things in computer science that I'm _not_ interested in. Currently, I work as a [teaching assistant]({{ '/teaching/' | prepend: site.baseurl }}) for Pitt's Computer Science Department where I love trying new techniques to help students students learn in my courses. Additionally, I am also the Lead Software Developer for the [_TouchTheInvisible_](https://touchtheinvisible.com) project at the University of Pittsburgh.
+
+Previously, I worked at the University of Pittsburgh’s Hill District Community Engagement Center as the STEAM ambassador (sponsored by the [University Honors College](https://www.frederickhonors.pitt.edu/)) where I also taught high school students computer scienec and information technology. As a founding member, I have also served on the advisory board for the [Spreading Neurodiversity Acceptance Project](https://snapfse.com/), a Pittsburgh organization which promotes the awareness of neurodiverse communities.<span class="endmark"></span>
+
+
+## **Education**
+<span class="h3"><i class="pitt-icon"></i>B.S., Computer Science, (Exp.) 2024</span>
+- University of Pittsburgh (School of Computing and Information & David C. Frederick Honors College)
+
+
+## **Work Experiences**
+
+<div class="accordion accordion-flush border mb-0" id="accordionExperiences">
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#currentPositions"
+        aria-expanded="false"
+        aria-controls="currentPositions"
+      >
+        <div class="fw-bold h4">Current Positions</div>
+      </button>
+    </div>
+    <div
+      id="currentPositions"
+      class="accordion-collapse collapse"
+      aria-labelledby="currentPositions"
+    >
+      <div class="accordion-body">
+        <div class="accordion accordion-flush mb-0" id="currPos">
+          {% for item in site.data.experiences.current %}
+          <div class="accordion-item accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse{{item.id}}"
+              aria-expanded="false"
+              aria-controls="collapse{{item.id}}"
+            >
+              <div class="h5">{{item.title}}</div>
+            </button>
+          </div>
+          <div
+            id="collapse{{item.id}}"
+            class="accordion-collapse collapse"
+            aria-labelledby="Acc_{{item.id}}"
+          >
+            <div class="accordion-body">
+              <div class="d-flex flex-column justify-content-between mb-3">
+                <div class="d-md-flex justify-content-between mb-3">
+                  <div class="flex-grow-1">
+                    <p class="h5 mb-1">
+                      <strong markdown="1">{{item.employer}}</strong>
+                    </p>
+                  </div>
+                  <div class="flex-shrink-0">
+                    <span class="text-pr  imary">{{item.duration}}</span>
+                  </div>
+                </div>
+                <p class="mb-0 fs-6" markdown="1">{{item.desc}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#previousPositions"
+        aria-expanded="false"
+        aria-controls="previousPositions"
+      >
+        <div class="fw-bold h4">Previous Positions</div>
+      </button>
+    </div>
+    <div
+      id="previousPositions"
+      class="accordion-collapse collapse"
+      aria-labelledby="previousPositions"
+    >
+      <div class="accordion-body">
+        <div class="accordion accordion-flush mb-0" id="prevPos">
+            {% for item in site.data.experiences.past %}
+            <div class="accordion-item accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse{{item.id}}"
+                aria-expanded="false"
+                aria-controls="collapse{{item.id}}"
+              >
+                <div class="h5">{{item.title}}</div>
+              </button>
+            </div>
+            <div
+              id="collapse{{item.id}}"
+              class="accordion-collapse collapse"
+              aria-labelledby="Acc_{{item.id}}"
+            >
+              <div class="accordion-body">
+                <div class="d-flex flex-column justify-content-between mb-3">
+                  <div class="d-md-flex justify-content-between mb-3">
+                    <div class="flex-grow-1">
+                      <p class="h5 mb-1">
+                        <strong markdown="1">{{item.employer}}</strong>
+                      </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                      <span class="text-primary">{{item.duration}}</span>
+                    </div>
+                  </div>
+                  <p class="mb-0 fs-6" markdown="1">{{item.desc}}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+Please visit my [LinkedIn](https://linkedin.com/in/kimshinwoo) for the most up-to-date information. 
+{: .text-center}
+
+---
+
+{% include icons.html %} 
+

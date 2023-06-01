@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include styles.html %}
+  </head>
+  <body {% if page.full_width or layout.full_width %}class="full-width"{% endif %}>   
+    {{ content }}
+    {% include print-footer.html %}
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>
