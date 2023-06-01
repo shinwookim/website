@@ -3,12 +3,31 @@
 ---
 @charset "utf-8";
 
-@import
-  "settings",
-  "tufte",
-  "extras",
-  "syntax-highlighting",
-  "site-style"
+@import "settings",
+"tufte",
+"extras",
+"syntax-highlighting",
+"site-style"
 ;
 
 /* Put site-local CSS overrides in _sass/site-style.scss */
+.toggle-theme {
+  position: absolute;
+  //width: 45px;
+  //height: 45px;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
+  border: 0;
+  font-size: 2.2em;
+}
+
+.dark .toggle-theme::after {
+  content: "☽";
+  color: #f1f1f1;
+}
+
+.light .toggle-theme::after {
+  content: "☀";
+  color: #000;
+}

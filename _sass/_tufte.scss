@@ -5,6 +5,27 @@ html {
   font-size: 15px;
 }
 
+.dark {
+  --background-color: #151515;
+  --font-color: #ddd;
+  --shadow-color: 0.03em 0 #151515, -0.03em 0 #151515, 0 0.03em #151515,
+    0 -0.03em #151515, 0.06em 0 #151515, -0.06em 0 #151515, 0.09em 0 #151515,
+    -0.09em 0 #151515, 0.12em 0 #151515, -0.12em 0 #151515, 0.15em 0 #151515,
+    -0.15em 0 #151515;
+
+}
+
+.light {
+  --background-color: #fffff8;
+  --font-color: #111;
+  --shadow-color: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8,
+    0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8,
+    -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8,
+    -0.15em 0 #fffff8;
+
+}
+
+
 body {
   width: 87.5%;
   margin-left: auto;
@@ -12,20 +33,20 @@ body {
   padding-left: 12.5%;
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
     "Book Antiqua", Georgia, serif;
-  background-color: #fffff8;
-  color: #111;
+  background-color: var(--background-color);
+  color: var(--font-color);
   max-width: 1400px;
   counter-reset: sidenote-counter;
 }
 
-/* Adds dark mode */
+/* Adds dark mode 
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #151515;
     color: #ddd;
   }
 }
-
+*/
 h1 {
   font-weight: 400;
   //margin-top: 4rem;
@@ -139,23 +160,24 @@ div.epigraph {
   margin: 5em 0;
 }
 
-div.epigraph > blockquote {
+div.epigraph>blockquote {
   margin-top: 3em;
   margin-bottom: 3em;
 }
 
-div.epigraph > blockquote,
-div.epigraph > blockquote > p {
+div.epigraph>blockquote,
+div.epigraph>blockquote>p {
   font-style: italic;
 }
 
-div.epigraph > blockquote > footer {
+div.epigraph>blockquote>footer {
   font-style: normal;
 }
 
-div.epigraph > blockquote > footer > cite {
+div.epigraph>blockquote>footer>cite {
   font-style: italic;
 }
+
 /* end chapter epigraphs styles */
 
 blockquote {
@@ -173,19 +195,20 @@ blockquote footer {
   text-align: right;
 }
 
-section > p,
-section > footer,
-section > table {
+section>p,
+section>footer,
+section>table {
   width: 55%;
 }
-li > p {
+
+li>p {
   width: 100% !important;
 }
 
 /* 50 + 5 == 55, to be the same width as paragraph */
-section > dl,
-section > ol,
-section > ul {
+section>dl,
+section>ol,
+section>ul {
   width: 50%;
   -webkit-padding-start: 5%;
 }
@@ -248,14 +271,17 @@ a:link,
   -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   background-repeat: no-repeat, no-repeat, repeat-x;
-  text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8,
+  text-shadow: var(--shadow-color);
+
+  /*0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8,
     0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8,
     -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8,
-    -0.15em 0 #fffff8;
+    -0.15em 0 #fffff8;*/
   background-position: 0% 93%, 100% 93%, 0% 93%;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
   a:link,
   .tufte-underline,
   .hover-tufte-underline:hover {
@@ -263,8 +289,9 @@ a:link,
   }
 }
 
-/* Adds dark mode */
+/* Adds dark mode 
 @media (prefers-color-scheme: dark) {
+
   a:link,
   .tufte-underline,
   .hover-tufte-underline:hover {
@@ -273,7 +300,7 @@ a:link,
       -0.09em 0 #151515, 0.12em 0 #151515, -0.12em 0 #151515, 0.15em 0 #151515,
       -0.15em 0 #151515;
   }
-}
+}*/
 
 a:link::selection,
 a:link::-moz-selection {
@@ -350,32 +377,33 @@ div.table-wrapper {
 }
 
 code,
-pre > code {
+pre>code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 1rem;
   line-height: 1.42;
-  -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. See https://github.com/edwardtufte/tufte-css/issues/81#issuecomment-261953409 */
+  -webkit-text-size-adjust: 100%;
+  /* Prevent adjustments of font size after orientation changes in iOS. See https://github.com/edwardtufte/tufte-css/issues/81#issuecomment-261953409 */
 }
 
-.sans > code {
+.sans>code {
   font-size: 1.2rem;
 }
 
-h1 > code,
-h2 > code,
-h3 > code,
-h4 > code,
-h5 > code,
-h6 > code {
+h1>code,
+h2>code,
+h3>code,
+h4>code,
+h5>code,
+h6>code {
   font-size: 0.8em;
 }
 
-.marginnote > code,
-.sidenote > code {
+.marginnote>code,
+.sidenote>code {
   font-size: 1rem;
 }
 
-pre > code {
+pre>code {
   font-size: 0.9rem;
   width: 52.5%;
   margin-left: 2.5%;
@@ -383,7 +411,7 @@ pre > code {
   display: block;
 }
 
-pre.fullwidth > code {
+pre.fullwidth>code {
   width: 90%;
 }
 
@@ -403,7 +431,8 @@ input.margin-toggle {
 
 label.sidenote-number {
   display: inline-block;
-  max-height: 2rem; /* should be less than or equal to paragraph line-height */
+  max-height: 2rem;
+  /* should be less than or equal to paragraph line-height */
 }
 
 label.margin-toggle:not(.sidenote-number) {
@@ -412,7 +441,8 @@ label.margin-toggle:not(.sidenote-number) {
 
 .iframe-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
+  /* 16:9 */
   padding-top: 25px;
   height: 0;
 }
@@ -433,19 +463,19 @@ label.margin-toggle:not(.sidenote-number) {
   }
 
   hr,
-  section > p,
-  section > footer,
-  section > table {
+  section>p,
+  section>footer,
+  section>table {
     width: 100%;
   }
 
-  pre > code {
+  pre>code {
     width: 97%;
   }
 
-  section > dl,
-  section > ol,
-  section > ul {
+  section>dl,
+  section>ol,
+  section>ul {
     width: 90%;
   }
 
@@ -478,8 +508,8 @@ label.margin-toggle:not(.sidenote-number) {
     display: none;
   }
 
-  .margin-toggle:checked + .sidenote,
-  .margin-toggle:checked + .marginnote {
+  .margin-toggle:checked+.sidenote,
+  .margin-toggle:checked+.marginnote {
     display: block;
     float: left;
     left: 1rem;
