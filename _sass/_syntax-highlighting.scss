@@ -1,11 +1,6 @@
-/**
- * Syntax highlighting styles
- */
-
-@media (prefers-color-scheme: dark) {
-    @import "_style_base16.monokai.dark";
-}
-
-@media (prefers-color-scheme: light) {
+body{
     @import "_style_github";
+}
+body.dark{
+    @import "_style_base16.monokai.dark";
 }

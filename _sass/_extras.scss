@@ -13,7 +13,7 @@
 .faded {
   color: rgba(17, 17, 17, 0.5);
 }
-@media (prefers-color-scheme: dark) {
+body.dark {
   .faded {
     color: rgba(255, 255, 255, 0.5);
   }
@@ -142,11 +142,11 @@ ul.footer-links li {
   li,
   footer,
   table {
-    width: 90%;
+    width: 100%;
   }
 }
 .full-width footer {
-  width: 90%;
+  width: 100%;
 }
 
 li.listing hr {
@@ -399,8 +399,7 @@ p pre code {
   font-family: $code-font;
   font-size: 1rem;
   line-height: 1.71428571;
-  margin-top: 1.71428571rem;
-
+  // margin-top: 1.71428571rem;
   // override tufte-css and make code blocks full width
   width: inherit;
 }

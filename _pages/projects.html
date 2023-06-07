@@ -13,7 +13,7 @@ permalink: /projects/
       <div class="card-img-overlay d-flex flex-column">
         <div class="card-text fw-bold"><span class="mr-auto">{{post.title}}</span></div>
         <div>{%for tag in post.tags %}<span class="badge rounded-pill text-bg-info mx-1">{{tag}}</span>{%endfor%}</div>
-        <a class="mt-auto no-tufte-underline" href="{{post.url | absolute_url}}"><i class="fas fa-search-plus"></i>Read
+        <a class="mt-auto no-tufte-underline text-decoration-underline" href="{{post.url | absolute_url}}"><i class="fas fa-search-plus"></i> Read
           More</a>
       </div>
     </div>
@@ -40,5 +40,8 @@ permalink: /projects/
   .card-img-top {
     height: 100%;
     object-fit: cover;
+  }
+  .card{
+    font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif;
   }
 </style>
