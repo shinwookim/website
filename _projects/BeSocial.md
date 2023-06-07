@@ -4,8 +4,9 @@ title: BeSocial
 subtitle: Collaborative class project for Database Management Systems at the University of Pittsburgh
 img: assets/img/projects/BeSocial.png
 imgtext: Screenshot of BeSocial program
-tags: PostgreSQL SQL Java JDBC
+tags: PostgreSQL Java JDBC
 year: 2023-2
+featured: true
 ---
 
 BeSocial is a Social Networking System for the University of Pittsburgh which uses a PostgreSQL database as the backend and Java (using JDBC) as the front end. This app uses SQL functions and triggers for all major functionalities. The Java front end is purely used to provide an optimized interface for the user.
@@ -46,3 +47,7 @@ javac -cp postgresql-42.6.0.jar BeSocial.java
 ```sh
 java -cp postgresql-42.6.0.jar:. BeSocial
 ```
+<span class="endmark"></span>
+
+**Code Available Upon Request**
+{: .text-center}

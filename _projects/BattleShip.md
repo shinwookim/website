@@ -3,7 +3,7 @@ layout: project
 title: BattleShip
 subtitle: Recreation of a classic board game <br/> Class Project for Programming Languages for Web Applications
 img: assets/img/projects/Battleship.png
-imgtext: Screenshot of BattleShip
+imgtext: Screenshot of BattleShip Game
 tags: HTML CSS JavaScript
 year: 2023-2
 ---
@@ -19,4 +19,4 @@ The entire game logic is written in vanilla JavaScript using only traditional DO
 
 ---
 
-[^1]: https://en.wikipedia.org/wiki/Battleship_(game)
+[^1]: [https://en.wikipedia.org/wiki/Battleship_(game)](https://en.wikipedia.org/wiki/Battleship_(game))

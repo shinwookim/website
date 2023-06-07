@@ -10,6 +10,7 @@ year: 2021-1
 ## Overview
 As a team, we wanted to answer the following question:
 > What is the best neighborhood in Pittsburgh?
+{: .fancy}
 
 With data from the [Western Pennsylvania Regional Data Center(WPRDC)](http://www.wprdc.org/), we created a data driven argument to support our claim about the “best” neighborhood in Pittsburgh. Specifically, we used Python's data analysis framework, Pandas, to analyze different data sets to come up with appropriate metrics to use in determining a good neighborhood. <span class="endmark"></span>
 

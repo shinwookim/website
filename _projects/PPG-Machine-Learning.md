@@ -5,6 +5,7 @@ img: assets/img/projects/PPG-ML1.png
 imgtext: Screenshot of Multivariate Additive Regression Splines Result
 tags: R Machine&nbsp;Learning
 year: 2023-2
+featured: true
 ---
 This comprehensive project used various machine learning methods—from simple linear regression to support vector machines and random forest—on a moderate-size paint detail dataset provided by [PPG Industries, Inc](https://www.ppg.com/en-US).
 

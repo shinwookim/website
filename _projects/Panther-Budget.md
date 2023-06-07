@@ -1,9 +1,18 @@
 ---
 layout: project
 title: Panther Budget
-img: assets/img/tti_screengrab.png
-imgtext: Screenshot of Touch The Invisible's Website
-tags: R Machine&nbsp;Learning
+img: assets/img/projects/pantherbudget.png
+imgtext: Screenshot of PantherBudget Program
+tags: REACT Javascript Flask Python SQLite&nbsp;(SQLAlchemy)
 year: 2023-2
 ---
-Visualizing macromolecular systems cam help students better understand the basic principles governing cell function (from storage of genetic information, to production of cellular components). In this project, we combine the crystallography data with 3D-printing technology to build scientifically accurate models of molecular complexes and use them in undergraduate biology and biochemistry courses. Through classroom applications we engage students in multisensorial learning experience at deep cognitive and perceptual levels that other types of molecular visualizations do not provide. When holding a molecular complex in your hand, you can study the 3D-shape from different angles, find the functional groups enabling specific intra and inter molecular binding, or examine grooves and crevices allowing the structural domains to combine in a macromolecular structure.
+PantherBudget is a very simple budget application for a single user. The application supports storing:
+- several budget categories with a set monthly limit for each category (e.g., \\$825 for rent, \\$400 for groceries, \\$130 for gas, etc.)
+- purchases with associated date and price (with purchases that are over the budget for the month highlighted in red)
+
+The backend is implemented in Python Flask with SQLite as the underlying database. This backend can be accessed via a RESTful API using the standard HTTP methods.
+
+The frontend is implemented in REACT and uses AJAX to interact with the Flask backend.<span class="endmark"></span>
+
+**Code Available Upon Request**
+{: .text-center}

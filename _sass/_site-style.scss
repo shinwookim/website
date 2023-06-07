@@ -22,6 +22,8 @@
 
 .footnotes ol li, .footnotes ol li p, .footnote{
   font-size: 0.8em;
+  line-height: normal;
+  margin-bottom: 0.65em;
 }
 
 .endmark {
@@ -33,7 +35,6 @@
   margin-left: 0.1rem;
   vertical-align: top;
   font-family: "Autography";
-
   height: 1em;
   content: "sk";
 }
