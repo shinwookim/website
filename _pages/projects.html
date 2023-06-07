@@ -3,20 +3,23 @@ title: Projects
 layout: page
 permalink: /projects/
 ---
+{% assign allprj = site.projects | sort: 'year' | reverse %}
+{% assign mp = allprj | where_exp: 'project', "project.featured != true" %}
+{% assign fp = allprj | where_exp: 'project', "project.featured == true" %}
 <div class="dropdown-center text-center ">
   <a class="btn dropdown-toggle border px-4 no-tufte-underline fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     QuickView
   </a>
 
   <ul class="dropdown-menu text-center">
-    {% assign all_prj = site.projects | sort: 'year' | reverse %}
-    {% for post in all_prj %}
+ 
+    {% for post in allprj %}
     <li><a class="dropdown-item no-tufte-underline px-3" href="{{post.url | absolute_url}}">{{post.title}}</a></li>
     {% endfor %}
   </ul>
 </div>
 <h2>Featured Projects</h2>
-{% assign fp = all_prj | where: 'featured', true %}
+
 {% for post in fp %}
 {% cycle 'add row' : '<div class="row">', '' %}
   <div class="col-lg-6 mb-3 d-flex align-items-stretch">
@@ -34,8 +37,8 @@ permalink: /projects/
 {% endfor %}
 
 <h2>More Projects</h2>
-{% assign fp = all_prj | where: 'featured', not true %}
-{% for post in fp %}
+
+{% for post in mp %}
 {% cycle 'add row' : '<div class="row">', '' %}
   <div class="col-lg-6 mb-3 d-flex align-items-stretch">
     <div class="card bg-dark text-white">
