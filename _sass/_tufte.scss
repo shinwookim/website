@@ -2,7 +2,7 @@
 
 /* Tufte CSS styles */
 html {
-  font-size: 15px;
+  font-size: 13.5px;
 }
 
 .dark {
@@ -108,6 +108,7 @@ hr {
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;*/
+  width: 55%;
   border: 0;
   border-top: 1px solid var(--font-color);
   height: 1px;
@@ -281,6 +282,7 @@ a:link,
     -0.15em 0 #fffff8;*/
   background-position: 0% 93%, 100% 93%, 0% 93%;
 }
+
 /*
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
 
