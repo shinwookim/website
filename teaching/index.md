@@ -12,10 +12,9 @@ hide_title: true
 </figure>
 
 ## Current Courses (Fall 2023, Term 2241)
-- <i class="pitt-icon"></i> TBA
- 
----
+- <i class="pitt-icon"></i> [**CS0449:** Introduction to System Software]()<sup class="text-secondary">TA</sup>
 
+---
 
 <div class="text-center" markdown="1">
 <h3 id="OH">Office Hours Schedule & Location</h3>
@@ -27,23 +26,23 @@ hide_title: true
 </div>
 </div>
 
-
-
 ---
+
 ## Previous Courses
-- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0449-2234/)
-- <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Spring 2023](./CS0441-2234/) [Fall 2022](./CS0441-2231/) 
-- <i class="pitt-icon"></i> **Bridges to IT:** Jump-Starting a Career in IT <sup><a href="#Instructor" type="button" onclick='highlight("Instructor")'  class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Primary/Lead Instructor">I</a></sup> [Fall 2021](bridges-to-it.html)
-- <i class="pitt-icon"></i> **CEC STEAM** Saturday Courses <sup><a href="#TA" type="button" onclick='highlight("TA")' class="text-decoration-none text-secondary" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Taught as Recitation Instructor/Teaching Assistant/Course Assistant">TA</a></sup> [Fall 2021](https://cec.pitt.edu/calendar/s-t-e-a-m-saturdays/2022-10-08/)
-
----
-
+- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software<sup class="text-secondary">TA</sup>
+  - [Spring 2023](./CS0449-2234/)
+- <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science<sup class="text-secondary">TA</sup>
+  - [Spring 2023](./CS0441-2234/)
+  - [Fall 2022](./CS0441-2231/)
+- <i class="pitt-icon"></i> **Bridges to IT:** Jump-Starting a Career in IT<sup class="text-secondary">I</sup>
+  - [Fall 2021](bridges-to-it.html)
+- <i class="pitt-icon"></i> **CEC STEAM** Saturday Courses<sup class="text-secondary">TA</sup>
+  - [Fall 2021](https://cec.pitt.edu/calendar/s-t-e-a-m-saturdays/2022-10-08/)
+  
 <sup id="TA" onclick='highlight_off()'><span class="text-secondary">TA</span>: Taught as Recitation Instructor/Teaching Assistant/Course Assistant</sup><br>
 <sup id="Instructor" onclick='highlight_off()'><span class="text-secondary">I</span>: Taught as Primary/Lead Instructor</sup>
 
 {% include icons.html %}
-
-
 <style>
 li {list-style: none;}
 </style>

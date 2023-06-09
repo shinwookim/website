@@ -1,10 +1,10 @@
 <!-- Site Title-->
-<div class="text-center text-md-end">
+<header class="text-center text-md-end">
   <div class="my-0 display-3">
     <a class="nav-link no-tufte-underline text-md-end fw-bolder autography" href='{{"/" | relative_url }}'>Shinwoo<br />Kim</a>
   </div>
   <div class="my-0 w-100">
-    <code class="h2 text-primary">
+    <code class="h2">
       <span
         class="typed"
         data-typed-items="Software Engineer, Developer, Pitt Student, Educator"
@@ -22,7 +22,7 @@
     <a class="no-tufte-underline h3" href="https://instagram.com/{{ site.instagram_username }}"><i
         class="fab fa-instagram"></i></a>
   </div>
-</div>
+</header>
 <!-- Site Navigation-->
 <nav class="d-block mb-4 p-0 navbar navbar-expand-md text-center">
   <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"
@@ -41,30 +41,8 @@
         </a>
       </li>
       {% endfor %}
-
     </ul>
   </div>
 </nav>
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-<script>
-  const select = (el, all = false) => {
-    el = el.trim();
-    if (all) {
-      return [...document.querySelectorAll(el)];
-    } else {
-      return document.querySelector(el);
-    }
-  };
-  const typed = select(".typed");
-  if (typed) {
-    let typed_strings = typed.getAttribute("data-typed-items");
-    typed_strings = typed_strings.split(",");
-    new Typed(".typed", {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000,
-    });
-  }
-</script>
+<script src="{{ "/assets/js/typed.js" | prepend: site.baseurl }}"></script>

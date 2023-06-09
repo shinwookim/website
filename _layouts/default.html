@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  {% include meta.html %}
-  {% include styles.html %}
-</head>
-
-<body {% if page.full_width or layout.full_width %}class="full-width" {% endif %}>
-  <button type="button" class="toggle-theme" id="color-selecter"></button>
-  {{ content }}
-  {% include print-footer.html %}
-  {% include footer.html %}
-  {% include scripts.html %}
-</body>
-
+  <head>
+    {% include meta.html %}
+    {% include styles.html %}
+  </head>
+  <body {% if page.full_width or layout.full_width %}class="full-width" {% endif %}>
+    <button type="button" class="toggle-theme" id="color-selecter"></button>
+    {{ content }}
+    {% include print-footer.html %}
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
 </html>
