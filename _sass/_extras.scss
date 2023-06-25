@@ -46,7 +46,13 @@ footer {
     p,
     li,
     footer,
-    table {
+    table,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       width: 100%;
     }
   }
@@ -54,6 +60,16 @@ footer {
   footer {
     width: 100%;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  width: 55%;
+  padding-right: 2rem;
 }
 
 /* Back home link */

@@ -53,7 +53,7 @@ _Most up-to-date information is on [Canvas](https://canvas.pitt.edu), and [Cours
     text-shadow: none !important;
   }
 </style>
-<div class="table-responsive" style="width:55%; ">
+<div class="table-responsive">
 <table class="table table-hover bg-none">
   <thead>
 <tr>
