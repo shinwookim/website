@@ -37,20 +37,6 @@ To aid your learning, we will use many resources and technologies throughout the
 4. [**Canvas**](canvas.pitt.edu) is for official grades only.
 5. [**Poll Everywhere**](https://pollev.com/home) will be used for recitation participation.
 
-### Textbook(s)
-
-<div class="mx-auto text-center px-3" markdown="1">
-[![CS APP Cover](http://csapp.cs.cmu.edu/3e/images/csapp3e-cover.jpg){: .book}](http://csapp.cs.cmu.edu/3e/home.html)
-[![Misurda CS 449 Cover](misurda-cover.png){: .book}](https://people.cs.pitt.edu/~jmisurda/teaching/cs449/cs449_lainstr.pdf)
-[![Dive Into Systems Cover](https://diveintosystems.org/Diveintosystemscover.jpeg){: .book}](https://diveintosystems.org/book/)
-</div>
-
-
-**CS:APP.** The official textbook for this course is Bryant & O’Hallaron's [*Computer Systems: A Programmer's Perspective (3rd Ed)*](http://csapp.cs.cmu.edu/3e/home.html). {%sidenote "CSAPP" "CS:APP is authored by the [people across fifth avenue](https://www.cs.cmu.edu/) and is very well-written. It provides great explanation and is the de-facto textbook when it comes to learning about computer systems. However, for this course, we will not be using it much (other than as additional reference) and you may [*opt-out*](https://solve.redshelf.com/hc/en-us/articles/360013142634-How-to-Opt-Out) of inclusive access if you wish to get a small refund."%}
-
-**Misurda.** The [*CS 0449 Book*](https://people.cs.pitt.edu/~jmisurda/teaching/cs449/cs449_latest.pdf) by Dr. Jonathan Misurda is another great resource which is freely available online.  {%sidenote "misurda-book" "It's based on a previous iteration of this course (which had a slightly different curriculum). You may find that some things are more/less emphasized than what we discussed in lecture. Still, this book is a great resource."%}
-
-**DIS.** [*Dive into Systems*](https://diveintosystems.org/book/) is a newer book that is also freely available. It covers many of the topics we will discuss in this course and may serve as a good resource if you want things explained in a different way.<span class="endmark"></span>
 
 <br/>
 
@@ -85,12 +71,8 @@ To aid your learning, we will use many resources and technologies throughout the
 </table>
 </div>
 
-### *Additional Handouts*
+### *Additional Resources*
+- [*Systems Textbooks*](books.html)
+- [*C Books*](c-books.html)
 - [*I want to learn more about systems*...](more-systems.html)
 
-<style>
-.book{
-    width: auto !important;
-    height: 150px;
-}
-</style>

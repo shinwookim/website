@@ -26,7 +26,7 @@ body.dark {
  * Make it so that top-level <p> don't need to be wrapped in <section>
  */
 article {
-
+  .div-55,
   p,
   li,
   footer,
@@ -52,7 +52,8 @@ footer {
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    .div-55 {
       width: 100%;
     }
   }
@@ -387,8 +388,11 @@ h3 {
     font-size: 2.5rem;
   }
 }
-
+h1.title{
+  width: 100%;
+}
 p.subtitle {
+  width: 100%;
   font-style: italic;
   margin-top: 1rem;
   margin-bottom: 2rem;
