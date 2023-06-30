@@ -2,7 +2,8 @@
 
 /* Tufte CSS styles */
 html {
-  font-size: 13.5px;
+  //font-size: 13.5px;
+  font-size: 13px;
 }
 
 .dark {
@@ -28,8 +29,8 @@ html {
 
 body {
   width: 87.5%;
-  margin-left: auto;
-  margin-right: auto;
+  //margin-left: auto;
+  //margin-right: auto;
   padding-left: 12.5%;
   font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD",
     "Book Antiqua", Georgia, serif;
@@ -112,7 +113,7 @@ hr {
   border: 0;
   border-top: 1px solid var(--font-color);
   height: 1px;
-  margin-top: 2.1rem;
+  //margin-top: 2.1rem;
   margin-bottom: 2.1rem;
 }
 
@@ -337,6 +338,8 @@ img {
 }
 
 .sidenote-number {
+  color: #a00000;
+  font-weight: bolder;
   counter-increment: sidenote-counter;
 }
 
@@ -355,6 +358,8 @@ img {
 }
 
 .sidenote:before {
+  color: #a00000;
+  font-weight: bolder;
   content: counter(sidenote-counter) " ";
   font-size: 1rem;
   top: -0.5rem;
@@ -518,6 +523,13 @@ label.margin-toggle:not(.sidenote-number) {
   .sidenote,
   .marginnote {
     display: none;
+  }
+
+  .margin-toggle {
+    color: #a00000;
+    vertical-align: super;
+    font-size: 80%;
+    font-weight: bolder;
   }
 
   .margin-toggle:checked+.sidenote,
