@@ -14,7 +14,7 @@ Although CS:APP will be our 'official textbook', we will not be using it much (o
 <div class="col-3">
     <a href="https://people.cs.pitt.edu/~jmisurda/teaching/cs449/cs449_latest.pdf"><img alt="Misurda CS 449 Cover" src="./misurda-cover.png"></a>
 </div>
-<div class="col-9">
+<div class="col-7">
     <div class="fw-bold"><a href="https://people.cs.pitt.edu/~jmisurda/teaching/cs449/cs449_latest.pdf">CS 0449: Introduction to Systems Software</a></div>
     <div class="fst-italic fw-medium">Jonathan Misurda</div>
     <div>The CS 449 book is compilation of lecture notes based on a previous iteration of this course (which had a slightly different curriculum). You may find that some things are more/less emphasized than what we discussed in lecture. Still, this book is a great resource that provides superb explanations.</div>
@@ -24,7 +24,7 @@ Although CS:APP will be our 'official textbook', we will not be using it much (o
 <div class="col-3">
     <a href="https://diveintosystems.org/book/"><img alt="Dive Into Systems Cover" src="https://diveintosystems.org/Diveintosystemscover.jpeg"></a>
 </div>
-<div class="col-9">
+<div class="col-7">
     <div class="fw-bold"><a href="https://diveintosystems.org/book/">Dive into Systems</a></div>
     <div class="fst-italic fw-medium">Suzanne J. Matthews, Tia Newhall, and Kevin C. Webb.</div>
     <div>This work is licensed under the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0.</a></div>
