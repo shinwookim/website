@@ -2,6 +2,8 @@
 layout: post
 title: "Some Recommended (Not Required) Books on the C Programming Language"
 subtitle: "CS 449: Introduction to Systems Software"
+backlink: ./
+
 ---
 {%marginfigure "K&R" "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/The_C_Programming_Language%2C_First_Edition_Cover.svg/220px-The_C_Programming_Language%2C_First_Edition_Cover.svg.png" "**The C Programming Language**<br/>Brian Kernighan & Dennis Ritchie"%}
 In this course, we will heavily write, use, and test programs using the C programming language. C is a particularly useful tool for us as it abstracts the unnecessary details with its robust syntax (compared to assembly or machine language) while maintaining the low-level access to memory (through the use of pointers). As such, it is very important that you become proficient in this language.
@@ -38,7 +40,7 @@ The **C Programming Language** (sometimes termed **K&R**, after its authors' ini
 </div>
 <div class="row my-3">
 <div class="col-3">
-    <a href="http://knking.com/books/c2/"><img alt="C Programming: A Modern Approach" src="http://knking.com/books/c2/images/cover2_small.jpg"></a>
+    <a href="http://knking.com/books/c2/"><img alt="C Programming: A Modern Approach" src="http://knking.com/books/c2/images/cover2.jpg"></a>
 </div>
 <div class="col-9">
     <div class="fw-bold"><a href="http://knking.com/books/c2/">C Programming a Modern Approach - 2nd Edition</a></div>

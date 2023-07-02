@@ -4,7 +4,11 @@ layout: default
 
 <section>
   <p class="mb-0">
-    <a href="{{site.baseurl}}/"><em>← Back to Home</em></a>
+    {% if page.backlink %}
+    <a href="{{ page.backlink }}"><em>← Back to Home</em></a>
+    {% else %}
+    <a href=".."><em>← Back to Home</em></a>
+    {% endif %}
   </p>
 </section>
 <article style="box-sizing: inherit;">
