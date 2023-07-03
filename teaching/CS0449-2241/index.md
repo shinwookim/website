@@ -28,8 +28,8 @@ You may attend **only** the recitation section you are signed up for unless you 
 
 <h2 id="handouts">Schedule & Handouts</h2><label for="Additional-Resources" class="margin-toggle">
 
-{%marginnote "extra" 
-"<strong>Additional Resources</strong><br><a href='books.html'>Recommended Books/Resources on <em>Systems</em></a><br><a href='c-books.html'>Recommended Books/Resources on <em>C Programming</em></a><br><a href='more-systems.html'>Pitt Courses to Learn More About <em>Systems</em></a>"%}
+{%marginnote "extra-resources" "**Additional Resources**<br>[Recommended Books/Resources on *Computer Systems*](books.html)<br>[Recommended Books/Resources on *C Programming*](c-books.html)<br>[Pitt Course Recommendations](more-systems.html)<br><br>[*How do computers read code?* (Video)](https://www.youtube.com/watch?v=QXjU9qTsYCc)<br>[*Command Line Help* (Web)](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)<br>[*GDB Cheatsheet* (PDF)](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)" %}
+
 <div class="table-responsive" markdown="1">
 | Week | Date       | Topic                                                     | Handouts |
 | ---- | ---------- | --------------------------------------------------------- | -------- |
