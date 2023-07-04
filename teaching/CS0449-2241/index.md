@@ -28,16 +28,14 @@ You may attend **only** the recitation section you are signed up for unless you 
 
 <h2 id="handouts">Schedule & Handouts</h2><label for="Additional-Resources" class="margin-toggle">
 
-{%marginnote "extra-resources" "**Additional Resources**<br>[Recommended Books/Resources on *Computer Systems*](books.html)<br>[Recommended Books/Resources on *C Programming*](c-books.html)<br>[Pitt Course Recommendations](more-systems.html)<br><br>[*How do computers read code?* (Video)](https://www.youtube.com/watch?v=QXjU9qTsYCc)<br>[*Command Line Help* (Web)](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)<br>[*GDB Cheatsheet* (PDF)](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)" %}
+{%marginnote "extra-resources" "**Additional Resources**<br>[Recommended Books/Resources on *Computer Systems*](books.html)<br>[Recommended Books/Resources on *C Programming*](c-books.html)<br>[Pitt Course Recommendations](more-systems.html)<br><br>[*How do computers read code?* (Video)](https://www.youtube.com/watch?v=QXjU9qTsYCc)<br>[*A Talk on Slab Allocators* (Video)](https://youtu.be/UQVd9mZr-jI)<br>[*The C Programming Language: Brian Kernighan* (Video)](https://youtu.be/de2Hsvxaf8M)<br>[*The Unix Operating System* (Video)](https://youtu.be/tc4ROCJYbm0)<br><br>[*Command Line Help* (Web)](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)<br>[*GDB Cheatsheet* (PDF)](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)<br>[*Vim-Adventure: A New Way To Learn Vim* (Web)](https://vim-adventures.com/)" %}
 
-<div class="table-responsive" markdown="1">
+
 | Week | Date       | Topic                                                     | Handouts |
 | ---- | ---------- | --------------------------------------------------------- | -------- |
 | 00   | January 13 | **No Recitation**                                         |          |
-| 01   | ??         | **Hello Lab**<br>Getting up to speed with the environment |
+| 01   | January 13 | **Hello Lab**<br>Getting up to speed with the environment | -        |
 {: .table .table-hover}
-
-</div>
 
 ---
 
@@ -47,7 +45,7 @@ Throughout the semester, we will be using the following resources and technologi
 ### ***Discord***
 [Discord](https://discord.com/) is an instant-messaging platform (similar to Skype, Microsoft Teams, and Slack) we will be using for announcements and communication. Here, you can ask your questions, get help on assignments, or socialize with your classmates.{%sidenote "faster-help" "If you ask a question on Discord, you may well get a response from one of your classmates faster than if you were to email the teaching staff."%}
 
-The link to join the server will be posted on the [Canvas](canvas.pitt.edu) page within the first few days of term's start. You should join promptly as the link automatically expires after fourteen days.{%sidenote "discord-expires" "You may need to contact your course instructor for a new link if you are unable to join."%}
+The link to join the server will be posted on the [Canvas](canvas.pitt.edu) page within the first few days of term's start. You should join promptly as the link automatically expires after fourteen days.
 
 Note that there are some guidelines about asking for help through Discord. Please review the 
 academic integrity section on the syllabus carefully.
