@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="initial-scale=1.0, width=device-width" name="viewport">
+<title> Panther Budget | Shinwoo Kim</title>
+<meta name="description" content="PantherBudget is a very simple budget application for a single user. The application supports storing:  several budget categories with a set monthly limit fo...">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/projects/Panther-Budget.html">
+    <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/latex.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+  <body class="full-width">
+    <button type="button" class="toggle-theme" id="color-selecter"></button>
+    <style>
+  /* TUFTE-OVERRIDE*/
+  body {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  li,
+  a {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  img {
+    width: 35vh;
+    transition: 0.5s ease;
+  }
+
+  img:hover {
+    scale: 1.05;
+  }
+
+  p,
+  li,
+  ul,
+  ol {
+    line-height: 1.4em;
+    margin-bottom: 0 !important;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1em;
+  }
+</style>
+<div class="container-xxl align-items-center mb-5 px-3">
+  <div class="row pt-5">
+    <aside class="col-md-4 pe-md-5">
+      <header class="sticky-top"><!-- Site Title-->
+<header class="text-center text-md-end">
+  <div class="my-0 display-3">
+    <a class="nav-link no-tufte-underline text-md-end fw-bolder autography" href="/~shk148/">Shinwoo<br>Kim</a>
+  </div>
+  <div class="my-0 w-100">
+    <code class="h2">
+      <span class="typed" data-typed-items="Software Engineer, Developer, Pitt Student, Educator"></span>
+    </code>
+  </div>
+  <div class="mb-0">
+    <a class="no-tufte-underline h3" href="mailto:shinwookim@pitt.edu"><i class="fas fa-envelope"></i></a>
+    <a class="no-tufte-underline h3" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+    <a class="no-tufte-underline h3" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a>
+    <a class="no-tufte-underline h3" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a>
+    <a class="no-tufte-underline h3" href="https://instagram.com/_shinwookim"><i class="fab fa-instagram"></i></a>
+  </div>
+</header>
+<!-- Site Navigation-->
+<nav class="d-block mb-4 p-0 navbar navbar-expand-md text-center">
+  <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="mt-3 navbar-toggler collapsed" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbar">
+    <ul class="flex-column ms-md-auto mt-3 nav text-center">
+      <li>
+        <a class="nav-link float-md-end " href="/~shk148/">Home</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end " href="/~shk148/about/">About Me
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end " href="/~shk148/resume/">Résumé
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end fw-bold" href="/~shk148/projects/">Projects
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end " href="/~shk148/teaching/">Teaching
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end " href="/~shk148/contact/">Contact Me
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="/~shk148/assets/js/typed.js"></script></header>
+    </aside>
+    <main class="col-md-7 px-3 ps-md-5">
+      <article>
+        <h1 class="my-0">Panther Budget</h1>
+        <p class="subtitle my-0"></p>
+        <div class="mb-2">
+          
+          <span class="badge rounded-pill text-bg-info mx-1">REACT</span>
+          
+          <span class="badge rounded-pill text-bg-info mx-1">Javascript</span>
+          
+          <span class="badge rounded-pill text-bg-info mx-1">Flask</span>
+          
+          <span class="badge rounded-pill text-bg-info mx-1">Python</span>
+          
+          <span class="badge rounded-pill text-bg-info mx-1">SQLite (SQLAlchemy)</span>
+          
+        </div>
+        <a href="/~shk148/assets/img/projects/pantherbudget.png">
+          <img src="/~shk148/assets/img/projects/pantherbudget.png" class="rounded mx-auto d-block" alt="Screenshot of PantherBudget Program">
+        </a>
+        <p>PantherBudget is a very simple budget application for a single user. The application supports storing:</p>
+<ul>
+  <li>several budget categories with a set monthly limit for each category (e.g., \$825 for rent, \$400 for groceries, \$130 for gas, etc.)</li>
+  <li>purchases with associated date and price (with purchases that are over the budget for the month highlighted in red)</li>
+</ul>
+
+<p>The backend is implemented in Python Flask with SQLite as the underlying database. This backend can be accessed via a RESTful API using the standard HTTP methods.</p>
+
+<p>The frontend is implemented in REACT and uses AJAX to interact with the Flask backend.<span class="endmark"></span></p>
+
+<p class="text-center"><strong>Code Available Upon Request</strong></p>
+
+      </article>
+    </main>
+  </div>
+</div>
+    <span class="print-footer">Panther Budget - July 13, 2023 - Shinwoo Kim</span>
+    <footer class="page-footer">
+  <div class="credits faded">
+    <span>© 2023
+      
+      <a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>
+      
+    </span>
+  </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+  </body>
+</html>

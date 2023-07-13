@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="initial-scale=1.0, width=device-width" name="viewport">
+<title> Introduction to Systems Software | Shinwoo Kim</title>
+<meta name="description" content="Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics. His passions are in computer science, technology, and education;  His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0449-2241/">
+    <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/latex.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </head>
+  <body>
+    <button type="button" class="toggle-theme" id="color-selecter"></button>
+    <section>
+  <p class="mb-0">
+    
+    <a href=".."><em>← Back to Home</em></a>
+    
+  </p>
+</section>
+<article style="box-sizing: inherit;">
+  <h1 class="title">Introduction to Systems Software</h1>
+  <p class="subtitle">CS 0449. Fall 2023 (Term 2241)</p>
+  <p class="byline">
+     
+  </p>
+
+  <p><em>Systems</em> is a branch of computer science that focuses on the design, implementation, and analysis of complex software, hardware, and their interaction. In this course, we will explore the issues of programming a real computer system by examining the abstractions, interfaces, and design decisions that influence the way that software runs.<label for="mf-mem" class="margin-toggle">†</label><input type="checkbox" id="mf-mem" class="margin-toggle"><span class="marginnote"><img class="fullwidth" src="https://imgs.xkcd.com/comics/pointers.png"><br>Pointers, <a href="https://xkcd.com/138/">XKCD 138</a></span></p>
+
+<h2 id="about-this-page">About this Page</h2>
+<p>This page will provide information regarding the things I go over in recitation. Please check back for updates regularly, especially if you miss a recitation. For other course materials including lecture slides and lab/project handouts, please see the <a href="https://cs0449.gitlab.io/sp2023/"><strong>course website</strong></a>.</p>
+
+<h2 id="course-description">Course Description</h2>
+<p>The purpose of this course is to provide a solid understanding of how computer systems execute programs, store information, and communicate. We will explore systems-level issues from a programmer’s view by examining the abstractions, interfaces, and design decisions that influence the way that software runs on the computer system.</p>
+
+<p>The perspective we will take is one of the life cycle of a program from implementation to execution. The act of compiling and running a program, a sequence of events we often take for granted, is a complex interaction of many different components that work together to manage the computer’s resources and perform the desired task.</p>
+
+<h2 id="contact-information">Contact Information</h2>
+<p><strong>Shinwoo Kim</strong><br>
+E-mail: <a href="mailto:shiwookim@pitt.edu"><code class="language-plaintext highlighter-rouge">shinwookim@pitt.edu</code></a><br>
+Home Page: <a href="https://pitt.edu/~shk148/"><code class="language-plaintext highlighter-rouge">https://pitt.edu/~shk148/</code></a><br>
+Office: <a href="https://pitt.edu/~shk148/teaching/#OH">Fall 2023 Office Hours</a><label for="office hours" class="margin-toggle sidenote-number"></label><input type="checkbox" id="office hours" class="margin-toggle" checked><span class="sidenote">Happy to meet by appointment. Just send me an E-mail! </span><label for="tutors" class="margin-toggle sidenote-number"></label><input type="checkbox" id="tutors" class="margin-toggle" checked><span class="sidenote">If you think you need extra help, the CS department offers <em>Peer Tutoring</em>. Sign up for an appointment on <a href="https://pitt.guide.eab.com/"><strong>Navigate</strong></a>. </span></p>
+
+<h2 id="recitations">Recitations</h2>
+<p>My recitation sections accompany professor <strong>Luis Oliveira</strong>’s lecture <strong>section 1090</strong> which meets Tuesdays and Thursdays 2:30–3:45pm in the 405 Information Science Building. We will meet <strong>every Friday at 12:00 PM in <a href="https://map.concept3d.com/?id=1315#!m/386791">5502 Information Science Building</a></strong> unless announced otherwise.</p>
+
+<p>You may attend <strong>only</strong> the recitation section you are signed up for unless you have received permission from the course instructor.</p>
+
+<h2 id="handouts">Schedule &amp; Handouts</h2>
+<p><label for="Additional-Resources" class="margin-toggle"></label></p>
+
+<p><label for="extra-resources" class="margin-toggle"> †</label><input type="checkbox" id="extra-resources" class="margin-toggle" checked><span class="marginnote"><strong>Additional Resources</strong><br><a href="books.html">Recommended Books/Resources on <em>Computer Systems</em></a><br><a href="c-books.html">Recommended Books/Resources on <em>C Programming</em></a><br><a href="more-systems.html">Pitt Course Recommendations</a><br><br><a href="https://www.youtube.com/watch?v=QXjU9qTsYCc"><em>How do computers read code?</em> (Video)</a><br><a href="https://youtu.be/UQVd9mZr-jI"><em>A Talk on Slab Allocators</em> (Video)</a><br><a href="https://youtu.be/de2Hsvxaf8M"><em>The C Programming Language: Brian Kernighan</em> (Video)</a><br><a href="https://youtu.be/tc4ROCJYbm0"><em>The Unix Operating System</em> (Video)</a><br><a href="CHistory.html">The Development of the C Language</a><br><br><a href="https://cheatography.com/davechild/cheat-sheets/linux-command-line/"><em>Command Line Help</em> (Web)</a><br><a href="https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf"><em>GDB Cheatsheet</em> (PDF)</a><br><a href="https://vim-adventures.com/"><em>Vim-Adventure: A New Way To Learn Vim</em> (Web)</a></span></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Week</th>
+      <th>Date</th>
+      <th>Topic</th>
+      <th>Handouts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>00</td>
+      <td>January 13</td>
+      <td><strong>No Recitation</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>01</td>
+      <td>January 13</td>
+      <td>
+<strong>Hello Lab</strong><br>Getting up to speed with the environment</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2 id="classroom-technologies">Classroom Technologies</h2>
+<p>Throughout the semester, we will be using the following resources and technologies:</p>
+
+<h3 id="discord"><strong><em>Discord</em></strong></h3>
+<p><a href="https://discord.com/">Discord</a> is an instant-messaging platform (similar to Skype, Microsoft Teams, and Slack) we will be using for announcements and communication. Here, you can ask your questions, get help on assignments, or socialize with your classmates.<label for="faster-help" class="margin-toggle sidenote-number"></label><input type="checkbox" id="faster-help" class="margin-toggle" checked><span class="sidenote">If you ask a question on Discord, you may well get a response from one of your classmates faster than if you were to email the teaching staff. </span></p>
+
+<p>The link to join the server will be posted on the <a href="canvas.pitt.edu">Canvas</a> page within the first few days of term’s start. You should join promptly as the link automatically expires after fourteen days.</p>
+
+<p>Note that there are some guidelines about asking for help through Discord. Please review the 
+academic integrity section on the syllabus carefully.</p>
+
+<h3 id="poll-everywhere"><strong><em>Poll Everywhere</em></strong></h3>
+<p><label for="PEV" class="margin-toggle">†</label><input type="checkbox" id="PEV" class="margin-toggle"><span class="marginnote"><img class="fullwidth" src="https://www.nova.edu/lec/This-Week-in-the-LEC/newsletter/images/survey.png"><br>Example of a Poll Everywhere Question</span><a href="https://pollev.com/home">Poll Everywhere</a> is a platform that we will be using for for administering in-class practice questions. You may create an account if you wish, but this is not required. During recitation, you can log in on a computer, on your phone.</p>
+
+<p>PE questions are not counted for a grade, meaning you can answer them freely without worrying about getting the question wrong.</p>
+
+<h3 id="gradescope"><strong><em>Gradescope</em></strong></h3>
+<p><a href="https://www.gradescope.com/">GradeScope</a> is a tool designed to streamline and standardize assignment grading. You should create an account and link it to your Canvas classroom.<label for="canvas-gs" class="margin-toggle sidenote-number"></label><input type="checkbox" id="canvas-gs" class="margin-toggle" checked><span class="sidenote">You can do this by clicking on the <code class="language-plaintext highlighter-rouge">GradeScope</code> link in Canvas’ sidebar </span>. This is where you will submit all the work (electronically) for this course; you will find deadlines for assignments and grade on there as well.</p>
+
+<p>Often, an autograder will be provided on GradeScope which gives you access to (almost) instantaneous feedback. This means you are able to make changes to your code and improve your score if you do not do well the first (or the first few) time provided there is time left before the deadline<label for="add-test" class="margin-toggle sidenote-number"></label><input type="checkbox" id="add-test" class="margin-toggle" checked><span class="sidenote">NOTE. We reserve the right to add or modify any additional test cases <em>after</em> the deadline has passed. </span>.</p>
+
+<p>As such, to best utilize this, you should start your projects and labs early!
+<img src="https://cdn.gradescope.com/assets/help_center/programming-assignment-student-autograder-results-ececd41778a14c19354e3936708610dc2d67ae7c7da1937dc43f7d4cf5472e2f.png" alt="GradeScope Autograder Screenshot"></p>
+
+<style>
+  table tr td, table tr th{
+    background-color: rgba(0,0,0, 0) !important;
+  }
+  td a {
+    text-shadow: none !important;
+  }
+</style>
+
+
+</article>
+    <span class="print-footer">Introduction to Systems Software - Shinwoo Kim</span>
+    <footer class="page-footer">
+  <div class="credits faded">
+    <span>© 2023
+      
+      <a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>
+      
+    </span>
+  </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+  </body>
+</html>

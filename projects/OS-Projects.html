@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="initial-scale=1.0, width=device-width" name="viewport">
+<title> Course Projects for Operating Systems | Shinwoo Kim</title>
+<meta name="description" content="A Linux Graphics LibraryAlthough printing to the terminal may amount only to a single line of code, beneath the veil of abstractions, it is a rather complex ...">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/projects/OS-Projects.html">
+    <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/latex.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </head>
+  <body class="full-width">
+    <button type="button" class="toggle-theme" id="color-selecter"></button>
+    <style>
+  /* TUFTE-OVERRIDE*/
+  body {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  li,
+  a {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  img {
+    width: 35vh;
+    transition: 0.5s ease;
+  }
+
+  img:hover {
+    scale: 1.05;
+  }
+
+  p,
+  li,
+  ul,
+  ol {
+    line-height: 1.4em;
+    margin-bottom: 0 !important;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1em;
+  }
+</style>
+<div class="container-xxl align-items-center mb-5 px-3">
+  <div class="row pt-5">
+    <aside class="col-md-4 pe-md-5">
+      <header class="sticky-top"><!-- Site Title-->
+<header class="text-center text-md-end">
+  <div class="my-0 display-3">
+    <a class="nav-link no-tufte-underline text-md-end fw-bolder autography" href="/~shk148/">Shinwoo<br>Kim</a>
+  </div>
+  <div class="my-0 w-100">
+    <code class="h2">
+      <span class="typed" data-typed-items="Software Engineer, Developer, Pitt Student, Educator"></span>
+    </code>
+  </div>
+  <div class="mb-0">
+    <a class="no-tufte-underline h3" href="mailto:shinwookim@pitt.edu"><i class="fas fa-envelope"></i></a>
+    <a class="no-tufte-underline h3" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+    <a class="no-tufte-underline h3" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a>
+    <a class="no-tufte-underline h3" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a>
+    <a class="no-tufte-underline h3" href="https://instagram.com/_shinwookim"><i class="fab fa-instagram"></i></a>
+  </div>
+</header>
+<!-- Site Navigation-->
+<nav class="d-block mb-4 p-0 navbar navbar-expand-md text-center">
+  <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="mt-3 navbar-toggler collapsed" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbar">
+    <ul class="flex-column ms-md-auto mt-3 nav text-center">
+      <li>
+        <a class="nav-link float-md-end " href="/~shk148/">Home</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end " href="/~shk148/about/">About Me
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end " href="/~shk148/resume/">Résumé
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end fw-bold" href="/~shk148/projects/">Projects
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end " href="/~shk148/teaching/">Teaching
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end " href="/~shk148/contact/">Contact Me
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="/~shk148/assets/js/typed.js"></script></header>
+    </aside>
+    <main class="col-md-7 px-3 ps-md-5">
+      <article>
+        <h1 class="my-0">Course Projects for Operating Systems</h1>
+        <p class="subtitle my-0"></p>
+        <div class="mb-2">
+          
+          <span class="badge rounded-pill text-bg-info mx-1">C</span>
+          
+          <span class="badge rounded-pill text-bg-info mx-1">Kernel Development</span>
+          
+          <span class="badge rounded-pill text-bg-info mx-1">Linux</span>
+          
+          <span class="badge rounded-pill text-bg-info mx-1">Operating Systems</span>
+          
+        </div>
+        <a href="/~shk148/assets/img/projects/OS.png">
+          <img src="/~shk148/assets/img/projects/OS.png" class="rounded mx-auto d-block" alt="Screenshot of Blackjack Program which tests the device driver">
+        </a>
+        <h2 id="a-linux-graphics-library">A Linux Graphics Library</h2>
+<p>Although printing to the terminal may amount only to a single line of code, beneath the veil of abstractions, it is a rather complex task. The computer, once it receives information on what characters to print, must calculate which pixels on the screen to manipulate by looking at the fonts, screen size, and screen type. This project explores how a computer does this by creating a custom graphics library and driver that can be used to draw and write to the screen.</p>
+
+<p>For this project, no external libraries were used (not even the C standard library) except for the system calls provided by the Linux operating system.</p>
+
+<h2 id="devcards-virtual-device-driver">
+<code class="language-plaintext highlighter-rouge">/dev/cards</code>: Virtual Device Driver</h2>
+<p>This project alters how the Linux operating system interacts with devices by creating a specific implementation of the <code class="language-plaintext highlighter-rouge">read()</code> system call for a software-emulated device. This project explores the OS’s system calls as a device-independent interface that user space programs can use to request the OS to do various tasks that it may not be able to do itself.</p>
+
+<p>Following the Unix ethos of “<em>Everything is a file</em>”, <code class="language-plaintext highlighter-rouge">cards</code> device driver can be mounted to the <code class="language-plaintext highlighter-rouge">/dev/</code> virtual filesystem which represents the hardware devices that are attatched to a system. In a similar manner to the virtual device drivers that are common to Linux (e.g., <code class="language-plaintext highlighter-rouge">/dev/zero</code> and <code class="language-plaintext highlighter-rouge">/dev/random</code>), the <code class="language-plaintext highlighter-rouge">/dev/cards</code> device driver returns a randomly selected playing card simulating a real card deck. As such, each card needs to be tracked to ensure that it is not returned again until all 52 cards have been exhausted.</p>
+
+<p>To test the newly created device driver, a driver program which emulates a simple Blackjack game (User vs. CPU) is implemented.</p>
+
+<h2 id="syscalls-and-interprocess-communication">Syscalls and Interprocess Communication</h2>
+<p>Anytime we have shared data between two or more processes or threads, we run the risk of having a <em>race condition</em> where our data could become corrupted. In order to avoid these situations, we have discussed various mechanisms to ensure that one program’s critical regions are guarded from another’s.</p>
+
+<p>One place that we might use parallelism is to simulate real-world situations that involve multiple independently acting entities, such as people or automobiles. This project models a common roadway occurrence, where a lane is closed and a flagperson is directing traffic. In addition, to implement this program, we modify the Linux kernel to create <em>custom system calls</em> that help us implement custom synchronization primitives.</p>
+
+<h2 id="virtual-memory-simulator">Virtual Memory Simulator</h2>
+<p>One of the most important abstractions provided by the operating system is the notion of exclusive access to memory. A operating system accomplishes this by using a scheme called <strong>virtual memory</strong> (and paging) that allow for allocating chunks of a processes’ address space onto physical RAM. Yet, one of the pitfalls of this scheme is the performance loss when a <em>page-fault</em> occurs. This project explores how we can optimize the various page replacement algorithms by using a simulation to count and analyze the number of page faults.</p>
+
+<h2 id="custom-file-system">Custom File System</h2>
+<p>How does a computer store files and metadata? Using <a href="https://github.com/libfuse/libfuse">FUSE</a>, this project implements various file-related system calls to create a custom file system that is managed via a single file that represents the disk device. Using FUSE and the project’s implementation, we can interact with the custom file system using standard UNIX/Linux programs in a transparent way.<span class="endmark"></span></p>
+
+<p class="text-center"><strong>Code Available Upon Request</strong></p>
+
+
+      </article>
+    </main>
+  </div>
+</div>
+    <span class="print-footer">Course Projects for Operating Systems - July 13, 2023 - Shinwoo Kim</span>
+    <footer class="page-footer">
+  <div class="credits faded">
+    <span>© 2023
+      
+      <a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>
+      
+    </span>
+  </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+  </body>
+</html>

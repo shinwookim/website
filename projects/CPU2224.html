@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="initial-scale=1.0, width=device-width" name="viewport">
+<title> CPU2224: A Single Cycle 16 bit CPU | Shinwoo Kim</title>
+<meta name="description" content="CPU2224 is a virtual CPU based on a 16-bit Harvard architecture with some similarities to MIPS. The logical circuit for the CPU is created using Logism1, a t...">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/projects/CPU2224.html">
+    <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/latex.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </head>
+  <body class="full-width">
+    <button type="button" class="toggle-theme" id="color-selecter"></button>
+    <style>
+  /* TUFTE-OVERRIDE*/
+  body {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  li,
+  a {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  img {
+    width: 35vh;
+    transition: 0.5s ease;
+  }
+
+  img:hover {
+    scale: 1.05;
+  }
+
+  p,
+  li,
+  ul,
+  ol {
+    line-height: 1.4em;
+    margin-bottom: 0 !important;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1em;
+  }
+</style>
+<div class="container-xxl align-items-center mb-5 px-3">
+  <div class="row pt-5">
+    <aside class="col-md-4 pe-md-5">
+      <header class="sticky-top"><!-- Site Title-->
+<header class="text-center text-md-end">
+  <div class="my-0 display-3">
+    <a class="nav-link no-tufte-underline text-md-end fw-bolder autography" href="/~shk148/">Shinwoo<br>Kim</a>
+  </div>
+  <div class="my-0 w-100">
+    <code class="h2">
+      <span class="typed" data-typed-items="Software Engineer, Developer, Pitt Student, Educator"></span>
+    </code>
+  </div>
+  <div class="mb-0">
+    <a class="no-tufte-underline h3" href="mailto:shinwookim@pitt.edu"><i class="fas fa-envelope"></i></a>
+    <a class="no-tufte-underline h3" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+    <a class="no-tufte-underline h3" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a>
+    <a class="no-tufte-underline h3" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a>
+    <a class="no-tufte-underline h3" href="https://instagram.com/_shinwookim"><i class="fab fa-instagram"></i></a>
+  </div>
+</header>
+<!-- Site Navigation-->
+<nav class="d-block mb-4 p-0 navbar navbar-expand-md text-center">
+  <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="mt-3 navbar-toggler collapsed" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbar">
+    <ul class="flex-column ms-md-auto mt-3 nav text-center">
+      <li>
+        <a class="nav-link float-md-end " href="/~shk148/">Home</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end " href="/~shk148/about/">About Me
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end " href="/~shk148/resume/">Résumé
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end fw-bold" href="/~shk148/projects/">Projects
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end " href="/~shk148/teaching/">Teaching
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link float-md-end " href="/~shk148/contact/">Contact Me
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="/~shk148/assets/js/typed.js"></script></header>
+    </aside>
+    <main class="col-md-7 px-3 ps-md-5">
+      <article>
+        <h1 class="my-0">CPU2224: A Single Cycle 16 bit CPU</h1>
+        <p class="subtitle my-0"></p>
+        <div class="mb-2">
+          
+          <span class="badge rounded-pill text-bg-info mx-1">MIPS</span>
+          
+          <span class="badge rounded-pill text-bg-info mx-1">RISC-V</span>
+          
+          <span class="badge rounded-pill text-bg-info mx-1">Logism</span>
+          
+        </div>
+        <a href="/~shk148/assets/img/projects/CPU2224.png">
+          <img src="/~shk148/assets/img/projects/CPU2224.png" class="rounded mx-auto d-block" alt="Screenshot of the CPU 2224 Logical Circuits Project">
+        </a>
+        <p>CPU2224 is a virtual CPU based on a 16-bit Harvard architecture with some similarities to MIPS. The logical circuit for the CPU is created using Logism<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>, a tool for designing and simulating digital logic circuits. The virtual hardware supports loading programs written in MIPS-like assembly from a virtual ROM drive and can output to a virtual LED display Digits.<span class="endmark"></span></p>
+
+<h2 id="supported-features">Supported Features</h2>
+<ul>
+  <li>Halting (<code class="language-plaintext highlighter-rouge">hlt</code>) and indicating on the dedicated LED display</li>
+  <li>Basic Arithmetic using a custom ALU
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">add</code>, <code class="language-plaintext highlighter-rouge">sub</code>, <code class="language-plaintext highlighter-rouge">and</code>, <code class="language-plaintext highlighter-rouge">or</code>, <code class="language-plaintext highlighter-rouge">xor</code>, <code class="language-plaintext highlighter-rouge">not</code>, <code class="language-plaintext highlighter-rouge">shl</code>, <code class="language-plaintext highlighter-rouge">shr</code>
+</li>
+    </ul>
+  </li>
+  <li>Loading immediates <code class="language-plaintext highlighter-rouge">li</code> , <code class="language-plaintext highlighter-rouge">lis</code> , <code class="language-plaintext highlighter-rouge">lui</code>
+</li>
+  <li>Displaying to display using <code class="language-plaintext highlighter-rouge">put</code>
+</li>
+  <li>Loading and Storing from Memory using <code class="language-plaintext highlighter-rouge">ld</code> and <code class="language-plaintext highlighter-rouge">st</code>
+</li>
+  <li>Using the ALU with immediates
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">adi</code>, <code class="language-plaintext highlighter-rouge">sbi</code>, <code class="language-plaintext highlighter-rouge">ani</code>, <code class="language-plaintext highlighter-rouge">ori</code>, <code class="language-plaintext highlighter-rouge">xri</code>, <code class="language-plaintext highlighter-rouge">sli</code>, <code class="language-plaintext highlighter-rouge">sri</code>
+</li>
+    </ul>
+  </li>
+  <li>Jumps - Unconditional and Conditional (Including Function Calls)
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">j</code>, <code class="language-plaintext highlighter-rouge">jr</code>, <code class="language-plaintext highlighter-rouge">blt</code>, <code class="language-plaintext highlighter-rouge">bge</code>, <code class="language-plaintext highlighter-rouge">beq</code>, <code class="language-plaintext highlighter-rouge">bne</code>, and <code class="language-plaintext highlighter-rouge">jal</code>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<p><span class="endmark"></span></p>
+
+<p class="text-center"><strong>CPU Design Available Upon Request</strong></p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="http://www.cburch.com/logisim/">http://www.cburch.com/logisim/</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+      </article>
+    </main>
+  </div>
+</div>
+    <span class="print-footer">CPU2224: A Single Cycle 16 bit CPU - July 13, 2023 - Shinwoo Kim</span>
+    <footer class="page-footer">
+  <div class="credits faded">
+    <span>© 2023
+      
+      <a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>
+      
+    </span>
+  </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+  </body>
+</html>
