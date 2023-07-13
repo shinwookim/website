@@ -4,7 +4,8 @@ title: "The Development of the C Language*"
 subtitle: "by Dennis M. Ritchie"
 ---
 {%marginnote "source" "This electronic reprint was retrieved from Bell Labs. See the original [here](https://www.bell-labs.com/usr/dmr/www/chist.html)."%}
-{%marginnote "Copyright" "**Copyright 1993 Association for Computing Machinery, Inc.**<br>This electronic reprint made available by the author as a courtesy. For further publication rights contact ACM or the author. This article was presented at Second History of Programming Languages conference, Cambridge, Mass., April, 1993. It was then collected in the conference proceedings: *History of Programming Languages  2nd ed. Thomas J. Bergin, Jr. and Richard G. Gibson, Jr. ACM Press (New York) and Addison-Wesley (Reading, Mass), 1996*; ISBN: `0-201-89502-1`."%}
+{%marginnote "Copyright" "**Copyright 1993 Association for Computing Machinery, Inc.**<br>This electronic reprint made available by the author as a courtesy. For further publication rights contact ACM or the author." %}
+{% marginnote "presented" "This article was presented at Second History of Programming Languages conference, Cambridge, Mass., April, 1993. It was then collected in the conference proceedings: *History of Programming Languages  2nd ed. Thomas J. Bergin, Jr. and Richard G. Gibson, Jr. ACM Press (New York) and Addison-Wesley (Reading, Mass), 1996*; ISBN: `0-201-89502-1`."%}
 
 
 ```
@@ -16,7 +17,7 @@ dmr@bell-labs.com
 ## Abstract
 The C programming language was devised in the early 1970s as a system implementation language for the nascent Unix operating system. Derived from the typeless language BCPL, it evolved a type structure; created on a tiny machine as a tool to improve a meager programming environment, it has become one of the dominant languages of today. This paper studies its evolution.
 
-#### Introduction
+## Introduction
 This paper is about the development of the C programming language, the influences on it, and the conditions under which it was created. For the sake of brevity, I omit full descriptions of C itself, its parent B{%sidenote "src-1" "S. C. Johnson and B. W. Kernighan, 'The Programming Language B,' Comp. Sci. Tech. Report #8, AT&T Bell Laboratories (January 1973)."%} and its grandparent BCPL{%sidenote "src-2" "M. Richards and C. Whitbey-Strevens, _BCPL: The Language and its Compiler,_ Cambridge Univ. Press: Cambridge, 1979."%}, and instead concentrate on characteristic elements of each language and how they evolved.
 
 C came into being in the years 1969-1973, in parallel with the early development of the Unix operating system; the most creative period occurred during 1972. Another spate of changes peaked between 1977 and 1979, when portability of the Unix system was being demonstrated. In the middle of this second period, the first widely available description of the language appeared: *The C Programming Language,* often called the 'white book' or 'K&R'{%sidenote "src-3" "B. W. Kernighan and D. M. Ritchie, *The C Programming Language*, Prentice-Hall: Englewood Cliffs, NJ, 1978. Second edition, 1988." %}. Finally, in the middle 1980s, the language was officially standardized by the ANSI X3J11 committee, which made further changes. Until the early 1980s, although compilers existed for a variety of machine architectures and operating systems, the language was almost exclusively associated with Unix; more recently, its use has spread much more widely, and today it is among the languages most commonly used throughout the computer industry.
@@ -36,7 +37,7 @@ Not long after Unix first ran on the PDP-7, in 1969, Doug McIlroy created the ne
 
 Challenged by McIlroy's feat in reproducing TMG, Thompson decided that Unix—possibly it had not even been named yet—needed a system programming language. After a rapidly scuttled attempt at Fortran, he created instead a language of his own, which he called B. B can be thought of as C without types; more accurately, it is BCPL squeezed into 8K bytes of memory and filtered through Thompson's brain. Its name most probably represents a contraction of BCPL, though an alternate theory holds that it derives from Bon{%sidenote "src-8" "K. Thompson, 'Bon—an Interactive Language,' undated AT&T Bell Laboratories internal memorandum (ca. 1969)." %}, an unrelated language created by Thompson during the Multics days. Bon in turn was named either after his wife Bonnie, or (according to an encyclopedia quotation in its manual), after a religion whose rituals involve the murmuring of magic formulas.
 
-#### Origins: the languages
+## Origins: the languages
 
 BCPL was designed by Martin Richards in the mid-1960s while he was visiting MIT, and was used during the early 1970s for several interesting projects, among them the OS6 operating system at Oxford{%sidenote "src-9" "J. E. Stoy and C. Strachey, 'OS6—An experimental operating system for a small computer. Part I: General principles and structure,' Comp J. **15**, (Aug. 1972), pp. 117-124." %}, and parts of the seminal Alto work at Xerox PARC{%sidenote "src-10" "C. P. Thacker, E. M. McCreight, B. W. Lampson, R. F. Sproull, D. R. Boggs, 'Alto: A Personal Computer,' in _Computer Structures: Principles and Examples,_ D. Sieworek, C. G. Bell, A. Newell, McGraw-Hill: New York, 1982." %}. We became familiar with it because the MIT CTSS system{%sidenote "src-11" "F. J. Corbato, M. Merwin-Dagget, R. C. Daley, 'An Experimental Time-sharing System,' AFIPS Conf. Proc. SJCC, 1962, pp. 335-344." %} on which Richards worked was used for Multics development. The original BCPL compiler was transported both to Multics and to the GE-635 GECOS system by Rudd Canaday and others at Bell Labs{%sidenote "src-12" "R. H. Canaday and D. M. Ritchie, 'Bell Laboratories BCPL,' AT&T Bell Laboratories internal memorandum, May, 1969." %}; during the final throes of Multics's life at Bell Labs and immediately after, it was the language of choice among the group of people who would later become involved with Unix.
 
@@ -93,7 +94,7 @@ None of BCPL, B, or C supports character data strongly in the language; each tre
 
 Individual characters in a BCPL string were usually manipulated by spreading the string out into another array, one character per cell, and then repacking it later; B provided corresponding routines, but people more often used other library functions that accessed or replaced individual characters in a string.
 
-#### More History
+## More History
 
 After the TMG version of B was working, Thompson rewrote B in itself (a bootstrapping step). During development, he continually struggled against memory limitations: each language addition inflated the compiler so it could barely fit, but each rewrite taking advantage of the feature reduced its size. For example, B introduced generalized assignment operators, using `x=+y` to add `y` to `x`. The notation came from Algol 68{%sidenote "src-15" "A. van Wijngaarden, B. J. Mailloux, J. E. Peck, C. H. Koster, M. Sintzoff, C. Lindsey, L. G. Meertens, R. G. Fisker, 'Revised report on the algorithmic language Algol 68,' Acta Informatica **5**, pp. 1-236." %} via McIlroy, who had incorporated it into his version of TMG. (In B and early C, the operator was spelled `=+` instead of `+=` ; this mistake, repaired in 1976, was induced by a seductively easy way of handling the first form in B's lexical analyzer.)
 
@@ -109,7 +110,7 @@ By 1970, the Unix project had shown enough promise that we were able to acquire 
 
 By 1971, our miniature computer center was beginning to have users. We all wanted to create interesting software more easily. Using assembler was dreary enough that B, despite its performance problems, had been supplemented by a small library of useful service routines and was being used for more and more new programs. Among the more notable results of this period was Steve Johnson's first version of the _yacc_ parser-generator{%sidenote "src-18" "S. C. Johnson, 'Yet another compiler-compiler,' in _Unix Programmer's Manual,_ Seventh Edition, Vol. 2A, M. D. McIlroy and B. W. Kernighan, eds. AT&T Bell Laboratories: Murray Hill, NJ, 1979." %}.
 
-#### The Problems of B
+## The Problems of B
 
 The machines on which we first used BCPL and then B were word-addressed, and these languages' single data type, the 'cell,' comfortably equated with the hardware machine word. The advent of the PDP-11 exposed several inadequacies of B's semantic model. First, its character-handling mechanisms, inherited with few changes from BCPL, were clumsy: using library procedures to spread packed strings into individual cells and then repack, or to access and replace individual characters, began to feel awkward, even silly, on a byte-oriented machine.
 
@@ -123,7 +124,7 @@ Aside from the problems with the language itself, the B compiler's threaded-code
 
 In 1971 I began to extend the B language by adding a character type and also rewrote its compiler to generate PDP-11 machine instructions instead of threaded code. Thus the transition from B to C was contemporaneous with the creation of a compiler capable of producing programs fast and small enough to compete with assembly language. I called the slightly-extended language NB, for 'new B.'
 
-#### Embryonic C
+## Embryonic C
 
 NB existed so briefly that no full description of it was written. It supplied the types int and char, arrays of them, and pointers to them, declared in a style typified by
 ```c
@@ -171,7 +172,7 @@ The scheme of type composition adopted by C owes considerable debt to Algol 68, 
 
 After creating the type system, the associated syntax, and the compiler for the new language, I felt that it deserved a new name; NB seemed insufficiently distinctive. I decided to follow the single-letter style and called it C, leaving open the question whether the name represented a progression through the alphabet or through the letters in BCPL.
 
-#### Neonatal C
+## Neonatal C
 
 Rapid changes continued after the language had been named, for example the introduction of the `&&` and `||` operators. In BCPL and B, the evaluation of expressions depends on context: within if and other conditional statements that compare an expression's value with zero, these languages place a special interpretation on the and (`&`) and or (`|`) operators. In ordinary contexts, they operate bitwise, but in the B statement
 ```c
@@ -191,7 +192,7 @@ where the inner parentheses are required but easily forgotten.
 
 Many other changes occurred around 1972-3, but the most important was the introduction of the preprocessor, partly at the urging of Alan Snyder{%sidenote "src-19" "A. Snyder, _A Portable Compiler for the Language C,_ MIT: Cambridge, Mass., 1974." %}, but also in recognition of the utility of the the file-inclusion mechanisms available in BCPL and PL/I. Its original version was exceedingly simple, and provided only included files and simple string replacements: `#include` and `#define` of parameterless macros. Soon thereafter, it was extended, mostly by Mike Lesk and then by John Reiser, to incorporate macros with arguments and conditional compilation. The preprocessor was originally considered an optional adjunct to the language itself. Indeed, for some years, it was not even invoked unless the source program contained a special signal at its beginning. This attitude persisted, and explains both the incomplete integration of the syntax of the preprocessor with the rest of the language and the imprecision of its description in early reference manuals.
 
-#### Portability
+## Portability
 
 By early 1973, the essentials of modern C were complete. The language and compiler were strong enough to permit us to rewrite the Unix kernel for the PDP-11 in C during the summer of that year. (Thompson had made a brief attempt to produce a system coded in an early version of C—before structures—in 1972, but gave up the effort.) Also during this period, the compiler was retargeted to other nearby machines, particularly the Honeywell 635 and IBM 360/370; because the language could not live in isolation, the prototypes for the modern libraries were developed. In particular, Lesk wrote a 'portable I/O package'{%sidenote "src-20" "M. E. Lesk, 'A Portable I/O Package,' AT&T Bell Laboratories internal memorandum ca. 1973."%} that was later reworked to become the C 'standard I/O' routines. In 1978 Brian Kernighan and I published _The C Programming Language_{%sidenote "src-21" "B. W. Kernighan and D. M. Ritchie, _The C Programming Language,_ Prentice-Hall: Englewood Cliffs, NJ, 1978. Second edition, 1988."%}. Although it did not describe some additions that soon became common, this book served as the language reference until a formal standard was adopted more than ten years later. Although we worked closely together on this book, there was a clear division of labor: Kernighan wrote almost all the expository material, while I was responsible for the appendix containing the reference manual and the chapter on interfacing with the Unix system.
 
@@ -201,13 +202,13 @@ The language changes during this period, especially around 1977, were largely fo
 
 Although the first edition of K&R described most of the rules that brought C's type structure to its present form, many programs written in the older, more relaxed style persisted, and so did compilers that tolerated it. To encourage people to pay more attention to the official language rules, to detect legal but suspicious constructions, and to help find interface mismatches undetectable with simple mechanisms for separate compilation, Steve Johnson adapted his _pcc_ compiler to produce _lint_{%sidenote "src-24" "S. C. Johnson, 'Lint, a Program Checker,' in _Unix Programmer's Manual,_ Seventh Edition, Vol. 2B, M. D. McIlroy and B. W. Kernighan, eds. AT&T Bell Laboratories: Murray Hill, NJ, 1979." %}, which scanned a set of files and remarked on dubious constructions.
 
-#### Growth in Usage
+## Growth in Usage
 
 The success of our portability experiment on the Interdata 8/32 soon led to another by Tom London and John Reiser on the DEC VAX 11/780. This machine became much more popular than the Interdata, and Unix and the C language began to spread rapidly, both within AT&T and outside. Although by the middle 1970s Unix was in use by a variety of projects within the Bell System as well as a small group of research-oriented industrial, academic, and government organizations outside our company, its real growth began only after portability had been achieved. Of particular note were the System III and System V versions of the system from the emerging Computer Systems division of AT&T, based on work by the company's development and research groups, and the BSD series of releases by the University of California at Berkeley that derived from research organizations in Bell Laboratories.
 
 During the 1980s the use of the C language spread widely, and compilers became available on nearly every machine architecture and operating system; in particular it became popular as a programming tool for personal computers, both for manufacturers of commercial software for these machines, and for end-users interested in programming. At the start of the decade, nearly every compiler was based on Johnson's _pcc_; by 1985 there were many independently-produced compiler products.
 
-#### Standardization
+## Standardization
 
 By 1982 it was clear that C needed formal standardization. The best approximation to a standard, the first edition of K&R, no longer described the language in actual use; in particular, it mentioned neither the void or enum types. While it foreshadowed the newer approach to structures, only after it was published did the language support assigning them, passing them to and from functions, and associating the names of members firmly with the structure or union containing them. Although compilers distributed by AT&T incorporated these changes, and most of the purveyors of compilers not based on _pcc_ quickly picked up them up, there remained no complete, authoritative description of the language.
 
@@ -233,13 +234,13 @@ X3J11 correctly believed that a full and careful description of a standard C lib
 
 By the rules of the standards process, the current activity of the X3J11 committee is confined to issuing interpretations on the existing standard. However, an informal group originally convened by Rex Jaeschke as NCEG (Numerical C Extensions Group) has been officially accepted as subgroup X3J11.1, and they continue to consider extensions to C. As the name implies, many of these possible extensions are intended to make the language more suitable for numerical use: for example, multi-dimensional arrays whose bounds are dynamically determined, incorporation of facilities for dealing with IEEE arithmetic, and making the language more effective on machines with vector or other advanced architectural features. Not all the possible extensions are specifically numerical; they include a notation for structure literals.
 
-#### Successors
+## Successors
 
 C and even B have several direct descendants, though they do not rival Pascal in generating progeny. One side branch developed early. When Steve Johnson visited the University of Waterloo on sabbatical in 1972, he brought B with him. It became popular on the Honeywell machines there, and later spawned Eh and Zed (the Canadian answers to 'what follows B?'). When Johnson returned to Bell Labs in 1973, he was disconcerted to find that the language whose seeds he brought to Canada had evolved back home; even his own _yacc_ program had been rewritten in C, by Alan Snyder.
 
 More recent descendants of C proper include Concurrent C{%sidenote "src-27" "N. H. Gehani and W. D. Roome, _Concurrent C,_ Silicon Press: Summit, NJ, 1989."%}, Objective C{%sidenote "src-28" "B. J. Cox and A. J. Novobilski, _Object-Oriented Programming: An Evolutionary Approach,_ Addison-Wesley: Reading, Mass., 1986. Second edition, 1991."%}, C\* {%sidenote "src-29" "_C\* Programming Guide,_ Thinking Machines Corp.: Cambridge Mass., 1990."%}, and especially C++{%sidenote "src-30" "B. Stroustrup, _The C++ Programming Language,_ Addison-Wesley: Reading, Mass., 1986. Second edition, 1991."%}. The language is also widely used as an intermediate representation (essentially, as a portable assembly language) for a wide variety of compilers, both for direct descendents like C++, and independent languages like Modula 3{%sidenote "src-31" "G. Nelson, _Systems Programming with Modula-3,_ Prentice-Hall: Englewood Cliffs, NJ, 1991." %} and Eiffel{%sidenote "src-32" "B. Meyer, _Object-oriented Software Construction,_ Prentice-Hall: Englewood Cliffs, NJ, 1988." %}.
 
-#### Critique
+## Critique
 
 Two ideas are most characteristic of C among languages of its class: the relationship between arrays and pointers, and the way in which declaration syntax mimics expression syntax. They are also among its most frequently criticized features, and often serve as stumbling blocks to the beginner. In both cases, historical accidents or mistakes have exacerbated their difficulty. The most important of these has been the tolerance of C compilers to errors in type. As should be clear from the history above, C evolved from typeless languages. It did not suddenly appear to its earliest users and developers as an entirely new language with its own rules; instead we continually had to adapt existing programs as the language developed, and make allowance for an existing body of code. (Later, the ANSI X3J11 committee standardizing C would face the same problem.)
 
@@ -274,7 +275,7 @@ Many smaller infelicities exist in the language and its description besides thos
 
 Similarly, C itself provides two durations of storage: 'automatic' objects that exist while control resides in or below a procedure, and 'static,' existing throughout execution of a program. Off-stack, dynamically-allocated storage is provided only by a library routine and the burden of managing it is placed on the programmer: C is hostile to automatic garbage collection.
 
-#### Whence Success?
+## Whence Success?
 
 C has become successful to an extent far surpassing any early expectations. What qualities contributed to its widespread use?
 
@@ -288,7 +289,7 @@ Finally, despite the changes that it has undergone since its first published des
 
 C is quirky, flawed, and an enormous success. While accidents of history surely helped, it evidently satisfied a need for a system implementation language efficient enough to displace assembly language, yet sufficiently abstract and fluent to describe algorithms and interactions in a wide variety of environments.
 
-#### Acknowledgments
+## Acknowledgments
 
 It is worth summarizing compactly the roles of the direct contributors to today's C language. Ken Thompson created the B language in 1969-70; it was derived directly from Martin Richards's BCPL. Dennis Ritchie turned B into C during 1971-73, keeping most of B's syntax while adding types and many other changes, and writing the first compiler. Ritchie, Alan Snyder, Steven C. Johnson, Michael Lesk, and Thompson contributed language ideas during 1972-1977, and Johnson's portable compiler remains widely used. During this period, the collection of library routines grew considerably, thanks to these people and many others at Bell Laboratories. In 1978, Brian Kernighan and Ritchie wrote the book that became the language definition for several years. Beginning in 1983, the ANSI X3J11 committee standardized the language. Especially notable in keeping its efforts on track were its officers Jim Brodie, Tom Plum, and P. J. Plauger, and the successive draft redactors, Larry Rosler and Dave Prosser.
 

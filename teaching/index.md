@@ -12,7 +12,7 @@ hide_title: true
 </figure>
 
 ## Current Courses (Fall 2023, Term 2241)
-- <i class="pitt-icon"></i> [**CS0449:** Introduction to System Software]()<sup>TA</sup>
+- <i class="pitt-icon"></i> [**CS0449:** Introduction to System Software](./CS0449-2241/)<sup>TA</sup>
 
 ---
 

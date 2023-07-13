@@ -28,7 +28,7 @@ You may attend **only** the recitation section you are signed up for unless you 
 
 <h2 id="handouts">Schedule & Handouts</h2><label for="Additional-Resources" class="margin-toggle">
 
-{%marginnote "extra-resources" "**Additional Resources**<br>[Recommended Books/Resources on *Computer Systems*](books.html)<br>[Recommended Books/Resources on *C Programming*](c-books.html)<br>[Pitt Course Recommendations](more-systems.html)<br><br>[*How do computers read code?* (Video)](https://www.youtube.com/watch?v=QXjU9qTsYCc)<br>[*A Talk on Slab Allocators* (Video)](https://youtu.be/UQVd9mZr-jI)<br>[*The C Programming Language: Brian Kernighan* (Video)](https://youtu.be/de2Hsvxaf8M)<br>[*The Unix Operating System* (Video)](https://youtu.be/tc4ROCJYbm0)<br><br>[*Command Line Help* (Web)](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)<br>[*GDB Cheatsheet* (PDF)](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)<br>[*Vim-Adventure: A New Way To Learn Vim* (Web)](https://vim-adventures.com/)" %}
+{%marginnote "extra-resources" "**Additional Resources**<br>[Recommended Books/Resources on *Computer Systems*](books.html)<br>[Recommended Books/Resources on *C Programming*](c-books.html)<br>[Pitt Course Recommendations](more-systems.html)<br><br>[*How do computers read code?* (Video)](https://www.youtube.com/watch?v=QXjU9qTsYCc)<br>[*A Talk on Slab Allocators* (Video)](https://youtu.be/UQVd9mZr-jI)<br>[*The C Programming Language: Brian Kernighan* (Video)](https://youtu.be/de2Hsvxaf8M)<br>[*The Unix Operating System* (Video)](https://youtu.be/tc4ROCJYbm0)<br>[The Development of the C Language](CHistory.html)<br><br>[*Command Line Help* (Web)](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)<br>[*GDB Cheatsheet* (PDF)](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)<br>[*Vim-Adventure: A New Way To Learn Vim* (Web)](https://vim-adventures.com/)" %}
 
 
 | Week | Date       | Topic                                                     | Handouts |
@@ -51,12 +51,17 @@ Note that there are some guidelines about asking for help through Discord. Pleas
 academic integrity section on the syllabus carefully.
 
 ### ***Poll Everywhere***
-[Poll Everywhere](https://pollev.com/home) is a platform that we will be using for for administering in-class practice questions. You may create an account if you wish, but this is not required. During recitation, you can log in on a computer, on your phone. 
+{%marginfigure "PEV" "https://www.nova.edu/lec/This-Week-in-the-LEC/newsletter/images/survey.png" "Example of a Poll Everywhere Question"%}[Poll Everywhere](https://pollev.com/home) is a platform that we will be using for for administering in-class practice questions. You may create an account if you wish, but this is not required. During recitation, you can log in on a computer, on your phone.
 
-PEV questions are not counted for a grade, meaning you can answer them freely without worrying about getting the question wrong.
+PE questions are not counted for a grade, meaning you can answer them freely without worrying about getting the question wrong.
 
 ### ***Gradescope***
 [GradeScope](https://www.gradescope.com/) is a tool designed to streamline and standardize assignment grading. You should create an account and link it to your Canvas classroom.{%sidenote "canvas-gs" "You can do this by clicking on the `GradeScope` link in Canvas' sidebar" %}. This is where you will submit all the work (electronically) for this course; you will find deadlines for assignments and grade on there as well.
+
+Often, an autograder will be provided on GradeScope which gives you access to (almost) instantaneous feedback. This means you are able to make changes to your code and improve your score if you do not do well the first (or the first few) time provided there is time left before the deadline{%sidenote "add-test" "NOTE. We reserve the right to add or modify any additional test cases *after* the deadline has passed." %}.
+
+As such, to best utilize this, you should start your projects and labs early!
+![GradeScope Autograder Screenshot](https://cdn.gradescope.com/assets/help_center/programming-assignment-student-autograder-results-ececd41778a14c19354e3936708610dc2d67ae7c7da1937dc43f7d4cf5472e2f.png) 
 
 <style>
   table tr td, table tr th{
