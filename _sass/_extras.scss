@@ -26,6 +26,7 @@ body.dark {
  * Make it so that top-level <p> don't need to be wrapped in <section>
  */
 article {
+
   .div-55,
   p,
   li,
@@ -63,15 +64,15 @@ footer {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  width: 55%;
-  padding-right: 2rem;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   width: 55%;
+//   padding-right: 2rem;
+// }
 
 /* Back home link */
 p.backarrow {
@@ -388,9 +389,11 @@ h3 {
     font-size: 2.5rem;
   }
 }
-h1.title{
+
+h1.title {
   width: 100%;
 }
+
 p.subtitle {
   width: 100%;
   font-style: italic;

@@ -17,13 +17,17 @@ hide_title: true
 ---
 
 <div class="text-center">
-<h3 id="OH" class="mx-auto">Office Hours Schedule & Location</h3>
-<a href="#" data-bs-toggle="collapse" data-bs-target="#collapseOH" aria-expanded="false" aria-controls="collapseOH">Click here to view my office hours schedule</a>
-<div class="collapse" id="collapseOH">
-  <div class="card card-body text-start">
-    {%include_relative SP23_OH.html%}
+  <h3 id="OH" class="mx-auto">Office Hours Schedule & Location</h3>
+  <a  href="#"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseOH"
+      aria-expanded="false"
+      aria-controls="collapseOH">Click here to view my office hours schedule</a>
+  <div class="collapse" id="collapseOH">
+    <div class="card card-body text-start">
+      {%include_relative FA23_OH.html%}
+    </div>
   </div>
-</div>
 </div>
 
 ---

@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Where to Go From Here"
-subtitle: "Courses to Take To Learn More About How Computer Systems Work"
+subtitle: "Pitt Courses to Take To Learn More About How Computer Systems Work"
+backlink: ./
 ---
-In this document is a list of courses offered at Pitt that are part of the *'systems'* subfield of computer science. If you enjoyed taking CS 0449, and want to learn more about how the software you write interacts with the physical hardware, consider some of these courses the next time you are scheduling.
+This document provides a list of courses offered at Pitt that focus on the *'systems'* subfield of computer science. If you enjoyed taking CS 0449, and want to learn more about how the software you write interacts with the physical hardware, consider some of these courses the next time you are scheduling.
 
 *Note:* Course descriptions and requirements are based on the course catalogue at the time of writing. Please see the latest [catalogue](https://catalog.upp.pitt.edu/) for the most accurate information. {%marginnote "pittcswiki" "Also, check out PittCSC's [*Course Guide*](https://pittcs.wiki/courses/) and [*Scheduling Guide*](https://pittcs.wiki/academics/scheduling)."%}
 
@@ -21,7 +22,7 @@ In this document is a list of courses offered at Pitt that are part of the *'sys
 ---
 
 ## Architecture
-We spend a lot of time in "systems" on learning how the code you write executes on the underlying hardware. In *Computer Architecture*, you will take a deeper look at how the hardware operates. Topics in this field include: Instruction Set Architecture (ISA), Memory Layout, Input/Output structure, and more. {%sidenote "447-449" "Computer architecture builds up on what you have learned in this course and [CS 447: Computer Organization & Assembly Language](https://courses.sci.pitt.edu/courses/view/CS-447)."%}
+We spend a lot of time in "systems" on learning how the code you write executes on the underlying hardware. In *Computer Architecture*, you will take a deeper look at how the hardware operates. Topics in this field include: Instruction Set Architecture (ISA), Memory Layout, Input/Output structure, and more.{%sidenote "447-449" "Computer architecture builds up on what you have learned in this course and [CS 447: Computer Organization & Assembly Language](https://courses.sci.pitt.edu/courses/view/CS-447)."%}
 
 ### [CS 1541: Introduction to Computer Architecture](https://courses.sci.pitt.edu/courses/view/CS-1541)
 - **Description**: This course emphasizes the study of computer architecture and hardware system organization. Topics such as CPU organization, sequential and microprogrammed control, instruction set implementation, memory organizations, input/output structure, peripherals and computer communications will be covered.
@@ -34,7 +35,7 @@ We spend a lot of time in "systems" on learning how the code you write executes 
 ## Operating Systems
 An operating system is the most important software that runs on a computer. It manages the computer's memory and processes, as well as all of its software and hardware. It also allows you to communicate with the computer without knowing how to speak the computer's language.{% sidenote "system-call" "In this course, you used  `fork()` and `exec()` to manage processes. These *system calls* (which are provided by the operating system) helps us interface with the hardware in a uniform way, regardless of specific hardware details." %} Courses in category will focus on how certain *abstractions* are used to hide the hardware details from the user and how the operating system *manages* system resources.
 
-### [CS 1550: Introduction to Operating Systems](https://courses.sci.pitt.edu/courses/view/CS-1550) {%sidenote "1550-grad-req" "This course is graduation requirement for Computer Science majors."%}
+### [CS 1550: Introduction to Operating Systems](https://courses.sci.pitt.edu/courses/view/CS-1550) 
 - **Description**: This course provides an introduction to basic concepts of operating systems which is a piece of software that interfaces the machine with upper-level programs. This course will introduce processes as processing unit, process management, concurrency, communication, memory management and protection, and file systems.
 - **Requirements**: [CS 447](https://courses.sci.pitt.edu/courses/view/CS-0447), [CS 449](https://courses.sci.pitt.edu/courses/view/CS-0449).
 

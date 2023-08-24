@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Some Recommended (Not Required) Books on the C Programming Language"
-subtitle: "CS 449: Introduction to Systems Software"
+title: "Recommended Books on the C Programming Language"
+subtitle: "CS 0449: Introduction to Systems Software — Extra Resources"
 backlink: ./
 
 ---
 {%marginfigure "K&R" "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/The_C_Programming_Language%2C_First_Edition_Cover.svg/220px-The_C_Programming_Language%2C_First_Edition_Cover.svg.png" "**The C Programming Language**<br/>Brian Kernighan & Dennis Ritchie"%}
-In this course, we will heavily write, use, and test programs using the C programming language. C is a particularly useful tool for us as it abstracts the unnecessary details with its robust syntax (compared to assembly or machine language) while maintaining the low-level access to memory (through the use of pointers). As such, it is very important that you become proficient in this language.
+In this course, we will heavily write, use, and test programs using the *C programming language*. C is a particularly useful tool for us as it **abstracts** the unnecessary details with its robust syntax (compared to assembly or machine language) while maintaining the **low-level access** to memory (through the use of pointers). As such, it is very important that you become proficient in this language.
 
 While we will spend the first few weeks of the course going over C's syntax (and the language's quirks), it maybe useful to have another resource handy (in case you get stuck while programming). Below are some free (and some not free) resources that may prove useful as you progress through this course.
 
@@ -53,4 +53,4 @@ The **C Programming Language** (sometimes termed **K&R**, after its authors' ini
 ## Finding Other Resources
 There are a vast number of great resources available both on-line and on print. However, because C is such an old language, there may be some resources that are outdated or contain inaccurate information. 
 
-For this course, we will focus on the [ANSI/ISO-C99 Standard](https://en.wikipedia.org/wiki/C99) of the C programming language. Although this is not the most up-to-date version of C, it is (still) one of the most popular versions and is suffice for our purposes {% sidenote "legaC" "Many legacy systems still rely upon C99, and many companies still use it as their primary C version." %}. Make sure that any materials you consult are based on this standard.
+For this course, we will focus on the [ANSI/ISO-C99 Standard](https://en.wikipedia.org/wiki/C99) of the C programming language. Although this is not the most up-to-date version of C, it is (still) one of the most popular versions and is sufficient for our purposes.{% sidenote "legaC" "Many legacy systems still rely upon C99, and many companies still use it as their primary C version." %} You should try to make sure that the materials you are referencing are based on this standard.

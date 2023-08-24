@@ -295,7 +295,7 @@ It is worth summarizing compactly the roles of the direct contributors to today'
 
 I thank Brian Kernighan, Doug McIlroy, Dave Prosser, Peter Nelson, Rob Pike, Ken Thompson, and HOPL's referees for advice in the preparation of this paper.
 
-## References
+<!-- ## References
 {% marginnote "ref-note" "NOTE. References have been transformed to margin note to increase readability on the web." %}
   
 <style>#refs p{margin-bottom: 0; font-size: 90%}</style>
@@ -444,6 +444,6 @@ K. Thompson, 'Bon—an Interactive Language,' undated AT&T Bell Laboratories int
 
 A. van Wijngaarden, B. J. Mailloux, J. E. Peck, C. H. Koster, M. Sintzoff, C. Lindsey, L. G. Meertens, R. G. Fisker, 'Revised report on the algorithmic language Algol 68,' Acta Informatica **5**, pp. 1-236.
 
-</div>
+</div> -->
 
 [Copyright](http://www.lucent.com/copyright.html) © 2003 Lucent Technologies Inc. All rights reserved.
