@@ -18,7 +18,7 @@ The perspective we will take is one of the life cycle of a program from implemen
 **Shinwoo Kim**<br/>
 E-mail: [`shinwookim@pitt.edu`](mailto:shiwookim@pitt.edu){% sidenote "office hours" "Happy to meet by appointment. Just send me an E-mail!"%}<br/>
 Home Page: [`https://pitt.edu/~shk148/`](https://pitt.edu/~shk148/)<br/>
-Office: [Fall 2023 Office Hours](https://pitt.edu/~shk148/teaching/#OH){%sidenote "tutors" "For extra help, the CS department offers *Peer Tutoring*. Sign up for an appointment on [**Navigate**](https://pitt.guide.eab.com/)."%}
+Office: [Fall 2023 Office Hours](https://pitt.edu/~shk148/teaching/#OH){%sidenote "tutors" "Extra help is available via the CS department's *Peer Tutoring* program. Sign up for an appointment on [**Navigate**](https://pitt.guide.eab.com/)."%}
 
 ## Recitations
 My recitation sections accompany professor **Luis Oliveira**'s lecture **section 1135** which meets Tuesdays and Thursdays 2:30–3:45pm in the 1501 Wesley W. Posvar Hall. We will meet **every Friday at 4:00 PM in [501 Information Science Building](https://map.concept3d.com/?id=1315#!m/386791)** unless announced otherwise.
@@ -31,9 +31,9 @@ You may attend **only** the recitation section you are signed up for unless you 
 {%marginnote "extra-resources" "**Additional Resources**<br>[Recommended Books/Resources on *Computer Systems*](books.html)<br>[Recommended Books/Resources on *C Programming*](c-books.html)<br>[The Development of the C Language](CHistory.html)<br>[Pitt Course Recommendations](more-systems.html)<br><br>[*How do computers read code?* (Video)](https://www.youtube.com/watch?v=QXjU9qTsYCc)<br>[*Slab Allocators* (Video)](https://youtu.be/UQVd9mZr-jI)<br>[*The C Programming Language: Brian Kernighan* (Video)](https://youtu.be/de2Hsvxaf8M)<br>[*The Unix Operating System* (Video)](https://youtu.be/tc4ROCJYbm0)<br><br>[*Command Line Help* (Web)](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)<br>[*GDB Cheatsheet* (PDF)](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)<br>[*Vim-Adventure: A New Way To Learn Vim* (Web)](https://vim-adventures.com/)" %}
 
 
-|        Date        | Topic                     | Handouts |
-| :----------------: | ------------------------- | -------- |
-| September 01, 2023 | **Administrivia & Lab 0** | -        |
+|   Date   | Topic            | Handouts |
+| :------: | ---------------- | -------- |
+| **Soon** | **More to Come** | **TBA**  |
 {: .table .table-hover}
 
 ---
