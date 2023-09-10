@@ -34,7 +34,8 @@ You may attend **only** the recitation section you are signed up for unless you 
 |    Date    | Topic                   | Handouts                                                                        |
 | :--------: | ----------------------- | ------------------------------------------------------------------------------- |
 | 09/01/2023 | Introduction + Lab0     | [Slides](01-intro.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/00/) |
-| 09/01/2023 | Bitwise Ops, I/O, Lab 1 | [Slides](02-cprog.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/01/) |
+| 09/08/2023 | Bitwise Ops, I/O, Lab 1 | [Slides](02-cprog.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/01/) |
+| 09/15/2023 | ???                     | TBA                                                                             |
 {: .table .table-hover}
 
 ---
