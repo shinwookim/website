@@ -31,11 +31,12 @@ You may attend **only** the recitation section you are signed up for unless you 
 {%marginnote "extra-resources" "**Additional Resources**<br>[Recommended Books/Resources on *Computer Systems*](books.html)<br>[Recommended Books/Resources on *C Programming*](c-books.html)<br>[The Development of the C Language](CHistory.html)<br>[Pitt Course Recommendations](more-systems.html)<br><br>[*How do computers read code?* (Video)](https://www.youtube.com/watch?v=QXjU9qTsYCc)<br>[*Slab Allocators* (Video)](https://youtu.be/UQVd9mZr-jI)<br>[*The C Programming Language: Brian Kernighan* (Video)](https://youtu.be/de2Hsvxaf8M)<br>[*The Unix Operating System* (Video)](https://youtu.be/tc4ROCJYbm0)<br><br>[*Command Line Help* (Web)](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)<br>[*GDB Cheatsheet* (PDF)](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf)<br>[*Vim-Adventure: A New Way To Learn Vim* (Web)](https://vim-adventures.com/)" %}
 
 
-|    Date    | Topic                   | Handouts                                                                        |
-| :--------: | ----------------------- | ------------------------------------------------------------------------------- |
-| 09/01/2023 | Introduction + Lab0     | [Slides](01-intro.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/00/) |
-| 09/08/2023 | Bitwise Ops, I/O, Lab 1 | [Slides](02-cprog.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/01/) |
-| 09/15/2023 | ???                     | TBA                                                                             |
+|    Date    | Topic                              | Handouts                                                                        |
+| :--------: | ---------------------------------- | ------------------------------------------------------------------------------- |
+| 09/01/2023 | Introduction + Lab0                | [Slides](01-intro.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/00/) |
+| 09/08/2023 | Bitwise Ops, I/O, Lab 1            | [Slides](02-cprog.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/01/) |
+| 09/15/2023 | Intermediate C Programming + Lab 2 | [Slides](03-adv-cprog.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/02/)            |
+| 09/22/2023 | TBA                                | ???                                                                             |
 {: .table .table-hover}
 
 ---
