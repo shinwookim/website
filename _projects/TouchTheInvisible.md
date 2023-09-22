@@ -1,9 +1,10 @@
 ---
 layout: project
 title: "TouchTheInvisible"
+subtitle: "Bridging Physical and Digital Modeling of Biological Macromolecules"
 img: assets/img/projects/tti_screengrab.png
 imgtext: Screenshot of Touch The Invisible's Website
-tags: HTML CSS JavaScript UCSF&nbsp;Chimera
+tags: WebDev JavaScript UCSF&nbsp;Chimera
 year: 2023-2
 featured: true
 ---

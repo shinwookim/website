@@ -1,11 +1,11 @@
 ---
 layout: project
 title: BeSocial
-subtitle: Collaborative class project for Database Management Systems at the University of Pittsburgh
+subtitle: Collaborative project for Database Management Systems at the University of Pittsburgh
 img: assets/img/projects/BeSocial.png
 imgtext: Screenshot of BeSocial program
 tags: PostgreSQL Java JDBC
-year: 2023-2
+year: 2022-2
 featured: true
 ---
 

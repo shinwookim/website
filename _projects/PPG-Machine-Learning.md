@@ -1,6 +1,7 @@
 ---
 layout: project
-title: Utilizing Machine Learning to Analyze Paint Colors for PPG Industries
+title: "Which Paint is the Best?"
+subtitle: Utilizing Machine Learning to Analyze Paint Colors for PPG Industries
 img: assets/img/projects/PPG-ML1.png
 imgtext: Screenshot of Multivariate Additive Regression Splines Result
 tags: R Machine&nbsp;Learning
@@ -48,13 +49,13 @@ Throughout our analysis, we will attempt to answer relevant question such as "*A
 ## Excerpt Visualizations
 (Click on each image to enlarge)
 <a href="{{site.baseurl}}/assets/img/projects/PPG-ML2.png">
-    <img src="{{site.baseurl}}/assets/img/projects/PPG-ML2.png" class="rounded mx-auto d-block w-50" alt="Data Visualization From Project">
+    <img src="{{site.baseurl}}/assets/img/projects/PPG-ML2.png" class="rounded mx-auto d-block" alt="Data Visualization From Project">
 </a>
 
 <a href="{{site.baseurl}}/assets/img/projects/PPG-ML3.png">
-    <img src="{{site.baseurl}}/assets/img/projects/PPG-ML3.png" class="rounded mx-auto d-block w-50" alt="Data Visualization From Project">
+    <img src="{{site.baseurl}}/assets/img/projects/PPG-ML3.png" class="rounded mx-auto d-block" alt="Data Visualization From Project">
 </a>
 
 <a href="{{site.baseurl}}/assets/img/projects/PPG-ML4.png">
-    <img src="{{site.baseurl}}/assets/img/projects/PPG-ML4.png" class="rounded mx-auto d-block w-50" alt="Data Visualization From Project">
+    <img src="{{site.baseurl}}/assets/img/projects/PPG-ML4.png" class="rounded mx-auto d-block" alt="Data Visualization From Project">
 </a>

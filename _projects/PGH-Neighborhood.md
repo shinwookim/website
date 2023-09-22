@@ -1,10 +1,12 @@
 ---
 layout: project
 title: Pittsburgh's Best Neighborhood
+subtitle: Using Data To Determine The Best Neighborhood in Pittsburgh
 img: assets/img/projects/pgh-neighborhood.png
-imgtext: Data Visualization Overlaying data ontop of PGH's map
+imgtext: Data Visualization Overlaying data on top of PGH's map
 tags: Python Pandas
 year: 2021-1
+featured: true
 ---
 
 ## Overview

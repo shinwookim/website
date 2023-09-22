@@ -33,14 +33,14 @@ hide_title: true
 ---
 
 ## Previous Courses
-- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software<sup>TA</sup>
+- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software<sup class="footnote">TA</sup> 
   - [Spring 2023](./CS0449-2234/)
-- <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science<sup>TA</sup>
+- <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science<sup class="footnote">TA</sup>
   - [Spring 2023](./CS0441-2234/)
   - [Fall 2022](./CS0441-2231/)
-- <i class="pitt-icon"></i> **Bridges to IT:** Jump-Starting a Career in IT<sup>I</sup>
+- <i class="pitt-icon"></i> **Bridges to IT:** Jump-Starting a Career in IT<sup class="footnote">I</sup>
   - [Fall 2021](bridges-to-it.html)
-- <i class="pitt-icon"></i> **CEC STEAM Saturday** Courses<sup>I</sup>
+- <i class="pitt-icon"></i> **CEC STEAM Saturday** Courses<sup class="footnote">I</sup>
   - [Fall 2021](https://cec.pitt.edu/calendar/s-t-e-a-m-saturdays/2022-10-08/)
   
 
@@ -58,4 +58,6 @@ hide_title: true
 {% include icons.html %}
 <style>
 li {list-style: none;}
+.footnote,.footnotes{font-size: 50%}
 </style>
+

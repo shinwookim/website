@@ -1,73 +1,25 @@
 ---
-layout: default
+layout: page
 full_width: true
 ---
 <style>
-  /* TUFTE-OVERRIDE*/
-  body {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  hr {
-    width: 100%;
-  }
-
-  li,
-  a {
-    margin: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
   img {
-    width: 35vh;
     transition: 0.5s ease;
   }
 
   img:hover {
-    scale: 1.05;
-  }
-
-  p,
-  li,
-  ul,
-  ol {
-    line-height: 1.4em;
-    margin-bottom: 0 !important;
-  }
-
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 1em;
+    scale: 1.01;
   }
 </style>
-<div class="container-xxl align-items-center mb-5 px-3">
-  <div class="row pt-5">
-    <aside class="col-md-4 pe-md-5">
-      <header class="sticky-top">{% include sidenav.html %}</header>
-    </aside>
-    <main class="col-md-7 px-3 ps-md-5">
-      <article>
-        <h1 class="my-0">{{ page.title }}</h1>
-        <p class="subtitle my-0">{{ page.subtitle }}</p>
-        <div class="mb-2">
-          {%for tag in page.tags %}
-          <span class="badge rounded-pill text-bg-info mx-1">{{tag}}</span>
-          {%endfor%}
-        </div>
-        <a href="{{site.baseurl}}/{{page.img}}">
-          <img src="{{site.baseurl}}/{{page.img}}" class="rounded mx-auto d-block" alt="{{page.imgtext}}">
-        </a>
-        {{content}}
-      </article>
-    </main>
-  </div>
+
+<p class="subtitle my-0">{{ page.subtitle }}</p>
+<div class="mb-2">
+  {%for tag in page.tags %}
+  <span class="badge rounded-pill text-bg-info mx-1">{{tag}}</span>
+  {%endfor%}
 </div>
+<a href="{{site.baseurl}}/{{page.img}}">
+  <img src="{{site.baseurl}}/{{page.img}}" class="rounded d-block" alt="{{page.imgtext}}">
+</a>
+
+{{content}}
