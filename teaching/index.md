@@ -8,7 +8,7 @@ hide_title: true
 <figure class="figure" style='max-width: 100%;'>
   <img src="https://www.cs.pitt.edu/sites/default/files/home-display-img/img_0760.jpg"
       class="figure-img img-fluid rounded w-100" alt="Picture of Sennott Square">
-  <figcaption class="figure-caption">Sennott Square, Home of the CS Department @ Pitt</figcaption>
+  <figcaption class="figure-caption text-end" style="max-width: 100%">Sennott Square, Home of the CS Department @ Pitt</figcaption>
 </figure>
 
 ## Current Courses (Fall 2023, Term 2241)

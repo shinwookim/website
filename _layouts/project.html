@@ -22,4 +22,4 @@ full_width: true
   <img src="{{site.baseurl}}/{{page.img}}" class="rounded d-block" alt="{{page.imgtext}}">
 </a>
 
-{{content}}
+{% include anchor_headings.html html=content anchorBody="¶" anchorClass="anchor-link"%}

@@ -20,6 +20,5 @@ layout: default
     {% if site.show_author %}{{ page.author | default: site.author }} — {% endif
     %} {{ page.date | date: "%B %-d, %Y" }}
   </p>
-
-  {{ content }}
+  {% include anchor_headings.html html=content anchorBody="¶" anchorClass="anchor-link"%}
 </article>

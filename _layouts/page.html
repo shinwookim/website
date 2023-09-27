@@ -4,14 +4,11 @@ full_width: true
 ---
 
 <style>
-  /* TUFTE-OVERRIDE*/
   html {
     font-size: 13.5px;
   }
 
   body {
-    width: 100% !important;
-    max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
   }
@@ -34,7 +31,7 @@ full_width: true
   <main class="col-md-6 ps-md-5">
     <article>
       <h1 class="mb-1">{{ page.title }}</h1>
-      {{ content }}
+      {% include anchor_headings.html html=content anchorBody="¶" anchorClass="anchor-link"%}
     </article>
   </main>
 </div>

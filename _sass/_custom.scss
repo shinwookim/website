@@ -1,0 +1,81 @@
+.toggle-theme {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border: 0;
+    font-size: 2.2em;
+}
+
+.dark .toggle-theme::after {
+    content: "☽";
+    color: #f1f1f1;
+}
+
+.light .toggle-theme::after {
+    content: "☀";
+    color: #000;
+}
+
+.footnotes ol li,
+.footnotes ol li p,
+.footnote {
+    font-size: 0.8em;
+    line-height: normal;
+    margin-bottom: 0.65em;
+}
+
+.endmark {
+    margin-bottom: 1.2em;
+}
+
+.endmark::after {
+    font-size: 1.5em;
+    margin-left: 0.1rem;
+    vertical-align: top;
+    font-family: "Autography";
+    height: 1em;
+    content: "sk";
+}
+
+@media (max-width: 760px) {
+
+    table {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 761px) {
+    table {
+        width: 55% !important;
+    }
+}
+
+.anchor-link {
+    text-decoration: none;
+    background: unset !important;
+    text-shadow: unset !important;
+    font-family: var(--bs-body-font-family);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out 0.2s;
+}
+
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out 0.2s;
+}
+
+.reversefootnote {
+    text-decoration: none;
+    background: unset !important;
+    text-shadow: unset !important;
+}
+
+.full-width {
+    width: 90%;
+}
