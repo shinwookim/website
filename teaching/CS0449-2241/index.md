@@ -37,7 +37,7 @@ You may attend **only** the recitation section you are signed up for unless you 
 | 09/08/2023 | Bitwise Ops, I/O, Lab 1            | [Slides](02-cprog.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/01/)                                          |
 | 09/15/2023 | Intermediate C Programming + Lab 2 | [Slides](03-adv-cprog.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/02/)                                      |
 | 09/22/2023 | Multi-file development             | [Slides](04-makefiles.pdf) <br> [Tutorial](https://cs0449.gitlab.io/fa2023/resources/worksheets/makefiles/makefiles.pdf) |
-| 09/29/2023 | TBA                                | TBA                                                                                                                      |
+| 09/29/2023 | Pointer Lab + Project 1 Discussion                                | TBA                                                                                                                      |
 {: .table .table-hover}
 
 ---
