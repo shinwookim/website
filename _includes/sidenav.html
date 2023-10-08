@@ -1,8 +1,11 @@
 <!-- Site Title-->
 <header class="text-center text-md-end">
   <div class="my-0 display-3">
-    <a class="nav-link no-tufte-underline text-md-end fw-bolder autography"
-      href='{{"/" | relative_url }}'>Shinwoo<br />Kim</a>
+    <a
+      class="nav-link no-tufte-underline text-md-end fw-bolder autography"
+      href='{{"/" | relative_url }}'
+      >Shinwoo<br />Kim</a
+    >
   </div>
   <div class="my-0 w-100">
     <code class="h2">
@@ -13,32 +16,59 @@
     </code>
   </div>
   <div class="mb-0">
-    <a class="no-tufte-underline h3" href="mailto:{{ site.email }}"><i class="fas fa-envelope"></i></a>
-    <a class="no-tufte-underline h3" href="https://linkedin.com/in/{{ site.linkedin_username }}"><i
-        class="fab fa-linkedin-in"></i></a>
-    <a class="no-tufte-underline h3" href="https://github.com/{{ site.github_username }}"><i
-        class="fab fa-github"></i></a>
-    <a class="no-tufte-underline h3" href="https://twitter.com/{{ site.twitter_username }}"><i
-        class="fab fa-twitter"></i></a>
-    <a class="no-tufte-underline h3" href="https://instagram.com/{{ site.instagram_username }}"><i
-        class="fab fa-instagram"></i></a>
+    <a class="no-tufte-underline h3" href="mailto:{{ site.email }}"
+      ><i class="fas fa-envelope"></i
+    ></a>
+    <a
+      class="no-tufte-underline h3"
+      href="https://linkedin.com/in/{{ site.linkedin_username }}"
+      ><i class="fab fa-linkedin-in"></i
+    ></a>
+    <a
+      class="no-tufte-underline h3"
+      href="https://github.com/{{ site.github_username }}"
+      ><i class="fab fa-github"></i
+    ></a>
+    <a
+      class="no-tufte-underline h3"
+      href="https://twitter.com/{{ site.twitter_username }}"
+      ><i class="fab fa-twitter"></i
+    ></a>
+    <a
+      class="no-tufte-underline h3"
+      href="https://instagram.com/{{ site.instagram_username }}"
+      ><i class="fab fa-instagram"></i
+    ></a>
   </div>
 </header>
 <!-- Site Navigation-->
 <nav class="d-block mb-4 p-0 navbar navbar-expand-md text-center">
-  <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"
-    class="mt-3 navbar-toggler collapsed" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+  <button
+    aria-controls="navbar"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    class="mt-3 navbar-toggler collapsed"
+    data-bs-target="#navbar"
+    data-bs-toggle="collapse"
+    type="button"
+  >
     <i class="fas fa-bars"></i>
   </button>
   <div class="collapse navbar-collapse" id="navbar">
     <ul class="flex-column ms-md-auto mt-3 nav text-center">
       <li>
-        <a class="nav-link float-md-end {% if page.url == '/' %}fw-bold{% endif %}" href="{{site.baseurl}}/">Home</a>
+        <a
+          class="nav-link float-md-end {% if page.url == '/' %}fw-bold{% endif %}"
+          href="{{site.baseurl}}/"
+          >Home</a
+        >
       </li>
       {% for item in site.data.nav.links %}
       <li class="nav-item">
-        <a class="nav-link float-md-end {% if page.url contains item.url %}fw-bold{% endif %}"
-          href="{{site.baseurl}}{{item.url}}">{{item.title}}
+        <a
+          class="nav-link float-md-end {% if page.url contains item.url %}fw-bold{% endif %}"
+          href="{{site.baseurl}}{{item.url}}"
+          >{{item.title}}
         </a>
       </li>
       {% endfor %}

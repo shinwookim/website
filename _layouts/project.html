@@ -2,6 +2,7 @@
 layout: page
 full_width: true
 ---
+
 <style>
   img {
     transition: 0.5s ease;
@@ -19,7 +20,12 @@ full_width: true
   {%endfor%}
 </div>
 <a href="{{site.baseurl}}/{{page.img}}">
-  <img src="{{site.baseurl}}/{{page.img}}" class="rounded d-block" alt="{{page.imgtext}}">
+  <img
+    src="{{site.baseurl}}/{{page.img}}"
+    class="mx-auto rounded d-block"
+    alt="{{page.imgtext}}"
+  />
 </a>
 
-{% include anchor_headings.html html=content anchorBody="¶" anchorClass="anchor-link"%}
+{% include anchor_headings.html html=content anchorBody="¶"
+anchorClass="anchor-link"%}

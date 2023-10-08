@@ -3,7 +3,7 @@ layout: page
 ---
 ![Image of Shinwoo Kim](./assets/img/hero-bg.webp){: .figure-img .img-fluid .rounded}
 
-## What's New?
+## News
 {: .h4}
 {% for item in site.data.news %}
 {% if forloop.index < 4 %}

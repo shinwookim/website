@@ -4,17 +4,17 @@ current:
     employer: University of Pittsburgh, Department of Computer Science
     duration: August 2022 — Present
     desc: "I am a Teaching Assistant for CS0441: Discrete Structures for Computer Science. I conduct weekly recitation to a section of 30 students where I taught discrete mathematics concepts by breaking them down and working though examples. I also provide comprehensive academic support in both one-to-one and in-class settings to maximize student participations and understanding of concepts. See [Teaching](teaching/) for more details"
-  - id: 2c
-    title: Chief Technology Officer, Software Developer
-    employer: "[Special Needs Assitance Program for Social Engagement](https://snapfse.com) — University of Pittsburgh Organization"
-    duration: July 2022 — Present
-    desc: "As the Chief Technology Officer, I overlooked and contributed to the development of the SNAPFSE app which aimed to connect the neurodiverse and neurotypical communities which utilized a matching algorithm, in-app chat, and cloud databases. I also created the [website](https://snapfse.com) for the Special Needs Assistance Program for Social Engagement."
   - id: 3c
     title: Lead Developer, Webmaster
     employer: "[Touch the Invisible](https://touchtheinvisible.com) — University of Pittsburgh Research Project"
     duration: March 2022 — Present
     desc: "I worked with Dr. Zuzana Swigonova(University of Pittsburgh, Department of Biology) and her team in creating a free, open-source library of macromolecular complexes which can be 3d-printed, or viewed online for classroom educational purposes. I created a [website](https://touchtheinvisible.com) which displays the 3D macromoleculear models and the accompanying information sheet using open source APIs. In addition, I created a content-management-system(CMS) to manage all the assets and to allow for non-technical staff members to edit the website without learning to code."
 past:
+  - id: 2c
+    title: Chief Technology Officer, Software Developer
+    employer: "[Special Needs Assitance Program for Social Engagement](https://snapfse.com) — University of Pittsburgh Organization"
+    duration: July 2022 — Present
+    desc: "As the Chief Technology Officer, I overlooked and contributed to the development of the SNAPFSE app which aimed to connect the neurodiverse and neurotypical communities which utilized a matching algorithm, in-app chat, and cloud databases. I also created the [website](https://snapfse.com) for the Special Needs Assistance Program for Social Engagement."
   - id: 1
     title: Diversity Recruitment Educator and Mentor (DREAM)
     employer: University of Pittsburgh — Office of Admissions and Financial Aid
