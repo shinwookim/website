@@ -40,7 +40,6 @@ You may attend **only** the recitation section you are signed up for unless you 
 |           09/22/2023            | Multi-file development             | [Slides](04-makefiles.pdf) <br> [Tutorial](https://cs0449.gitlab.io/fa2023/resources/worksheets/makefiles/makefiles.pdf) |
 |           09/29/2023            | Pointer Lab + Project 1 Discussion | [Slides](05-pointers.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/03/)                                       |
 | Fall Break<br>**No Recitation** | Queue Lab                          | [Slides](06-queue.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/04/)                                          |
-
 {: .table .table-hover}
 
 ---
