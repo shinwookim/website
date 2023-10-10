@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Supplemental Notes on Malloc Project"
-subtitle: "Writing Custom Test Cases (Traces)"
+subtitle: "Writing Custom Test Cases (Traces) + Project Hints"
 ---
 Testing software while developing is a crucial and indispensable aspect of the software development process. For this project, you are provided a set of *traces* (found in the `./traces/` directory) which are used to test your heap allocator implementation (`mm_malloc()`) for correctness, space utilization, and throughput. Each *trace file* contains a sequence of allocate and free instructions that direct the driver program (`mdriver.c`) to call your `mm_malloc()` and `mm_free()` functions in some order{%sidenote "grading" "The provided driver and trace files are the same ones we will use when we grade your handin `mm.c` file, although we may change the order in which the traces are used."%}.
 
@@ -64,3 +64,22 @@ a 1 112       /* allocate 112 bytes. Job ID = 1 */
 (...)
 ```
 </div>
+
+## Project Hints
+1. During the inital phases of development, using tiny trace file will immensely simply debugging and testing. Use the following commandline to test your implementation on a specific trace:
+
+    ```sh
+    $ make
+    $ ./mdriver -c <tracefile> # Runs tracefile exactly once, testing only for correctness.
+    $ ./mdriver -f <tracefile> # Runs one particular tracefile instead of the 
+                            # default set of tracefiles for testing correctness and performance 
+    ```
+    You may find `-c` option to be extremely useful when you want to print out debugging messages. 
+2. Using the `-V` option with the `mdriver` will indicate when each trace file is processed which may help you isolate errors.
+3. Using a debugger such as `gdb` will help you easily isolate and identify memory errors. If you are unsure how to use `gdb`, refer back to lab 0. The `watch` command in `gdb` may be useful in figuring out which values changed unexpectedly.
+4. C preprocessors macros are provided to help you with pointer arithmetic. Use them! Pointer arithmetic in memory managers is confusing and error-prone because of all the casting that is necessary. You can reduce the complexity significantly by using macros or inline functions.
+5. Remember that wre are working with 64-bit machines. Pointers (which store memory addresses) take up 8 bytes of space. Notably, the following fact may be useful: `sizeof(size_t) == 8`.
+6. The started code comes with helper functions called `check_heap()` and `examine_heap()`.  A good heap consistency checker will save you hours and hours when debugging your malloc package. You can use your heap checker to find out where exactly things are going wrong in your implementation (hopefully not in too many places!). Every time you change your implementation, one of the first things
+you should do is think about how your `check_heap()` will change, what sort of tests need to be performed, and so on.
+7. **Keep backups**. Whenever you have a working allocator and are considering making changes to it, keep a backup copy of the last working version. It is very common to make changes that inadvertently break the code and then have trouble undoing them. Better yet, consider adopting a version control system such as git!
+8. **Start early!** It is possible to write an efficient malloc package with a few pages of code. However, we can guarantee that it will be some of the most difficult and sophisticated code you have written so far in your career. So start early, and good luck!
