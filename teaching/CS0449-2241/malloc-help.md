@@ -59,8 +59,8 @@ In summary, your trace file must conform to the following format:
 12000         /* Number of IDs (how many allocations?) */
 16000         /* Number of operations (# of allocation + # of free) */
 1             /* Unused number */
-a 0 16        /* allocate 16 bytes. Job ID = 0 */
-a 1 112       /* allocate 112 bytes. Job ID = 1 */
+a 0 16        /* allocate 16 bytes. Assign pointer to ID 0 */
+a 1 112       /* allocate 112 bytes. Assign pointer to ID 1 */
 (...)
 ```
 </div>
