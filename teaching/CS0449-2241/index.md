@@ -39,7 +39,8 @@ You may attend **only** the recitation section you are signed up for unless you 
 |           09/15/2023            | Intermediate C Programming + Lab 2 | [Slides](03-adv-cprog.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/02/)                                      |
 |           09/22/2023            | Multi-file development             | [Slides](04-makefiles.pdf) <br> [Tutorial](https://cs0449.gitlab.io/fa2023/resources/worksheets/makefiles/makefiles.pdf) |
 |           09/29/2023            | Pointer Lab + Project 1 Discussion | [Slides](05-pointers.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/03/)                                       |
-| Fall Break<br>**No Recitation** | Queue Lab                          | [Slides](06-queue.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/04/)                                          |
+| 10/06/2023<br>**Fall Break** | Queue Lab                          | [Slides](06-queue.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/04/)                                          |
+| 10/13/2023 | Mid-Term Review | [Study Guide](https://shinwookim.github.io/CS0449-StudyGuide/)|
 {: .table .table-hover}
 
 ---
