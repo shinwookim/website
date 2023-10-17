@@ -1,5 +1,6 @@
 ---
 layout: post
+tufte: true
 title: "The Development of the C Language*"
 subtitle: "by Dennis M. Ritchie"
 ---

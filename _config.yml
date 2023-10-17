@@ -2,11 +2,20 @@ title: Shinwoo Kim
 author: Shinwoo Kim
 email: shinwookim@pitt.edu
 description: >-
-  Shinwoo Kim is a student and a teaching assistant at the University of Pittsburgh studying computer science and mathematics.
-  His passions are in computer science, technology, and education; 
-  His research interests are in the field of Artificial Intelligence, Machine Learning, and Natural Language Processing.
+  Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.
 baseurl: "/~shk148"
 url: "https://sites.pitt.edu"
+twitter:
+  username: _shinwookim
+  card: summary
+social:
+  name: Shinwoo Kim
+  links:
+    - https://twitter.com/_shinwookim
+    - https://www.instagram.com/_shinwookim
+    - https://www.linkedin.com/in/kimshinwoo
+    - https://github.com/shinwookim
+image: 
 
 # Social Profiles
 twitter_username: _shinwookim
@@ -15,6 +24,9 @@ instagram_username: _shinwookim
 linkedin_username: kimshinwoo
 
 # Build settings
+markdown: kramdown
+highlighter: rouge
+
 timezone: America/New_York
 excerpt_separator: <!--more-->
 include:
@@ -25,3 +37,10 @@ collections:
 plugins:
   - jekyll-feed
   - jekyll-spaceship
+  - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg
+

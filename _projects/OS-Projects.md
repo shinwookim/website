@@ -1,11 +1,14 @@
 ---
 layout: project
 title: "Course Projects for Operating Systems"
-img: assets/img/projects/OS.png
-imgtext: Screenshot of Blackjack Program which tests the device driver
+featured_image:
+    - src: assets/img/projects/OS.png
+    - alt: Screenshot of Blackjack Program which tests the device driver
 tags: C Kernel&nbsp;Development Linux Operating&nbsp;Systems
 year: 2023-2
 ---
+
+Below are some of my projects for the CS 1550: Operating Systems course that I took in Spring 2022 with Dr. Jon Misurda.
 
 ## A Linux Graphics Library
 Although printing to the terminal may amount only to a single line of code, beneath the veil of abstractions, it is a rather complex task. The computer, once it receives information on what characters to print, must calculate which pixels on the screen to manipulate by looking at the fonts, screen size, and screen type. This project explores how a computer does this by creating a custom graphics library and driver that can be used to draw and write to the screen.
@@ -28,7 +31,7 @@ One place that we might use parallelism is to simulate real-world situations tha
 One of the most important abstractions provided by the operating system is the notion of exclusive access to memory. A operating system accomplishes this by using a scheme called **virtual memory** (and paging) that allow for allocating chunks of a processes' address space onto physical RAM. Yet, one of the pitfalls of this scheme is the performance loss when a *page-fault* occurs. This project explores how we can optimize the various page replacement algorithms by using a simulation to count and analyze the number of page faults. 
 
 ## Custom File System
-How does a computer store files and metadata? Using [FUSE](https://github.com/libfuse/libfuse), this project implements various file-related system calls to create a custom file system that is managed via a single file that represents the disk device. Using FUSE and the project's implementation, we can interact with the custom file system using standard UNIX/Linux programs in a transparent way.<span class="endmark"></span>
+How does a computer store files and metadata? Using [FUSE](https://github.com/libfuse/libfuse), this project implements various file-related system calls to create a custom file system that is managed via a single file that represents the disk device. Using FUSE and the project's implementation, we can interact with the custom file system using standard UNIX/Linux programs in a transparent way.
 
 **Code Available Upon Request**
 {: .text-center}

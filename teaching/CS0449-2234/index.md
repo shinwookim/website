@@ -3,6 +3,7 @@ layout: post
 title: "Introduction to Systems Software"
 subtitle: "CS 0449 (Spring 2023, Term 2234)"
 nav: true
+tufte: true
 nav-links:
   - title: CS0449
     url: /teaching/CS0449-2234/

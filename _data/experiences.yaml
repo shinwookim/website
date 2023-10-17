@@ -1,6 +1,6 @@
 current:
   - id: 1c
-    title: Teaching Assitant
+    title: Teaching Assitant/Part-Time Instructor
     employer: University of Pittsburgh, Department of Computer Science
     duration: August 2022 — Present
     desc: "I am a Teaching Assistant for CS0441: Discrete Structures for Computer Science. I conduct weekly recitation to a section of 30 students where I taught discrete mathematics concepts by breaking them down and working though examples. I also provide comprehensive academic support in both one-to-one and in-class settings to maximize student participations and understanding of concepts. See [Teaching](teaching/) for more details"
@@ -30,13 +30,13 @@ past:
     employer: University of Pittsburgh — School of Computing & Information Community Engagement
     duration: August 2021 — January 2022
     desc: I developed the curriculum and course materials for CompTIA A+ certification class; and Taught CompTIA A+ certification class to Hills district high school students.
-  - id: 4
-    title: President & Academic Tutor
-    employer: Academic Discussion and Peer Tutoring at North Penn High School
-    duration: September 2019 - June 2021
-    desc: I created and implemented a virtual tutoring program; I utilized GSuite to manage over 50 volunteer academic tutors. I tutored 15 students in math and science, resulting in their improved grades. I also created the groundwork for a tutoring center partnership between the North Penn High School and its surrounding middle and elementary schools.
-  - id: 5
-    title: SAT Instructor
-    employer: ADAPT SAT Class at North Penn High School
-    duration: September 2019 - June 2021
-    desc: I co-founded a SAT Class run by the Academic Discussion and Peer Tutoring Program, creating course materials and teaching a class of over 60 students via Google Meet. I organized the curriculum and helped to improve scores by an average over 40 points increase, getting about a 90 percent approval rate from students.
+  # - id: 4
+  #   title: President & Academic Tutor
+  #   employer: Academic Discussion and Peer Tutoring at North Penn High School
+  #   duration: September 2019 - June 2021
+  #   desc: I created and implemented a virtual tutoring program; I utilized GSuite to manage over 50 volunteer academic tutors. I tutored 15 students in math and science, resulting in their improved grades. I also created the groundwork for a tutoring center partnership between the North Penn High School and its surrounding middle and elementary schools.
+  # - id: 5
+    # title: SAT Instructor
+    # employer: ADAPT SAT Class at North Penn High School
+    # duration: September 2019 - June 2021
+    # desc: I co-founded a SAT Class run by the Academic Discussion and Peer Tutoring Program, creating course materials and teaching a class of over 60 students via Google Meet. I organized the curriculum and helped to improve scores by an average over 40 points increase, getting about a 90 percent approval rate from students.

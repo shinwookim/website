@@ -13,17 +13,18 @@ permalink: /projects/
   <div class="col-3 px-0 ">
 
     <a href="{{post.url | absolute_url}}">
-      <img src="{{site.baseurl}}/{{post.img}}" alt="{{post.imgtext}}" class="card-img-top rounded">
+      <img src="{{site.baseurl}}/{{post.featured_image[0].src}}" alt="{{post.featured_image[0].alt}}"
+        class="card-img-top rounded">
     </a>
 
   </div>
   <div class="col-9 px-0">
-    <div class="m-3">
+    <div class="mx-3 my-2">
       <div>
-        {%for tag in post.tags %}<span class="badge rounded-pill text-bg-info me-1">{{tag}}</span>{%endfor%}
+        {%for tag in post.tags %}<span class="badge rounded-pill mb-2 mt-0 text-bg-info me-1">{{tag}}</span>{%endfor%}
       </div>
       <h2 class="mb-0">{{post.title}}</h2>
-      <p class="mb-0">{{post.subtitle}}</p>
+      <p class="my-0">{{post.subtitle}}</p>
       <a class="mt-auto no-tufte-underline text-decoration-underline" href="{{post.url | absolute_url}}">
         <i class="fas fa-search-plus"></i> Read More</a>
     </div>
@@ -32,7 +33,7 @@ permalink: /projects/
 
 {% endfor %}
 
-
+<!-- 
 <div class="text-center">
   <a data-bs-toggle="collapse" href="#old-prj" role="button" aria-expanded="false" id="show-old-prj"
     aria-controls="old-prj" onclick="document.getElementById('show-old-prj').style.display='none'">
@@ -45,23 +46,24 @@ permalink: /projects/
   <div class="row mb-3 border rounded p-0">
     <div class="col-3 px-0 ">
       <a href="{{post.url | absolute_url}}">
-        <img src="{{site.baseurl}}/{{post.img}}" alt="{{post.imgtext}}" class="card-img-top rounded">
+        <img src="{{site.baseurl}}/{{post.featured_image[0].src}}" alt="{{post.featured_image[0].alt}}"
+          class="card-img-top rounded">
       </a>
     </div>
     <div class="col-9 px-0">
-      <div class="m-3">
+      <div class="mx-3 my-2">
         <div>
-          {%for tag in post.tags %}<span class="badge rounded-pill text-bg-info me-1">{{tag}}</span>{%endfor%}
+          {%for tag in post.tags %}<span class="badge rounded-pill mb-2 mt-0 text-bg-info me-1">{{tag}}</span>{%endfor%}
         </div>
         <h2 class="mb-0">{{post.title}}</h2>
-        <p class="mb-0">{{post.subtitle}}</p>
+        <p class="my-0">{{post.subtitle}}</p>
         <a class="mt-auto no-tufte-underline text-decoration-underline" href="{{post.url | absolute_url}}">
           <i class="fas fa-search-plus"></i> Read More</a>
       </div>
     </div>
   </div>
   {% endfor %}
-</div>
+</div> -->
 
 <style>
   .card-img-overlay {

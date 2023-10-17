@@ -1,5 +1,6 @@
 ---
 layout: post
+tufte: true
 title: "Supplemental Notes on Malloc Project"
 subtitle: "Writing Custom Test Cases (Traces) + Project Hints"
 ---
@@ -70,11 +71,9 @@ a 1 112       /* allocate 112 bytes. Assign pointer to ID 1 */
 
     ```sh
     $ make
-    $ ./mdriver -c <tracefile> # Runs tracefile exactly once, testing only for correctness.
     $ ./mdriver -f <tracefile> # Runs one particular tracefile instead of the 
                             # default set of tracefiles for testing correctness and performance 
     ```
-    You may find `-c` option to be extremely useful when you want to print out debugging messages. 
 2. Using the `-V` option with the `mdriver` will indicate when each trace file is processed which may help you isolate errors.
 3. Using a debugger such as `gdb` will help you easily isolate and identify memory errors. If you are unsure how to use `gdb`, refer back to lab 0. The `watch` command in `gdb` may be useful in figuring out which values changed unexpectedly.
 4. C preprocessors macros are provided to help you with pointer arithmetic. Use them! Pointer arithmetic in memory managers is confusing and error-prone because of all the casting that is necessary. You can reduce the complexity significantly by using macros or inline functions.

@@ -1,19 +1,22 @@
-<footer class="page-footer">
-  <div class="credits faded">
-    <span>&copy; {{ site.time | date: '%Y' }}
-      {% if site.email == "" or site.email == nil %}
-      {{ site.author }}
-      {% else %}
-      <a href="mailto:{{ site.email }}">{{site.author}}</a>
-      {% endif %}
-    </span>
-    <div class="mb-0">
-      <a class="no-tufte-underline h5" href="https://linkedin.com/in/{{ site.linkedin_username }}"><i
-          class="fab fa-linkedin-in"></i></a>
-      <a class="no-tufte-underline h5" href="https://github.com/{{ site.github_username }}"><i
-          class="fab fa-github"></i></a>
-      <a class="no-tufte-underline h5" href="https://twitter.com/{{ site.twitter_username }}"><i
-          class="fab fa-twitter"></i></a>
-    </div>
-  </div>
-</footer>
+<div class="container">
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class=" d-flex align-middle">
+			<a class="no-tufte-underline text-md-end fw-bolder autography h3 mx-2"
+				href='{{"/" | relative_url }}'>Shinwoo
+				Kim</a>
+			<span class="mb-3 mb-md-0 text-body-secondary"> &copy; 2020 - {{ site.time | date: '%Y' }},
+				<a href="mailto:{{ site.email }}">{{site.author}}</a>. All Rights Reserved.
+			</span>
+
+		</div>
+		<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+			<li class="ms-3"><a class="no-tufte-underline" href="https://twitter.com/{{ site.twitter_username }}"><i
+						class="fab fa-twitter"></i></a></li>
+			<li class="ms-3"><a class="no-tufte-underline" href="https://github.com/{{ site.github_username }}"><i
+						class="fab fa-github"></i></a></li>
+			<li class="ms-3"><a class="no-tufte-underline"
+					href="https://linkedin.com/in/{{ site.linkedin_username }}"><i class="fab fa-linkedin-in"></i></a>
+			</li>
+		</ul>
+	</footer>
+</div>

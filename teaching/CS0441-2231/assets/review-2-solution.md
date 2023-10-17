@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2022-10-08
+tufte: true
 title: "Solutions to More Practice on Proofs"
 subtitle: "Solutions & Commentary to Accompany More Practice on Proofs"
 ---
