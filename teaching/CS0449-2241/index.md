@@ -41,7 +41,8 @@ You may attend **only** the recitation section you are signed up for unless you 
 |          09/29/2023          | Pointer Lab + Project 1 Discussion | [Slides](05-pointers.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/03/)                                       |
 | 10/06/2023<br>**Fall Break** | Queue Lab                          | [Slides](06-queue.pdf) <br> [Handout](https://cs0449.gitlab.io/fa2023/labs/04/)                                          |
 |          10/13/2023          | Mid-Term Review                    | [Study Guide](https://shinwookim.github.io/CS0449-StudyGuide/)                                                           |
-|          10/20/2023          | Assembly                           | [Slides](07-asm.pdf)                                                                                                              |
+|          10/20/2023          | Assembly                           | [Slides](07-asm.pdf)                                                                                                     |
+|          10/27/2023          | Valgrind and Memory Leaks          | [Handout](valgrind-lab.html)                                                                                             |
 {: .table .table-hover}
 
 ---
