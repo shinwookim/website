@@ -907,3 +907,22 @@ blockquote.fancy p:first-child::before {
 blockquote.fancy p {
   font-style: italic;
 }
+
+.dark {
+  .code-box {
+    @extend .div-55;
+    border: 1px solid white;
+    background-color: black;
+  }
+}
+
+.light {
+  .code-box {
+    @extend .div-55;
+    border: 1px solid black;
+    background-color: white;
+  }
+}
+pre {
+  margin-bottom: 0;
+}
