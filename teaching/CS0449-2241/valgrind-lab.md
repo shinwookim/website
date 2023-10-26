@@ -21,7 +21,7 @@ The [Valgrind tool suite](https://valgrind.org/) provides a number of debugging 
     <div class="code-box" markdown="1">
     ```sh
     cp ~wahn/public/cs449/valgrind/quick-start.c ./
-    gcc –g quick-start.c –o ./quick-start
+    gcc -g quick-start.c -o ./quick-start
     valgrind --leak-check=yes ./quick-start
     ```
     </div>
@@ -33,7 +33,7 @@ Focus on Section 4.2: Explanation of error messages from MemCheck.
     <div class="code-box" markdown="1">
     ```sh
     cp ~wahn/public/cs449/valgrind/very-buggy.c ./
-    gcc –g very-buggy.c –o ./very-buggy
+    gcc -g very-buggy.c -o ./very-buggy
     valgrind --leak-check=full --track-origins=yes ./very-buggy
     ```
     </div>
@@ -63,7 +63,7 @@ Write how many errors of each type valgrind discovers in the above example code.
     <div class="code-box" markdown="1">
     ```sh
     cp ~wahn/public/cs449/valgrind/leak.c ./
-    gcc –g leak.c –o ./leak
+    gcc -g leak.c -o ./leak
     valgrind --leak-check=full --show-reachable=yes ./leak
     ```
     </div>
