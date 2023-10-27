@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Valgrind Lab"
+meta_title: Valgrind Lab | CS 0449
 full_width: true
 ---
 
