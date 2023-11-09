@@ -37,38 +37,44 @@ body {
 
 h1 {
   font-weight: 400;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   line-height: 1;
+  margin-top: 1rem;
 }
 
 h2 {
   font-weight: 400;
   font-size: 2.2rem;
   line-height: 1;
+  margin-top: 1rem;
 }
 
 h3 {
   font-weight: 400;
   font-size: 1.7rem;
   line-height: 1;
+  margin-top: 1rem;
 }
 
 h4 {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1;
+  margin-top: 1rem;
 }
 
 h5 {
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1;
+  margin-top: 1rem;
 }
 
 h6 {
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1;
+  margin-top: 1rem;
 }
 
 hr {
@@ -114,7 +120,8 @@ ul {
 }
 
 p {
-  margin-bottom: 1.4rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0;
   padding-right: 0;
   vertical-align: baseline;
 }
@@ -123,21 +130,21 @@ div.epigraph {
   margin: 5em 0;
 }
 
-div.epigraph > blockquote {
+div.epigraph>blockquote {
   margin-top: 3em;
   margin-bottom: 3em;
 }
 
-div.epigraph > blockquote,
-div.epigraph > blockquote > p {
+div.epigraph>blockquote,
+div.epigraph>blockquote>p {
   font-style: italic;
 }
 
-div.epigraph > blockquote > footer {
+div.epigraph>blockquote>footer {
   font-style: normal;
 }
 
-div.epigraph > blockquote > footer > cite {
+div.epigraph>blockquote>footer>cite {
   font-style: italic;
 }
 
@@ -158,20 +165,20 @@ blockquote footer {
   text-align: right;
 }
 
-section > p,
-section > footer,
-section > table {
+section>p,
+section>footer,
+section>table {
   width: 55%;
 }
 
-li > p {
+li>p {
   width: 100% !important;
 }
 
 /* 50 + 5 == 55, to be the same width as paragraph */
-section > dl,
-section > ol,
-section > ul {
+section>dl,
+section>ol,
+section>ul {
   width: 50%;
   -webkit-padding-start: 5%;
 }
@@ -323,32 +330,32 @@ div.table-wrapper {
 }
 
 code,
-pre > code {
+pre>code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 1rem;
   line-height: 1.42;
   -webkit-text-size-adjust: 100%;
 }
 
-.sans > code {
+.sans>code {
   font-size: 1.2rem;
 }
 
-h1 > code,
-h2 > code,
-h3 > code,
-h4 > code,
-h5 > code,
-h6 > code {
+h1>code,
+h2>code,
+h3>code,
+h4>code,
+h5>code,
+h6>code {
   font-size: 0.8em;
 }
 
-.marginnote > code,
-.sidenote > code {
+.marginnote>code,
+.sidenote>code {
   font-size: 1rem;
 }
 
-pre > code {
+pre>code {
   font-size: 0.9rem;
   width: 52.5%;
   margin-left: 2.5%;
@@ -356,7 +363,7 @@ pre > code {
   display: block;
 }
 
-pre.fullwidth > code {
+pre.fullwidth>code {
   width: 90%;
 }
 
@@ -413,19 +420,19 @@ label.margin-toggle:not(.sidenote-number) {
   }
 
   hr,
-  section > p,
-  section > footer,
-  section > table {
+  section>p,
+  section>footer,
+  section>table {
     width: 100%;
   }
 
-  pre > code {
+  pre>code {
     width: 97%;
   }
 
-  section > dl,
-  section > ol,
-  section > ul {
+  section>dl,
+  section>ol,
+  section>ul {
     width: 90%;
   }
 
@@ -465,8 +472,8 @@ label.margin-toggle:not(.sidenote-number) {
     font-weight: bolder;
   }
 
-  .margin-toggle:checked + .sidenote,
-  .margin-toggle:checked + .marginnote {
+  .margin-toggle:checked+.sidenote,
+  .margin-toggle:checked+.marginnote {
     display: block;
     float: left;
     left: 1rem;
@@ -523,6 +530,7 @@ body.dark {
  * Make it so that top-level <p> don't need to be wrapped in <section>
  */
 article {
+
   .div-55,
   p,
   li,
@@ -539,6 +547,7 @@ footer {
 // should still go wide on narrow screens
 @media (max-width: 760px) {
   article {
+
     p,
     li,
     footer,
@@ -569,7 +578,7 @@ p.backarrow {
 /* Styles for nav and headers */
 
 /* Style for active menu links: bold and with surrounding angle brackets */
-header > nav ul {
+header>nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -577,7 +586,7 @@ header > nav ul {
     sans-serif;
 }
 
-header > nav a {
+header>nav a {
   font-size: 1.3rem;
   //letter-spacing: 0.15em;
   //text-transform: uppercase;
@@ -595,11 +604,11 @@ header > nav a {
   vertical-align: baseline;
 }
 
-header > nav li:last-child a {
+header>nav li:last-child a {
   margin-right: inherit;
 }
 
-header > nav a img {
+header>nav a img {
   height: 5rem;
   position: relative;
   max-width: 100%;
@@ -646,6 +655,7 @@ ul.footer-links li {
 // Full width page styling stuff
 
 .full-width article {
+
   p,
   li,
   footer,
@@ -923,6 +933,7 @@ blockquote.fancy p {
     background-color: white;
   }
 }
+
 pre {
   margin-bottom: 0;
 }

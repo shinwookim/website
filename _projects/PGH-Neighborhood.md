@@ -2,8 +2,9 @@
 layout: project
 title: Pittsburgh's Best Neighborhood
 subtitle: Using Data To Determine The Best Neighborhood in Pittsburgh
-img: assets/img/projects/pgh-neighborhood.png
-imgtext: Data Visualization Overlaying data on top of PGH's map
+featured_image:
+    - src: assets/img/projects/pgh-neighborhood.jpg
+    - alt: Data Visualization Overlaying data on top of PGH's map
 tags: Python Pandas
 year: 2021-1
 featured: true
@@ -14,7 +15,12 @@ As a team, we wanted to answer the following question:
 > What is the best neighborhood in Pittsburgh?
 {: .fancy}
 
-With data from the [Western Pennsylvania Regional Data Center(WPRDC)](http://www.wprdc.org/), we created a data driven argument to support our claim about the “best” neighborhood in Pittsburgh. Specifically, we used Python's data analysis framework, Pandas, to analyze different data sets to come up with appropriate metrics to use in determining a good neighborhood. <span class="endmark"></span>
+With data from the [Western Pennsylvania Regional Data Center(WPRDC)](http://www.wprdc.org/), we created a data driven argument to support our claim about the “best” neighborhood in Pittsburgh. Specifically, we used Python's data analysis framework, Pandas, to analyze different data sets to come up with appropriate metrics to use in determining a good neighborhood.
+
+| [![Data Visualization Overlaying data on top of PGH's map](../assets/img/projects/pgh-neighborhood.jpg)](../assets/img/projects/pgh-neighborhood.jpg) |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                         Data Visualization: Overlaying Arrest Data on top of Pittsburgh's Map                                         |
+
 
 ## Data Set Used
 - [Pittsburgh Police Arrest Data](https://data.wprdc.org/dataset/arrest-data)

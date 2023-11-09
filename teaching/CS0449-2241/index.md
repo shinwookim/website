@@ -43,7 +43,8 @@ You may attend **only** the recitation section you are signed up for unless you 
 |          10/13/2023          | Mid-Term Review                    | [Study Guide](https://shinwookim.github.io/CS0449-StudyGuide/)                                                           |
 |          10/20/2023          | Assembly                           | [Slides](07-asm.pdf)                                                                                                     |
 |          10/27/2023          | Valgrind and Memory Leaks          | [Handout](valgrind-lab.html)                                                                                             |
-|          11/03/2023          | Project 3 Discussion               | [Slides](09-bomb.pdf)                    					|
+|          11/03/2023          | Project 3 Discussion               | [Slides](09-bomb.pdf)                                                                                                    |
+|          11/10/2023          | Process Lab                                | [Slides](10-proc.pdf)                                                                                                              |
 {: .table .table-hover}
 
 ---
