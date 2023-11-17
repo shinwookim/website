@@ -44,10 +44,10 @@ You may attend **only** the recitation section you are signed up for unless you 
 |          10/20/2023          | Assembly                           | [Slides](07-asm.pdf)                                                                                                     |
 |          10/27/2023          | Valgrind and Memory Leaks          | [Handout](valgrind-lab.html)                                                                                             |
 |          11/03/2023          | Project 3 Discussion               | [Slides](09-bomb.pdf)                                                                                                    |
-|          11/10/2023          | Process Lab                                | [Slides](10-proc.pdf)                                                                                                              |
+|          11/10/2023          | Process Lab                        | [Slides](10-proc.pdf)                                                                                                    |
+|          11/17/2023          | Project 4 Discussion               | [Slides](11-shell.pdf)                                                                                                   |
 {: .table .table-hover}
 
----
 
 <!-- ## Classroom Technologies
 Throughout the semester, we will be using the following resources and technologies:
