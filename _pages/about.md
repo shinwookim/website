@@ -12,7 +12,7 @@ Previously, I worked as the STEAM ambassador[^sponser] at Pitt's [Hill District 
 [^neurodiverse]: N. Baumer and J. Frueh, “What is neurodiversity?,” Harvard Health Publishing, [https://www.health.harvard.edu/blog/what-is-neurodiversity-202111232645](https://www.health.harvard.edu/blog/what-is-neurodiversity-202111232645)
 
 ## Education
-<span class="h3"><i class="pitt-icon"></i>Master of Science, Computer Science, December 2024(Exp.)</span>
+<span class="h3"><i class="pitt-icon"></i>Master of Science, Computer Science, December 2024</span>
 {: .mb-0}
 
 - University of Pittsburgh

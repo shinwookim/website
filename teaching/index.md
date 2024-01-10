@@ -11,9 +11,6 @@ hide_title: true
   <figcaption class="figure-caption text-end" style="max-width: 100%">Sennott Square, Home of the CS Department @ Pitt</figcaption>
 </figure>
 
-## Current Courses (Fall 2023, Term 2241)
-- <i class="pitt-icon"></i> [**CS0449:** Introduction to System Software](./CS0449-2241/)<sup>TA</sup>
-
 ---
 
 <div class="text-center">
@@ -34,6 +31,7 @@ hide_title: true
 
 ## Previous Courses
 - <i class="pitt-icon"></i> **CS0449:** Introduction to System Software<sup class="footnote">TA</sup> 
+  - [Fall 2023](./CS0449-2241/)
   - [Spring 2023](./CS0449-2234/)
 - <i class="pitt-icon"></i> **CS0441:** Discrete Structures for Computer Science<sup class="footnote">TA</sup>
   - [Spring 2023](./CS0441-2234/)
@@ -42,7 +40,6 @@ hide_title: true
   - [Fall 2021](bridges-to-it.html)
 - <i class="pitt-icon"></i> **CEC STEAM Saturday** Courses<sup class="footnote">I</sup>
   - [Fall 2021](https://cec.pitt.edu/calendar/s-t-e-a-m-saturdays/2022-10-08/)
-  
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
