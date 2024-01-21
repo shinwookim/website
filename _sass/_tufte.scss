@@ -126,6 +126,12 @@ p {
   vertical-align: baseline;
 }
 
+.w-55>p,
+.w-55>ul>li,
+.w-55>ol>li {
+  width: 100%;
+}
+
 div.epigraph {
   margin: 5em 0;
 }
@@ -167,7 +173,8 @@ blockquote footer {
 
 section>p,
 section>footer,
-section>table {
+section>table,
+.w-55 {
   width: 55%;
 }
 
@@ -422,7 +429,8 @@ label.margin-toggle:not(.sidenote-number) {
   hr,
   section>p,
   section>footer,
-  section>table {
+  section>table,
+  .w-55 {
     width: 100%;
   }
 
