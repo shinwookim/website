@@ -11,6 +11,9 @@ hide_title: true
   <figcaption class="figure-caption text-end" style="max-width: 100%">Sennott Square, Home of the CS Department @ Pitt</figcaption>
 </figure>
 
+## Current Courses
+- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software <sup class="footnote">G</sup>
+
 ---
 
 <div class="text-center">
@@ -22,7 +25,7 @@ hide_title: true
       aria-controls="collapseOH">Click here to view my office hours schedule</a>
   <div class="collapse" id="collapseOH">
     <div class="card card-body text-start">
-      {%include_relative FA23_OH.html%}
+      {%include_relative SP24_OH.html%}
     </div>
   </div>
 </div>
