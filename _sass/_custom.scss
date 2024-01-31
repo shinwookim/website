@@ -1,21 +1,18 @@
-.toggle-theme {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background-color: transparent;
-    border: 0;
-    font-size: 2.2em;
-}
+/* body {
+    margin: 0 !important;
+    padding: 0 !important;
+  } */
 
-.dark .toggle-theme::after {
-    content: "☽";
-    color: #f1f1f1;
-}
+/* hr {
+    width: 100%;
+  } */
 
-.light .toggle-theme::after {
-    content: "☀";
-    color: #000;
-}
+/* li,
+  a {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  } */
 
 .footnotes ol li,
 .footnotes ol li p,
@@ -38,44 +35,57 @@
     content: "sk";
 }
 
-@media (max-width: 760px) {
 
-    table {
-        width: 100% !important;
-    }
+
+a:link,
+a:visited {
+    color: inherit;
 }
 
-@media (min-width: 761px) {
-    table {
-        width: 55% !important;
-    }
-}
 
-.anchor-link {
+a:link,
+.tufte-underline,
+.hover-tufte-underline:hover {
     text-decoration: none;
-    background: unset !important;
-    text-shadow: unset !important;
-    font-family: var(--bs-body-font-family);
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out 0.2s;
+    background: -webkit-linear-gradient(#fffff8, #fffff8),
+        -webkit-linear-gradient(#fffff8, #fffff8),
+        -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(#fffff8, #fffff8),
+        linear-gradient(#fffff8, #fffff8),
+        linear-gradient(currentColor, currentColor);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: var(--shadow-color);
+    background-position: 0% 93%, 100% 93%, 0% 93%;
+    transition: color 0.5s ease;
 }
 
-h1:hover .anchor-link,
-h2:hover .anchor-link,
-h3:hover .anchor-link,
-h4:hover .anchor-link,
-h5:hover .anchor-link,
-h6:hover .anchor-link {
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out 0.2s;
+.light a:hover {
+    color: #a00000;
 }
 
-.reversefootnote {
-    text-decoration: none;
-    background: unset !important;
-    text-shadow: unset !important;
+a:link::selection,
+a:link::-moz-selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe,
+        0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe,
+        -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe,
+        -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
 }
 
-.full-width {
-    width: 90%;
+.no-tufte-underline:link {
+    background: unset;
+    text-shadow: unset;
 }
+
+// .reversefootnote {
+//     text-decoration: none;
+//     background: unset !important;
+//     text-shadow: unset !important;
+// }
+
+// .full-width {
+//     width: 90%;
+// }

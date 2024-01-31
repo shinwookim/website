@@ -1,5 +1,6 @@
 ---
 layout: post
+tufte: true
 title: "Discrete Structures for Computer Science"
 subtitle: "CS 0441 (Spring 2023, Term 2234)"
 ---
@@ -68,7 +69,7 @@ Click the date for annoucement slides and see footnotes for important recitation
 | **13** | 04/04/2023 |                           Homework #7 + Homework #8                           |                                                                       |
 | **14** | 04/11/2023 |                                  Homework #8                                  |                                                                       |
 | **15** | 04/18/2023 |                              Final Exam Practice                              |                                                                       |
-| **16** | 04/25/2023 |                        Finals Week <br> **No Recitation**                        |                                                                       |
+| **16** | 04/25/2023 |                      Finals Week <br> **No Recitation**                       |                                                                       |
 {: .table-hover}
 
 </div>

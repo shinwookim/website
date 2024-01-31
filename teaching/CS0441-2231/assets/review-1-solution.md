@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2022-09-17
+tufte: true
 title: "Section 1.1 & 1.2 Review Solutions"
 subtitle: "Solutions & Commentary to Accompany Section 1.1 & 1.2 Review"
 ---

@@ -9,7 +9,7 @@ twitter:
   username: _shinwookim
   card: summary
 social:
-  name: Ben Balter
+  name: Shinwoo Kim
   links:
     - https://twitter.com/_shinwookim
     - https://www.instagram.com/_shinwookim
@@ -24,6 +24,9 @@ instagram_username: _shinwookim
 linkedin_username: kimshinwoo
 
 # Build settings
+markdown: kramdown
+highlighter: rouge
+
 timezone: America/New_York
 excerpt_separator: <!--more-->
 include:
