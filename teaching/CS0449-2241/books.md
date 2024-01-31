@@ -1,5 +1,6 @@
 ---
 layout: post
+tufte: true
 title: "Recommended Books on Computer Systems"
 subtitle: "CS 0449: Introduction to Systems Software — Extra Resources"
 backlink: ./

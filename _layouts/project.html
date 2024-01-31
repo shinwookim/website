@@ -17,8 +17,13 @@ full_width: true
   img:hover {
     scale: 1.01;
   }
-</style>
 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+<h1>{{ page.title }}</h1>
 <p class="subtitle mb-3 mt-0">{{ page.subtitle }}</p>
 <div class="mb-2">
   {%for tag in page.tags %}

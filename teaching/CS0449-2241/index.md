@@ -1,5 +1,6 @@
 ---
 layout: post
+tufte: true
 title: "Introduction to Systems Software"
 subtitle: "CS 0449. Fall 2023 (Term 2241)"
 ---
@@ -46,8 +47,8 @@ You may attend **only** the recitation section you are signed up for unless you 
 |          11/03/2023          | Project 3 Discussion               | [Slides](09-bomb.pdf)                                                                                                    |
 |          11/10/2023          | Process Lab                        | [Slides](10-proc.pdf)                                                                                                    |
 |          11/17/2023          | Project 4 Discussion               | [Slides](11-shell.pdf)                                                                                                   |
-|          12/01/2023          | Synchronization & Concurrency      | [Slides](12-threads.pdf)                                                                                                                         |
-|          12/08/2023          | Final Exam Review                  | [Course Recommendations](more-systems.html)
+|          12/01/2023          | Synchronization & Concurrency      | [Slides](12-threads.pdf)                                                                                                 |
+|          12/08/2023          | Final Exam Review                  | [Course Recommendations](more-systems.html)                                                                              |
 {: .table .table-hover}
 
 <style>

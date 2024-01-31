@@ -1,5 +1,6 @@
 ---
 layout: post
+tufte: true
 title: "CS 0449 Exam II (Non-Exhaustive) Study Guide"
 subtitle: "for Fall 2023 Final Exam"
 ---

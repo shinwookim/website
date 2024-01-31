@@ -1,5 +1,6 @@
 ---
 layout: post
+tufte: true
 title: "Supplemental Notes on Malloc Project"
 subtitle: "Writing Custom Test Cases (Traces) + Project Hints"
 ---

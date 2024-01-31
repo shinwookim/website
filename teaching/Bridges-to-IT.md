@@ -1,5 +1,6 @@
 ---
 layout: post
+tufte: true
 title: "Bridges to IT: Jump-Starting a Career in IT"
 subtitle: "Fall 2021"
 permalink: /teaching/bridges-to-it.html
