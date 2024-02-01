@@ -38,3 +38,11 @@
 body {
     background-color: var(--background-color);
 }
+
+.light a:hover {
+    color: #a00000;
+}
+
+.dark a:hover {
+    color: #e19a87;
+}
