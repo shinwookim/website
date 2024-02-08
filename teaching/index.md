@@ -12,7 +12,7 @@ hide_title: true
 </figure>
 
 ## Current Courses
-- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software <sup class="footnote">P</sup>
+- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software<sup class="footnote">P</sup>
 
 ---
 
