@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CPU2224: A Single Cycle 16 bit CPU | Shinwoo Kim</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="CPU2224: A Single Cycle 16 bit CPU">
+<meta name="author" content="Shinwoo Kim">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="CPU2224 is a virtual CPU based on a 16-bit Harvard architecture with some similarities to MIPS. The logical circuit for the CPU is created using Logism1, a tool for designing and simulating digital logic circuits. The virtual hardware supports loading programs written in MIPS-like assembly from a virtual ROM drive and can output to a virtual LED display Digits. Supported Features Halting (hlt) and indicating on the dedicated LED display Basic Arithmetic using a custom ALU add, sub, and, or, xor, not, shl, shr Loading immediates li , lis , lui Displaying to display using put Loading and Storing from Memory using ld and st Using the ALU with immediates adi, sbi, ani, ori, xri, sli, sri Jumps - Unconditional and Conditional (Including Function Calls) j, jr, blt, bge, beq, bne, and jal CPU Design Available Upon Request http://www.cburch.com/logisim/ ↩">
+<meta property="og:description" content="CPU2224 is a virtual CPU based on a 16-bit Harvard architecture with some similarities to MIPS. The logical circuit for the CPU is created using Logism1, a tool for designing and simulating digital logic circuits. The virtual hardware supports loading programs written in MIPS-like assembly from a virtual ROM drive and can output to a virtual LED display Digits. Supported Features Halting (hlt) and indicating on the dedicated LED display Basic Arithmetic using a custom ALU add, sub, and, or, xor, not, shl, shr Loading immediates li , lis , lui Displaying to display using put Loading and Storing from Memory using ld and st Using the ALU with immediates adi, sbi, ani, ori, xri, sli, sri Jumps - Unconditional and Conditional (Including Function Calls) j, jr, blt, bge, beq, bne, and jal CPU Design Available Upon Request http://www.cburch.com/logisim/ ↩">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/projects/CPU2224.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/projects/CPU2224.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2024-02-08T12:17:13-05:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="twitter:title" content="CPU2224: A Single Cycle 16 bit CPU">
+<meta name="twitter:site" content="@_shinwookim">
+<meta name="twitter:creator" content="@Shinwoo Kim">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shinwoo Kim"},"dateModified":"2024-02-08T12:17:13-05:00","datePublished":"2024-02-08T12:17:13-05:00","description":"CPU2224 is a virtual CPU based on a 16-bit Harvard architecture with some similarities to MIPS. The logical circuit for the CPU is created using Logism1, a tool for designing and simulating digital logic circuits. The virtual hardware supports loading programs written in MIPS-like assembly from a virtual ROM drive and can output to a virtual LED display Digits. Supported Features Halting (hlt) and indicating on the dedicated LED display Basic Arithmetic using a custom ALU add, sub, and, or, xor, not, shl, shr Loading immediates li , lis , lui Displaying to display using put Loading and Storing from Memory using ld and st Using the ALU with immediates adi, sbi, ani, ori, xri, sli, sri Jumps - Unconditional and Conditional (Including Function Calls) j, jr, blt, bge, beq, bne, and jal CPU Design Available Upon Request http://www.cburch.com/logisim/ &#8617;","headline":"CPU2224: A Single Cycle 16 bit CPU","image":"https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://sites.pitt.edu/~shk148/projects/CPU2224.html"},"url":"https://sites.pitt.edu/~shk148/projects/CPU2224.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- End Metadata -->
+  <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/~shk148/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="/~shk148/assets/favicon/favicon.ico">
+<link rel="manifest" href="/~shk148/assets/favicon/manifest.json">
+
+<!-- End Styles-->
+
+<!-- <link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css" /> -->
+</head>
+
+<body>
+  <button type="button" class="toggle-theme" id="color-selecter"></button>
+  <div class="container mt-5">
+	<div class="row pt-5">
+		<div class="col-md">
+			<header class="text-md-end text-center">
+    <div class="display-3 my-0">
+        <a class="nav-link no-tufte-underline text-md-end fw-bolder autography" href="/~shk148/">Shinwoo<br>Kim</a>
+    </div>
+    <div class="w-100 my-0">
+        <code class="h2">
+            <span class="typed" data-typed-items="Software Engineer, Developer, Pitt Panther, Educator"></span>
+        </code>
+    </div>
+    <div class="mb-0">
+        <a class="no-tufte-underline h3" href="mailto:shinwookim@pitt.edu"><i class="fas fa-envelope"></i></a>
+        <a class="no-tufte-underline h3" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+        <a class="no-tufte-underline h3" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a>
+        <a class="no-tufte-underline h3" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a>
+    </div>
+</header>
+<!-- Site Navigation-->
+<nav class="d-block navbar navbar-expand-md mb-4 p-0 text-center">
+    <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed mt-3" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar">
+        <ul class="flex-column ms-md-auto nav mt-3 text-center">
+            <li>
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/about/">About Me
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/resume/">Résumé
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end fw-bold" href="/~shk148/projects/">Projects
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/teaching/">Teaching
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/contact/">Contact Me
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="/~shk148/assets/js/typed.js"></script>
+		</div>
+		<div class="col-md-8">
+			<style>
+  img {
+    transition: 0.5s ease;
+    margin: auto;
+    border-radius: var(--bs-border-radius) !important;
+  }
+
+  table {
+    margin: auto;
+  }
+
+  img:hover {
+    scale: 1.01;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+<h1>
+  
+  
+    CPU2224: A Single Cycle 16 bit CPU
+  
+  
+</h1>
+    
+<p class="subtitle mb-3 mt-0"></p>
+<div class="mb-2">
+  
+  <span class="badge rounded-pill text-bg-info mx-1">MIPS</span>
+  
+  <span class="badge rounded-pill text-bg-info mx-1">RISC-V</span>
+  
+  <span class="badge rounded-pill text-bg-info mx-1">Logism</span>
+  
+</div>
+
+<p>CPU2224 is a virtual CPU based on a 16-bit Harvard architecture with some similarities to MIPS. The logical circuit for the CPU is created using Logism<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>, a tool for designing and simulating digital logic circuits. The virtual hardware supports loading programs written in MIPS-like assembly from a virtual ROM drive and can output to a virtual LED display Digits.<span class="endmark"></span></p>
+<h2 id="supported-features">
+  
+  
+    
+  
+  
+    Supported Features <a href="#supported-features" class="anchor-link">¶</a>
+  
+  
+ <a href="#supported-features" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+    
+<ul>
+  <li>Halting (<code class="language-plaintext highlighter-rouge">hlt</code>) and indicating on the dedicated LED display</li>
+  <li>Basic Arithmetic using a custom ALU
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">add</code>, <code class="language-plaintext highlighter-rouge">sub</code>, <code class="language-plaintext highlighter-rouge">and</code>, <code class="language-plaintext highlighter-rouge">or</code>, <code class="language-plaintext highlighter-rouge">xor</code>, <code class="language-plaintext highlighter-rouge">not</code>, <code class="language-plaintext highlighter-rouge">shl</code>, <code class="language-plaintext highlighter-rouge">shr</code>
+</li>
+    </ul>
+  </li>
+  <li>Loading immediates <code class="language-plaintext highlighter-rouge">li</code> , <code class="language-plaintext highlighter-rouge">lis</code> , <code class="language-plaintext highlighter-rouge">lui</code>
+</li>
+  <li>Displaying to display using <code class="language-plaintext highlighter-rouge">put</code>
+</li>
+  <li>Loading and Storing from Memory using <code class="language-plaintext highlighter-rouge">ld</code> and <code class="language-plaintext highlighter-rouge">st</code>
+</li>
+  <li>Using the ALU with immediates
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">adi</code>, <code class="language-plaintext highlighter-rouge">sbi</code>, <code class="language-plaintext highlighter-rouge">ani</code>, <code class="language-plaintext highlighter-rouge">ori</code>, <code class="language-plaintext highlighter-rouge">xri</code>, <code class="language-plaintext highlighter-rouge">sli</code>, <code class="language-plaintext highlighter-rouge">sri</code>
+</li>
+    </ul>
+  </li>
+  <li>Jumps - Unconditional and Conditional (Including Function Calls)
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">j</code>, <code class="language-plaintext highlighter-rouge">jr</code>, <code class="language-plaintext highlighter-rouge">blt</code>, <code class="language-plaintext highlighter-rouge">bge</code>, <code class="language-plaintext highlighter-rouge">beq</code>, <code class="language-plaintext highlighter-rouge">bne</code>, and <code class="language-plaintext highlighter-rouge">jal</code>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<p><span class="endmark"></span></p>
+
+<p class="text-center"><strong>CPU Design Available Upon Request</strong></p>
+<hr>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="http://www.cburch.com/logisim/">http://www.cburch.com/logisim/</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+		</div>
+	</div>
+</div>
+  <div class="container">
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class="col-md-4 d-flex align-items-center">
+			<a class="no-tufte-underline text-md-end fw-bolder autography h3 mx-2" href="/~shk148/">Shinwoo
+				Kim</a>
+			<span class="mb-3 mb-md-0 text-body-secondary"> © 2024
+				<a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>
+			</span>
+		</div>
+		<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+			<li class="ms-3"><a class="no-tufte-underline" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a></li>
+			<li class="ms-3"><a class="no-tufte-underline" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a></li>
+			<li class="ms-3">
+<a class="no-tufte-underline" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+			</li>
+		</ul>
+	</footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+<script data-name="BMC-Widget" data-cfasync="false" src="/~shk148/assets/js/coffee.js" data-id="shinwookim" data-description="Support me on Buy me a coffee!" data-message="" data-color="#fff" data-position="Right" data-x_margin="12" data-y_margin="12"></script>
+</body>
+
+</html>
