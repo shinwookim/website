@@ -5,6 +5,7 @@
         0 -0.03em #151515, 0.06em 0 #151515, -0.06em 0 #151515, 0.09em 0 #151515,
         -0.09em 0 #151515, 0.12em 0 #151515, -0.12em 0 #151515, 0.15em 0 #151515,
         -0.15em 0 #151515;
+    --my-color: #e19a87;
 }
 
 .light {
@@ -14,6 +15,7 @@
         0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8,
         -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8,
         -0.15em 0 #fffff8;
+    --my-color: #a00000;
 }
 
 .dark .toggle-theme::after {
@@ -39,10 +41,7 @@ body {
     background-color: var(--background-color);
 }
 
-.light a:hover {
-    color: #a00000;
-}
-
-.dark a:hover {
-    color: #e19a87;
+a:hover,
+.btn:hover {
+    color: var(--my-color);
 }
