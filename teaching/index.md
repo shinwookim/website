@@ -5,19 +5,14 @@ published: true
 hide_title: true
 ---
 
-<figure class="figure" >
+<figure class="figure w-100">
   <img src="https://www.cs.pitt.edu/sites/default/files/home-display-img/img_0760.jpg"
       class="figure-img rounded w-100" alt="Picture of Sennott Square">
-
   <figcaption class="figure-caption text-end" >Sennott Square, Home of the CS Department @ Pitt</figcaption>
 </figure>
 
-## Current Courses
-- <i class="pitt-icon"></i> **CS0449:** Introduction to System Software<sup class="footnote">P</sup>
 
----
-
-<div class="text-center">
+<div class="text-center mb-5">
   <h3 id="OH" class="mx-auto">Office Hours Schedule & Location</h3>
   <a  href="#"
       data-bs-toggle="collapse"
@@ -31,6 +26,7 @@ hide_title: true
     </div>
   </div>
 </div>
+
 
 |               Term               | Course                                                                                                                                                                                           | Role                                                 |
 | :------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
@@ -46,7 +42,6 @@ hide_title: true
 
 <style>
 li {list-style: none;}
-
 table tr td, table tr th{
   background-color: rgba(0,0,0, 0) !important;
   a {
