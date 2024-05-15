@@ -31,6 +31,8 @@ timezone: America/New_York
 excerpt_separator: <!--more-->
 include:
   - _pages
+exclude:
+  - styles
 collections:
   projects:
     output: true

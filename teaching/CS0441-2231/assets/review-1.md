@@ -9,7 +9,7 @@ subtitle: "Select problems from the text (&copy; McGraw Hill)"
 
 # Problem 1
 
-Let $p$ be the proposition “_I will do every exercise in the textbook_” and $q$ be the proposition “_I will get an A in CS0441_”.
+Let $p$ be the proposition “_I will do every exercise in the textbook_” and $q$ be the proposition “_I will get an A in CS0441_.”
 
 Express each of these as a combination of $p$ and $q$.
 
@@ -21,7 +21,7 @@ c) Either I will not get an A in CS0441 or I will not do every exercise in the t
 
 # Problem 2
 
-Express your answer in terms of $e$: “_You can edit a protected Wikipedia entry_” and $a$: “_You are an administrator_”.
+Express your answer in terms of $e$: “_You can edit a protected Wikipedia entry_” and $a$: “_You are an administrator_.”
 You cannot edit a protected Wikipedia entry unless you are an administrator.
 
 # Problem 3
