@@ -1,5 +1,6 @@
 ---
 layout: post
+tufte: true
 date: 2022-10-07
 title: "More Practice on Proofs"
 subtitle: "Select problems from the text (&copy; McGraw Hill)"

@@ -1,5 +1,6 @@
 ---
 layout: post
+tufte: true
 title: "Introduction to Systems Software"
 subtitle: "CS 0449. Fall 2023 (Term 2241)"
 ---
@@ -46,33 +47,9 @@ You may attend **only** the recitation section you are signed up for unless you 
 |          11/03/2023          | Project 3 Discussion               | [Slides](09-bomb.pdf)                                                                                                    |
 |          11/10/2023          | Process Lab                        | [Slides](10-proc.pdf)                                                                                                    |
 |          11/17/2023          | Project 4 Discussion               | [Slides](11-shell.pdf)                                                                                                   |
-|          12/01/2023          | Synchronization & Concurrency      | [Slides](12-threads.pdf)                                                                                                                         |
+|          12/01/2023          | Synchronization & Concurrency      | [Slides](12-threads.pdf)                                                                                                 |
+|          12/08/2023          | Final Exam Review                  | [Course Recommendations](more-systems.html)                                                                              |
 {: .table .table-hover}
-
-
-<!-- ## Classroom Technologies
-Throughout the semester, we will be using the following resources and technologies:
-
-### ***Discord***
-[Discord](https://discord.com/) is an instant-messaging platform (similar to Skype, Microsoft Teams, and Slack) we will be using for announcements and communication. Here, you can ask your questions, get help on assignments, or socialize with your classmates.{%sidenote "faster-help" "If you ask a question on Discord, you may well get a response from one of your classmates faster than if you were to email the teaching staff."%}
-
-The link to join the server will be posted on the [Canvas](canvas.pitt.edu) page within the first few days of term's start. You should join promptly as the link automatically expires after fourteen days.
-
-Note that there are some guidelines about asking for help through Discord. Please review the
-academic integrity section on the syllabus carefully.
-
-### ***Poll Everywhere***
-{%marginfigure "PEV" "https://www.nova.edu/lec/This-Week-in-the-LEC/newsletter/images/survey.png" "Example of a [Poll Everywhere](https://pollev.com/home) Question"%}[Poll Everywhere](https://pollev.com/home) is a platform that we will be using for for administering in-class practice questions. You may create an account if you wish, but this is not required. During recitation, you can log in on a computer, on your phone.
-
-PE questions are not counted for a grade, meaning you can answer them freely without worrying about getting the question wrong.
-
-### ***Gradescope***
-[GradeScope](https://www.gradescope.com/) is a tool designed to streamline and standardize assignment grading. You should create an account and link it to your Canvas classroom.{%sidenote "canvas-gs" "You can do this by clicking on the `GradeScope` link in Canvas' sidebar" %}. This is where you will submit all the work (electronically) for this course; you will find deadlines for assignments and grade on there as well.
-
-Often, an autograder will be provided on GradeScope which gives you access to (almost) instantaneous feedback. This means you are able to make changes to your code and improve your score if you do not do well the first (or the first few) time provided there is time left before the deadline{%sidenote "add-test" "NOTE. We reserve the right to add or modify any additional test cases *after* the deadline has passed." %}.
-![GradeScope Autograder Screenshot](https://cdn.gradescope.com/assets/help_center/programming-assignment-student-autograder-results-ececd41778a14c19354e3936708610dc2d67ae7c7da1937dc43f7d4cf5472e2f.png)
-
-As such, you should start your projects and labs early! -->
 
 <style>
   table tr td, table tr th{

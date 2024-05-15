@@ -3,6 +3,7 @@ layout: post
 title: "Recommended Books on the C Programming Language"
 subtitle: "CS 0449: Introduction to Systems Software — Extra Resources"
 backlink: ./
+tufte: true
 
 ---
 {%marginfigure "K&R" "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/The_C_Programming_Language%2C_First_Edition_Cover.svg/220px-The_C_Programming_Language%2C_First_Edition_Cover.svg.png" "**The C Programming Language**<br/>Brian Kernighan & Dennis Ritchie"%}

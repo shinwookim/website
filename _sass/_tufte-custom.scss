@@ -5,31 +5,12 @@ html {
   font-size: 13.5px;
 }
 
-.dark {
-  --background-color: #151515;
-  --font-color: #ddd;
-  --shadow-color: 0.03em 0 #151515, -0.03em 0 #151515, 0 0.03em #151515,
-    0 -0.03em #151515, 0.06em 0 #151515, -0.06em 0 #151515, 0.09em 0 #151515,
-    -0.09em 0 #151515, 0.12em 0 #151515, -0.12em 0 #151515, 0.15em 0 #151515,
-    -0.15em 0 #151515;
-}
-
-.light {
-  --background-color: #fffff8;
-  --font-color: #111;
-  --shadow-color: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8,
-    0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8,
-    -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8,
-    -0.15em 0 #fffff8;
-}
-
 body {
   width: 87.5%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 12.5%;
   font-family: $body-font;
-  background-color: var(--background-color);
   color: var(--font-color);
   max-width: 100%;
   counter-reset: sidenote-counter;
@@ -126,6 +107,12 @@ p {
   vertical-align: baseline;
 }
 
+.w-55>p,
+.w-55>ul>li,
+.w-55>ol>li {
+  width: 100%;
+}
+
 div.epigraph {
   margin: 5em 0;
 }
@@ -167,7 +154,8 @@ blockquote footer {
 
 section>p,
 section>footer,
-section>table {
+section>table,
+.w-55 {
   width: 55%;
 }
 
@@ -218,47 +206,7 @@ figure.fullwidth figcaption {
 
 /* Links: replicate underline that clears descenders */
 
-a:link,
-a:visited {
-  color: inherit;
-}
 
-.no-tufte-underline:link {
-  background: unset;
-  text-shadow: unset;
-}
-
-a:link,
-.tufte-underline,
-.hover-tufte-underline:hover {
-  text-decoration: none;
-  background: -webkit-linear-gradient(#fffff8, #fffff8),
-    -webkit-linear-gradient(#fffff8, #fffff8),
-    -webkit-linear-gradient(currentColor, currentColor);
-  background: linear-gradient(#fffff8, #fffff8),
-    linear-gradient(#fffff8, #fffff8),
-    linear-gradient(currentColor, currentColor);
-  -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  text-shadow: var(--shadow-color);
-  background-position: 0% 93%, 100% 93%, 0% 93%;
-  transition: color 0.5s ease;
-}
-
-.light a:hover {
-  color: $contrast-color;
-}
-
-a:link::selection,
-a:link::-moz-selection {
-  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe,
-    0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe,
-    -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe,
-    -0.15em 0 #b4d5fe;
-  background: #b4d5fe;
-}
 
 /* Sidenotes, margin notes, figures, captions */
 img {
@@ -422,7 +370,8 @@ label.margin-toggle:not(.sidenote-number) {
   hr,
   section>p,
   section>footer,
-  section>table {
+  section>table,
+  .w-55 {
     width: 100%;
   }
 
@@ -495,6 +444,19 @@ label.margin-toggle:not(.sidenote-number) {
 
   img {
     width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+
+  table {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 761px) {
+  table {
+    width: 55% !important;
   }
 }
 
@@ -936,4 +898,9 @@ blockquote.fancy p {
 
 pre {
   margin-bottom: 0;
+}
+
+ul li li,
+ol li li {
+  width: 100%;
 }

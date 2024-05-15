@@ -1,5 +1,6 @@
 ---
 layout: post
+tufte: true
 title: "Where to Go From Here"
 subtitle: "Pitt Courses to Take To Learn More About How Computer Systems Work"
 backlink: ./
