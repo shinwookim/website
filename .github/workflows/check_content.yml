@@ -23,7 +23,7 @@ jobs:
           args: --verbose --max-concurrency 1 --retry-wait-time 30 --exclude-mail './_site/**/*.html' --exclude-path './_site/teaching/CS0441-2231' --exclude-path './_site/teaching/CS0441-2234' --exclude-path './_site/teaching/CS0449-2234' --exclude-path './_site/teaching/CS0449-2241'
       - name: Create Issue From File
         if: env.lychee_exit_code != 0
-        uses: peter-evans/create-issue-from-file@v4
+        uses: peter-evans/create-issue-from-file@v5
         with:
           title: Link Checker Report
           content-filepath: ./lychee/out.md
