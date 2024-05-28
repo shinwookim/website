@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Introduction to Systems Software | Shinwoo Kim</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Introduction to Systems Software">
+<meta name="author" content="Shinwoo Kim">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.">
+<meta property="og:description" content="Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0449-2241/">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0449-2241/">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="twitter:title" content="Introduction to Systems Software">
+<meta name="twitter:site" content="@_shinwookim">
+<meta name="twitter:creator" content="@Shinwoo Kim">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Shinwoo Kim"},"description":"Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.","headline":"Introduction to Systems Software","image":"https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg","url":"https://sites.pitt.edu/~shk148/teaching/CS0449-2241/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- End Metadata -->
+
+  <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/tufte.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/~shk148/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="/~shk148/assets/favicon/favicon.ico">
+<link rel="manifest" href="/~shk148/assets/favicon/manifest.json">
+
+<!-- End Styles-->
+
+<!-- <link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css" /> -->
+</head>
+
+<body>
+  <button type="button" class="toggle-theme" id="color-selecter"></button>
+  <section>
+  <p class="mb-0">
+    
+    <a href=".."><em>← Back to Home</em></a>
+    
+  </p>
+</section>
+<article style="box-sizing: inherit;">
+  <h1 class="title">Introduction to Systems Software</h1>
+  <p class="subtitle">CS 0449. Fall 2023 (Term 2241)</p>
+  <p class="byline">
+     
+  </p>
+  <p><em>Systems</em> is a branch of computer science that focuses on the design, implementation, and analysis of complex software, hardware, and their interaction. In this course, we will explore the issues of programming a real computer system by examining the abstractions, interfaces, and design decisions that influence the way that software runs.<label for="mf-mem" class="margin-toggle">†</label><input type="checkbox" id="mf-mem" class="margin-toggle"><span class="marginnote"><img class="fullwidth" src="https://imgs.xkcd.com/comics/pointers.png"><br>Pointers, <a href="https://xkcd.com/138/">XKCD 138</a></span></p>
+<h2 id="about-this-page">
+  
+  
+    About this Page <a href="#about-this-page" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+
+<p>This page will provide information regarding the things I go over in recitation. <strong>Check back for updates regularly, especially if you miss a recitation</strong>. For other course materials including lecture slides and lab/project handouts, please see the <a href="https://cs0449.gitlab.io/fa2023/" target="\_blank"><strong>course website</strong></a>.</p>
+
+<!-- ## Course Description
+The purpose of this course is to provide a solid understanding of how computer systems execute programs, store information, and communicate. We will explore systems-level issues from a programmer’s view by examining the abstractions, interfaces, and design decisions that influence the way that software runs on the computer system.
+
+The perspective we will take is one of the life cycle of a program from implementation to execution. The act of compiling and running a program, a sequence of events we often take for granted, is a complex interaction of many different components that work together to manage the computer’s resources and perform the desired task. -->
+<h2 id="contact-information">
+  
+  
+    Contact Information <a href="#contact-information" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+
+<p><strong>Shinwoo Kim</strong><br>
+E-mail: <a href="mailto:shiwookim@pitt.edu"><code class="language-plaintext highlighter-rouge">shinwookim@pitt.edu</code></a><label for="office hours" class="margin-toggle sidenote-number"></label><input type="checkbox" id="office hours" class="margin-toggle" checked><span class="sidenote">Happy to meet by appointment. Just send me an E-mail! </span><br>
+Home Page: <a href="https://pitt.edu/~shk148/"><code class="language-plaintext highlighter-rouge">https://pitt.edu/~shk148/</code></a><br>
+Office: <a href="https://pitt.edu/~shk148/teaching/#OH">Fall 2023 Office Hours</a><label for="tutors" class="margin-toggle sidenote-number"></label><input type="checkbox" id="tutors" class="margin-toggle" checked><span class="sidenote">Extra help is available via the CS department’s <em>Peer Tutoring</em> program. Sign up for an appointment on <a href="https://pitt.guide.eab.com/"><strong>Navigate</strong></a>. </span></p>
+<h2 id="recitations">
+  
+  
+    Recitations <a href="#recitations" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+
+<p>My recitation sections accompany professor <strong>Luis Oliveira</strong>’s lecture <strong>section 1135</strong> which meets Tuesdays and Thursdays 2:30–3:45pm in the 1501 Wesley W. Posvar Hall. We will meet <strong>every Friday at 4:00 PM in <a href="https://map.concept3d.com/?id=1315#!m/386791">501 Information Science Building</a></strong> unless announced otherwise.</p>
+
+<p>You may attend <strong>only</strong> the recitation section you are signed up for unless you have received permission from the course instructor.</p>
+<h2 id="handouts">
+  
+  
+    Schedule &amp; Handouts <a href="#handouts" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<p><label for="Additional-Resources" class="margin-toggle"></label></p>
+
+<p><label for="extra-resources" class="margin-toggle"> †</label><input type="checkbox" id="extra-resources" class="margin-toggle" checked><span class="marginnote"><strong>Additional Resources</strong><br><a href="books.html">Recommended Books/Resources on <em>Computer Systems</em></a><br><a href="c-books.html">Recommended Books/Resources on <em>C Programming</em></a><br><a href="CHistory.html">The Development of the C Language</a><br><a href="more-systems.html">Pitt Course Recommendations</a><br><br><a href="https://www.youtube.com/watch?v=QXjU9qTsYCc"><em>How do computers read code?</em> (Video)</a><br><a href="https://youtu.be/UQVd9mZr-jI"><em>Slab Allocators</em> (Video)</a><br><a href="https://youtu.be/de2Hsvxaf8M"><em>The C Programming Language: Brian Kernighan</em> (Video)</a><br><a href="https://youtu.be/tc4ROCJYbm0"><em>The Unix Operating System</em> (Video)</a><br><br><a href="https://cheatography.com/davechild/cheat-sheets/linux-command-line/"><em>Command Line Help</em> (Web)</a><br><a href="https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf"><em>GDB Cheatsheet</em> (PDF)</a><br><a href="https://vim-adventures.com/"><em>Vim-Adventure: A New Way To Learn Vim</em> (Web)</a></span></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th style="text-align: center">Date</th>
+      <th>Topic</th>
+      <th>Handouts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">09/01/2023</td>
+      <td>Introduction + Lab0</td>
+      <td>
+<a href="01-intro.pdf">Slides</a> <br> <a href="https://cs0449.gitlab.io/fa2023/labs/00/">Handout</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">09/08/2023</td>
+      <td>Bitwise Ops, I/O, Lab 1</td>
+      <td>
+<a href="02-cprog.pdf">Slides</a> <br> <a href="https://cs0449.gitlab.io/fa2023/labs/01/">Handout</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">09/15/2023</td>
+      <td>Intermediate C Programming + Lab 2</td>
+      <td>
+<a href="03-adv-cprog.pdf">Slides</a> <br> <a href="https://cs0449.gitlab.io/fa2023/labs/02/">Handout</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">09/22/2023</td>
+      <td>Multi-file development</td>
+      <td>
+<a href="04-makefiles.pdf">Slides</a> <br> <a href="https://cs0449.gitlab.io/fa2023/resources/worksheets/makefiles/makefiles.pdf">Tutorial</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">09/29/2023</td>
+      <td>Pointer Lab + Project 1 Discussion</td>
+      <td>
+<a href="05-pointers.pdf">Slides</a> <br> <a href="https://cs0449.gitlab.io/fa2023/labs/03/">Handout</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">10/06/2023<br><strong>Fall Break</strong>
+</td>
+      <td>Queue Lab</td>
+      <td>
+<a href="06-queue.pdf">Slides</a> <br> <a href="https://cs0449.gitlab.io/fa2023/labs/04/">Handout</a>
+</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">10/13/2023</td>
+      <td>Mid-Term Review</td>
+      <td><a href="https://shinwookim.github.io/CS0449-StudyGuide/">Study Guide</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">10/20/2023</td>
+      <td>Assembly</td>
+      <td><a href="07-asm.pdf">Slides</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">10/27/2023</td>
+      <td>Valgrind and Memory Leaks</td>
+      <td><a href="valgrind-lab.html">Handout</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">11/03/2023</td>
+      <td>Project 3 Discussion</td>
+      <td><a href="09-bomb.pdf">Slides</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">11/10/2023</td>
+      <td>Process Lab</td>
+      <td><a href="10-proc.pdf">Slides</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">11/17/2023</td>
+      <td>Project 4 Discussion</td>
+      <td><a href="11-shell.pdf">Slides</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">12/01/2023</td>
+      <td>Synchronization &amp; Concurrency</td>
+      <td><a href="12-threads.pdf">Slides</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">12/08/2023</td>
+      <td>Final Exam Review</td>
+      <td><a href="more-systems.html">Course Recommendations</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+  table tr td, table tr th{
+    background-color: rgba(0,0,0, 0) !important;
+  }
+  td a {
+    text-shadow: none !important;
+  }
+</style>
+
+</article>
+  <div class="container">
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class=" d-flex align-middle">
+			<a class="no-tufte-underline text-md-end fw-bolder autography h3 mx-2" href="/~shk148/">Shinwoo
+				Kim</a>
+			<span class="mb-3 mb-md-0 text-body-secondary"> © 2020 - 2024,
+				<a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>. All Rights Reserved.
+			</span>
+
+		</div>
+		<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+			<li class="ms-3"><a class="no-tufte-underline" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a></li>
+			<li class="ms-3"><a class="no-tufte-underline" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a></li>
+			<li class="ms-3">
+<a class="no-tufte-underline" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+			</li>
+		</ul>
+	</footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+<script data-name="BMC-Widget" data-cfasync="false" src="/~shk148/assets/js/coffee.js" data-id="shinwookim" data-description="Support me on Buy me a coffee!" data-message="" data-color="#fff" data-position="Right" data-x_margin="12" data-y_margin="12"></script>
+<script>
+  // Enable Bootstrap Tooltips
+  // See: https://getbootstrap.com/docs/5.3/components/tooltips/
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+</script>
+</body>
+
+</html>

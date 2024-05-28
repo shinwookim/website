@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Solutions to Practice Problems from week 9 | Shinwoo Kim</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Solutions to Practice Problems from week 9">
+<meta name="author" content="Shinwoo Kim">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.">
+<meta property="og:description" content="Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0449-2234/rec09-soln.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0449-2234/rec09-soln.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="twitter:title" content="Solutions to Practice Problems from week 9">
+<meta name="twitter:site" content="@_shinwookim">
+<meta name="twitter:creator" content="@Shinwoo Kim">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Shinwoo Kim"},"description":"Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.","headline":"Solutions to Practice Problems from week 9","image":"https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg","url":"https://sites.pitt.edu/~shk148/teaching/CS0449-2234/rec09-soln.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- End Metadata -->
+
+  <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/tufte.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/~shk148/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="/~shk148/assets/favicon/favicon.ico">
+<link rel="manifest" href="/~shk148/assets/favicon/manifest.json">
+
+<!-- End Styles-->
+
+<!-- <link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css" /> -->
+</head>
+
+<body>
+  <button type="button" class="toggle-theme" id="color-selecter"></button>
+  <section>
+  <p class="mb-0">
+    
+    <a href=".."><em>← Back to Home</em></a>
+    
+  </p>
+</section>
+<article style="box-sizing: inherit;">
+  <h1 class="title">Solutions to Practice Problems from week 9</h1>
+<p class="byline">
+     
+  </p>
+  <style>
+    .mermaid{
+        width: 160%;
+        max-width: 160%;
+    }
+</style>
+<h2 id="question-1-dynamic-memory">
+  
+  
+    Question 1: Dynamic Memory <a href="#question-1-dynamic-memory" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<p>We use dynamic memory because:</p>
+<ul>
+  <li>
+<strong>A.</strong> The heap is significantly faster than the stack</li>
+  <li>
+<strong>B.</strong> Storing data on the stack requires knowing the size of that data at compile time</li>
+  <li>
+<strong>C.</strong> The stack is prone to corruption from buffer overflows</li>
+  <li>
+<strong>D.</strong> None of the above</li>
+</ul>
+
+<div class="row">
+<div class="col-3">
+<h3 id="student-responses">
+  
+  
+    Student Responses <a href="#student-responses" class="anchor-link">¶</a>
+  
+  
+</h3>
+    
+    <ul>
+      <li>A : 18%</li>
+      <li>B : 53%</li>
+      <li>C : 24%</li>
+      <li>D : 6%</li>
+    </ul>
+  </div>
+<div class="col-9">
+<h3 id="solutions">
+  
+  
+    Solutions <a href="#solutions" class="anchor-link">¶</a>
+  
+  
+</h3>
+    
+    <ul>
+      <li>A: Recall that to allocate some space in the stack, all that was needed was to move the stack pointer (<code class="language-plaintext highlighter-rouge">%rsp</code>) using a simple <code class="language-plaintext highlighter-rouge">sub</code> instruction. For dynamic memory allocation (such as <code class="language-plaintext highlighter-rouge">malloc()</code>), we needed a more elaborate and complicated scheme such as the ones you implemented in <em>project 2</em>. Hence, stack allocation (or static memory allocation) is significantly faster than the heap (dynamic memory allocation) and thus this answer is incorrect.</li>
+      <li>
+<strong>B: This is the correct answer.</strong> One of our motivations for using dynamic memory allocation was that we did not know ahead of time how much memory our program would need. Indeed, for the queue lab, since we didn’t know how many ‘<em>nodes</em>’ would be added to our queue, we needed to call <code class="language-plaintext highlighter-rouge">malloc()</code> as many times as was needed.</li>
+      <li>C: Although the stack is prone to corruption (as you saw in <em>project 3</em>), this is not why we use dynamic memory allocation. Much of the security issues with stack allocation can be overcome by methods such as <em>stack canaries</em> or <em>Address space layout randomization</em>.</li>
+      <li>D: This is incorrect since <strong>B</strong> is the correct answer.</li>
+    </ul>
+  </div>
+</div>
+<hr>
+<h2 id="question-2-the-wait-system-call">
+  
+  
+    Question 2: The <code class="language-plaintext highlighter-rouge">wait()</code> System Call <a href="#question-2-the-wait-system-call" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<p>Do parent processes wait for grandchildren processes?</p>
+<div class="row">
+<div class="col-3">
+<h3 id="student-responses-1">
+  
+  
+    Student Responses <a href="#student-responses-1" class="anchor-link">¶</a>
+  
+  
+</h3>
+    
+    <ul>
+      <li>True : 6%</li>
+      <li>False : 94%</li>
+    </ul>
+  </div>
+<div class="col-9">
+<h3 id="solutions-1">
+  
+  
+    Solutions <a href="#solutions-1" class="anchor-link">¶</a>
+  
+  
+</h3>
+    
+    <p>If the parent process forks, and the child process forks again, the original parent process, on <code class="language-plaintext highlighter-rouge">wait()</code> will not wait for the grandchildren process. Hence, the solution is <strong>false</strong>.</p>
+  </div>
+</div>
+<hr>
+<h2 id="question-3-tracing-through-forks">
+  
+  
+    Question 3: Tracing through <code class="language-plaintext highlighter-rouge">fork()</code>s <a href="#question-3-tracing-through-forks" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<p>Given the following code, is the following sequence of output possible?</p>
+<div class="row">
+<div class="col">
+    <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">nestedfork</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"L0</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">fork</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"L1</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">fork</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"L2</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Bye</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </div>
+<div class="col">
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>Sequence 1:
+L0
+L1
+Bye
+Bye
+Bye
+L2
+</code></pre></div>    </div>
+  </div>
+</div>
+
+<div class="row">
+<div class="col-3">
+<h3 id="student-responses-2">
+  
+  
+    Student Responses <a href="#student-responses-2" class="anchor-link">¶</a>
+  
+  
+</h3>
+    
+    <ul>
+      <li>True : 6%</li>
+      <li>False : 94%</li>
+    </ul>
+  </div>
+<div class="col-9">
+<h3 id="solutions-2">
+  
+  
+    Solutions <a href="#solutions-2" class="anchor-link">¶</a>
+  
+  
+</h3>
+    
+    <p>Drawing a process graphs to model forks, tells us that the output <code class="language-plaintext highlighter-rouge">L2</code> cannot come after three <code class="language-plaintext highlighter-rouge">Bye</code>s. Hence, the answer is <strong>false</strong>.
+<img src="rec09-proc_graph.png" alt="Process Graph"></p>
+  </div>
+</div>
+
+</article>
+  <div class="container">
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class=" d-flex align-middle">
+			<a class="no-tufte-underline text-md-end fw-bolder autography h3 mx-2" href="/~shk148/">Shinwoo
+				Kim</a>
+			<span class="mb-3 mb-md-0 text-body-secondary"> © 2020 - 2024,
+				<a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>. All Rights Reserved.
+			</span>
+
+		</div>
+		<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+			<li class="ms-3"><a class="no-tufte-underline" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a></li>
+			<li class="ms-3"><a class="no-tufte-underline" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a></li>
+			<li class="ms-3">
+<a class="no-tufte-underline" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+			</li>
+		</ul>
+	</footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+<script data-name="BMC-Widget" data-cfasync="false" src="/~shk148/assets/js/coffee.js" data-id="shinwookim" data-description="Support me on Buy me a coffee!" data-message="" data-color="#fff" data-position="Right" data-x_margin="12" data-y_margin="12"></script>
+<script>
+  // Enable Bootstrap Tooltips
+  // See: https://getbootstrap.com/docs/5.3/components/tooltips/
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+</script>
+</body>
+
+</html>

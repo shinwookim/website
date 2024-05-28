@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>GNU Make Cheatsheet | Shinwoo Kim</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="GNU Make Cheatsheet">
+<meta name="author" content="Shinwoo Kim">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.">
+<meta property="og:description" content="Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0449-2234/Makefiles.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0449-2234/Makefiles.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="twitter:title" content="GNU Make Cheatsheet">
+<meta name="twitter:site" content="@_shinwookim">
+<meta name="twitter:creator" content="@Shinwoo Kim">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Shinwoo Kim"},"description":"Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.","headline":"GNU Make Cheatsheet","image":"https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg","url":"https://sites.pitt.edu/~shk148/teaching/CS0449-2234/Makefiles.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- End Metadata -->
+
+  <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/~shk148/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="/~shk148/assets/favicon/favicon.ico">
+<link rel="manifest" href="/~shk148/assets/favicon/manifest.json">
+
+<!-- End Styles-->
+
+<!-- <link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css" /> -->
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <button type="button" class="toggle-theme" id="color-selecter"></button>
+  <section>
+  <p class="mb-0">
+    
+    <a href=".."><em>← Back to Home</em></a>
+    
+  </p>
+</section>
+<article style="box-sizing: inherit;">
+  <h1 class="title">GNU Make Cheatsheet</h1>
+<p class="byline">
+     
+  </p>
+  <p>Based on <a href="https://www.gnu.org/software/make/manual/html_node/Quick-Reference.html">https://www.gnu.org/software/make/manual/html_node/Quick-Reference.html</a></p>
+<h2 id="directives">
+  
+  
+    Directives <a href="#directives" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Directive</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">define variable</code> <br> <code class="language-plaintext highlighter-rouge">define variable =</code> <br> <code class="language-plaintext highlighter-rouge">define variable :=</code> <br> <code class="language-plaintext highlighter-rouge">define variable ::=</code> <br> <code class="language-plaintext highlighter-rouge">define variable +=</code> <br> <code class="language-plaintext highlighter-rouge">define variable ?=</code> <br> <code class="language-plaintext highlighter-rouge">endef</code>
+</td>
+      <td style="text-align: left">Define multi-line variables.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">undefine variable</code></td>
+      <td style="text-align: left">Undefining variables.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">ifdef variable</code> <br> <code class="language-plaintext highlighter-rouge">ifndef variable</code> <br> <code class="language-plaintext highlighter-rouge">ifeq (a,b)</code> <br> <code class="language-plaintext highlighter-rouge">ifeq "a" "b"</code> <br> <code class="language-plaintext highlighter-rouge">ifeq 'a' 'b'</code> <br> <code class="language-plaintext highlighter-rouge">ifneq (a,b)</code> <br> <code class="language-plaintext highlighter-rouge">ifneq "a" "b"</code> <br> <code class="language-plaintext highlighter-rouge">ifneq 'a' 'b'</code> <br> <code class="language-plaintext highlighter-rouge">else</code> <br> <code class="language-plaintext highlighter-rouge">endif</code>
+</td>
+      <td style="text-align: left">Conditionally evaluate part of the makefile.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">include file</code> <br> <code class="language-plaintext highlighter-rouge">-include file</code> <br> <code class="language-plaintext highlighter-rouge">sinclude file</code>
+</td>
+      <td style="text-align: left">Include another makefile.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">override variable-assignment</code></td>
+      <td style="text-align: left">Define a variable, overriding any previous definition, even one from the command line.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">export</code></td>
+      <td style="text-align: left">Tell make to export all variables to child processes by default.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">export variable</code> <br> <code class="language-plaintext highlighter-rouge">export variable-assignment</code> <br> <code class="language-plaintext highlighter-rouge">unexport variable</code>
+</td>
+      <td style="text-align: left">Tell make whether or not to export a particular variable to child processes.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">private variable-assignment</code></td>
+      <td style="text-align: left">Do not allow this variable assignment to be inherited by prerequisites.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">vpath pattern path</code></td>
+      <td style="text-align: left">Specify a search path for files matching a ‘%’ pattern.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">vpath pattern</code></td>
+      <td style="text-align: left">Remove all search paths previously specified for pattern.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">vpath</code></td>
+      <td style="text-align: left">Remove all search paths previously specified in any vpath directive.</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="built-in-functions">
+  
+  
+    Built-in Functions <a href="#built-in-functions" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Function</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(subst from,to,text)</code></td>
+      <td style="text-align: left">Replace <code class="language-plaintext highlighter-rouge">from</code> with <code class="language-plaintext highlighter-rouge">to</code> in <code class="language-plaintext highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(patsubst pattern,replacement,text)</code></td>
+      <td style="text-align: left">Replace words matching <code class="language-plaintext highlighter-rouge">pattern</code> with <code class="language-plaintext highlighter-rouge">replacement</code> in <code class="language-plaintext highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(strip string)</code></td>
+      <td style="text-align: left">Remove excess whitespace characters from <code class="language-plaintext highlighter-rouge">string</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(findstring find,text)</code></td>
+      <td style="text-align: left">Locate find in <code class="language-plaintext highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(filter pattern…,text)</code></td>
+      <td style="text-align: left">Select words in <code class="language-plaintext highlighter-rouge">text</code> that match one of the <code class="language-plaintext highlighter-rouge">pattern</code> words.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(filter-out pattern…,text)</code></td>
+      <td style="text-align: left">Select words in <code class="language-plaintext highlighter-rouge">text</code> that do not match any of the <code class="language-plaintext highlighter-rouge">pattern</code> words.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(sort list)</code></td>
+      <td style="text-align: left">Sort the words in <code class="language-plaintext highlighter-rouge">list</code> lexicographically, removing duplicates.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(word n,text)</code></td>
+      <td style="text-align: left">Extract the <code class="language-plaintext highlighter-rouge">n</code>-th word (one-origin) of <code class="language-plaintext highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(words text)</code></td>
+      <td style="text-align: left">Count the number of words in <code class="language-plaintext highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(wordlist s,e,text)</code></td>
+      <td style="text-align: left">Returns the list of words in <code class="language-plaintext highlighter-rouge">text</code> from <code class="language-plaintext highlighter-rouge">s</code> to <code class="language-plaintext highlighter-rouge">e</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(firstword names…)</code></td>
+      <td style="text-align: left">Extract the first word of <code class="language-plaintext highlighter-rouge">names</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(lastword names…)</code></td>
+      <td style="text-align: left">Extract the last word of <code class="language-plaintext highlighter-rouge">names</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(dir names…)</code></td>
+      <td style="text-align: left">Extract the directory part of each file name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(notdir names…)</code></td>
+      <td style="text-align: left">Extract the non-directory part of each file name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(suffix names…)</code></td>
+      <td style="text-align: left">Extract the suffix (the last ‘.’ and following characters) of each file name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(basename names…)</code></td>
+      <td style="text-align: left">Extract the base name (name without suffix) of each file name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(addsuffix suffix,names…)</code></td>
+      <td style="text-align: left">Append <code class="language-plaintext highlighter-rouge">suffix</code> to each word in <code class="language-plaintext highlighter-rouge">names</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(addprefix prefix,names…)</code></td>
+      <td style="text-align: left">Prepend <code class="language-plaintext highlighter-rouge">prefix</code> to each word in <code class="language-plaintext highlighter-rouge">names</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(join list1,list2)</code></td>
+      <td style="text-align: left">Join two parallel lists of words.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(wildcard pattern…)</code></td>
+      <td style="text-align: left">Find file names matching a shell file name pattern (<em>not</em> a ‘%’ pattern).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(realpath names…)</code></td>
+      <td style="text-align: left">For each file name in <code class="language-plaintext highlighter-rouge">names</code>, expand to an absolute name that does not contain any ., .., nor symlinks.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(abspath names…)</code></td>
+      <td style="text-align: left">For each file name in <code class="language-plaintext highlighter-rouge">names</code>, expand to an absolute name that does not contain any . or .. components, but preserves symlinks.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(error text…)</code></td>
+      <td style="text-align: left">When this function is evaluated, make generates a fatal error with the message <code class="language-plaintext highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(warning text…)</code></td>
+      <td style="text-align: left">When this function is evaluated, make generates a warning with the message <code class="language-plaintext highlighter-rouge">text</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(shell command)</code></td>
+      <td style="text-align: left">Execute a shell command and return its output.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(origin variable)</code></td>
+      <td style="text-align: left">Return a string describing how the make variable <code class="language-plaintext highlighter-rouge">variable</code> was defined.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(flavor variable)</code></td>
+      <td style="text-align: left">Return a string describing the flavor of the make variable <code class="language-plaintext highlighter-rouge">variable</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(foreach var,words,text)</code></td>
+      <td style="text-align: left">Evaluate <code class="language-plaintext highlighter-rouge">text</code> with <code class="language-plaintext highlighter-rouge">var</code> bound to each word in <code class="language-plaintext highlighter-rouge">words</code>, and concatenate the results.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(if cond,then-part[,else-part])</code></td>
+      <td style="text-align: left">Evaluate <code class="language-plaintext highlighter-rouge">cond</code>; if it’s non-empty substitute the expansion of the <code class="language-plaintext highlighter-rouge">then-part</code> otherwise substitute the expansion of the <code class="language-plaintext highlighter-rouge">else-part</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(or cond1[,cond2[,cond3…]])</code></td>
+      <td style="text-align: left">Evaluate <code class="language-plaintext highlighter-rouge">condN</code> one at a time; substitute the first non-empty expansion. If all expansions are empty, substitute the empty string.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(and cond1[,cond2[,cond3…]])</code></td>
+      <td style="text-align: left">Evaluate <code class="language-plaintext highlighter-rouge">condN</code> one at a time; if any results in empty string substitute the empty string. Otherwise substitute the expansion of the last <code class="language-plaintext highlighter-rouge">condN</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(call var,param,…)</code></td>
+      <td style="text-align: left">Evaluate the variable <code class="language-plaintext highlighter-rouge">var</code> replacing any references to <code class="language-plaintext highlighter-rouge">$(1)</code>, <code class="language-plaintext highlighter-rouge">$(2)</code> with the first, second, etc. param values.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(eval text)</code></td>
+      <td style="text-align: left">Evaluate <code class="language-plaintext highlighter-rouge">text</code> then read the results as makefile commands; expands to the empty string.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(file op filename,text)</code></td>
+      <td style="text-align: left">Expand the arguments, then open the file <code class="language-plaintext highlighter-rouge">filename</code> using mode <code class="language-plaintext highlighter-rouge">op</code> and write <code class="language-plaintext highlighter-rouge">text</code> to that file.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$(value var)</code></td>
+      <td style="text-align: left">Evaluates to the contents of the variable <code class="language-plaintext highlighter-rouge">var</code>, with no expansion performed on it.</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="automatic-variables">
+  
+  
+    Automatic Variables <a href="#automatic-variables" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Variable</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$@</code></td>
+      <td style="text-align: left">The file name of the target.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$%</code></td>
+      <td style="text-align: left">The target member name, when the target is an archive member.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$&lt;</code></td>
+      <td style="text-align: left">The name of the first prerequisite.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$?</code></td>
+      <td style="text-align: left">The names of all the prerequisites newer than the target, with spaces between them. For prerequisites which are archive members, only the named member is used (see Archives).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">$^</code> <br> <code class="language-plaintext highlighter-rouge">$+</code>
+</td>
+      <td style="text-align: left">The names of all the prerequisites, with spaces between them. For prerequisites which are archive members, only the named member is used (see Archives). The value of $^ omits duplicate prerequisites, while $+ retains them and preserves their order.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">$*</code></td>
+      <td style="text-align: left">The stem with which an implicit rule matches (see How Patterns Match).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">$(@D)</code> <br> <code class="language-plaintext highlighter-rouge">$(@F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-plaintext highlighter-rouge">$@</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">$(*D)</code> <br> <code class="language-plaintext highlighter-rouge">$(*F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-plaintext highlighter-rouge">$*</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">$(%D)</code> <br> <code class="language-plaintext highlighter-rouge">$(%F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-plaintext highlighter-rouge">$%</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">$(&lt;D)</code> <br> <code class="language-plaintext highlighter-rouge">$(&lt;F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-plaintext highlighter-rouge">$&lt;</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">$(^D)</code> <br> <code class="language-plaintext highlighter-rouge">$(^F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-plaintext highlighter-rouge">$^</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">$(+D)</code> <br> <code class="language-plaintext highlighter-rouge">$(+F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-plaintext highlighter-rouge">$+</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">
+<code class="language-plaintext highlighter-rouge">$(?D)</code> <br> <code class="language-plaintext highlighter-rouge">$(?F)</code>
+</td>
+      <td style="text-align: left">The directory part and the file-within-directory part of <code class="language-plaintext highlighter-rouge">$?</code>.</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="special-variables">
+  
+  
+    Special Variables <a href="#special-variables" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Variables</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MAKEFILES</code></td>
+      <td style="text-align: left">Makefiles to be read on every invocation of make.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">VPATH</code></td>
+      <td style="text-align: left">Directory search path for files not found in the current directory.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">SHELL</code></td>
+      <td style="text-align: left">The name of the system default command interpreter, usually <code class="language-plaintext highlighter-rouge">/bin/sh</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MAKESHELL</code></td>
+      <td style="text-align: left">The name of the command interpreter that is to be used by make, taking precedence over <code class="language-plaintext highlighter-rouge">SHELL</code> (MS-DOS only).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MAKE</code></td>
+      <td style="text-align: left">The name with which make was invoked (using this variable in recipes has special meaning).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MAKE_VERSION</code></td>
+      <td style="text-align: left">The built-in variable <code class="language-plaintext highlighter-rouge">MAKE_VERSION</code> expands to the version number of the GNU make program.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MAKE_HOST</code></td>
+      <td style="text-align: left">The built-in variable <code class="language-plaintext highlighter-rouge">MAKE_HOST</code> expands to a string representing the host that GNU make was built to run on.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MAKELEVEL</code></td>
+      <td style="text-align: left">The number of levels of recursion (sub-makes).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MAKEFLAGS</code></td>
+      <td style="text-align: left">The flags given to make. You can set this in the environment or a makefile to set flags.  It is <em>never</em> appropriate to use MAKEFLAGS directly in a recipe line: its contents may not be quoted correctly for use in the shell. Always allow recursive make’s to obtain these values through the environment from its parent.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">GNUMAKEFLAGS</code></td>
+      <td style="text-align: left">Other flags parsed by make. You can set this in the environment or a makefile to set make command-line flags. GNU make never sets this variable itself. This variable is only needed if you’d like to set GNU make-specific flags in a POSIX-compliant makefile. This variable will be seen by GNU make and ignored by other make implementations. It’s not needed if you only use GNU make; just use MAKEFLAGS directly. See Communicating Options to a Sub-make.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">MAKECMDGOALS</code></td>
+      <td style="text-align: left">The targets given to make on the command line. Setting this variable has no effect on the operation of make.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">CURDIR</code></td>
+      <td style="text-align: left">Set to the absolute pathname of the current working directory (after all -C options are processed, if any). Setting this variable has no effect on the operation of make.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">SUFFIXES</code></td>
+      <td style="text-align: left">The default list of suffixes before make reads any makefiles.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">.LIBPATTERNS</code></td>
+      <td style="text-align: left">Defines the naming of the libraries make searches for, and their order.</td>
+    </tr>
+  </tbody>
+</table>
+
+</article>
+  <div class="container">
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class=" d-flex align-middle">
+			<a class="no-tufte-underline text-md-end fw-bolder autography h3 mx-2" href="/~shk148/">Shinwoo
+				Kim</a>
+			<span class="mb-3 mb-md-0 text-body-secondary"> © 2020 - 2024,
+				<a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>. All Rights Reserved.
+			</span>
+
+		</div>
+		<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+			<li class="ms-3"><a class="no-tufte-underline" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a></li>
+			<li class="ms-3"><a class="no-tufte-underline" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a></li>
+			<li class="ms-3">
+<a class="no-tufte-underline" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+			</li>
+		</ul>
+	</footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+<script data-name="BMC-Widget" data-cfasync="false" src="/~shk148/assets/js/coffee.js" data-id="shinwookim" data-description="Support me on Buy me a coffee!" data-message="" data-color="#fff" data-position="Right" data-x_margin="12" data-y_margin="12"></script>
+<script>
+  // Enable Bootstrap Tooltips
+  // See: https://getbootstrap.com/docs/5.3/components/tooltips/
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+</script>
+</body>
+
+</html>

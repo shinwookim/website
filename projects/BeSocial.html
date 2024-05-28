@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>BeSocial | Shinwoo Kim</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="BeSocial">
+<meta name="author" content="Shinwoo Kim">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="BeSocial is a Social Networking System for the University of Pittsburgh which uses a PostgreSQL database as the backend and Java (using JDBC) as the front end. This app uses SQL functions and triggers for all major functionalities. The Java front end is purely used to provide an optimized interface for the user. Supported Features Creating and Removing Profiles Automatically generates user IDs of new accounts Automatically removes users from friend relations and groups when accounts are deleted Automatically removes user messages when accounts are deleted Login/Logout Logs in as the user when a valid information is provided Automatically updates the last login time Manage Friends Supports making and accepting friend requests Supports displaying friends Manage Groups Supports making join request for groups Supports leaving groups Supports confirming group memberships (as group manager) Send and Recieve Messages Supports for direct and group messages Miscellaneous Supports searching for profile given a string query (for name, email, etc.) Supports ranking groups based on the number of members Supports ranking user profiles based on the number of friends Supports ranking user profiles based on the number of messages Supports Three Degrees — calculating a path from a user to another with at most 3 hops between them Code Available Upon Request">
+<meta property="og:description" content="BeSocial is a Social Networking System for the University of Pittsburgh which uses a PostgreSQL database as the backend and Java (using JDBC) as the front end. This app uses SQL functions and triggers for all major functionalities. The Java front end is purely used to provide an optimized interface for the user. Supported Features Creating and Removing Profiles Automatically generates user IDs of new accounts Automatically removes users from friend relations and groups when accounts are deleted Automatically removes user messages when accounts are deleted Login/Logout Logs in as the user when a valid information is provided Automatically updates the last login time Manage Friends Supports making and accepting friend requests Supports displaying friends Manage Groups Supports making join request for groups Supports leaving groups Supports confirming group memberships (as group manager) Send and Recieve Messages Supports for direct and group messages Miscellaneous Supports searching for profile given a string query (for name, email, etc.) Supports ranking groups based on the number of members Supports ranking user profiles based on the number of friends Supports ranking user profiles based on the number of messages Supports Three Degrees — calculating a path from a user to another with at most 3 hops between them Code Available Upon Request">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/projects/BeSocial.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/projects/BeSocial.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2024-05-28T19:16:19-04:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="twitter:title" content="BeSocial">
+<meta name="twitter:site" content="@_shinwookim">
+<meta name="twitter:creator" content="@Shinwoo Kim">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shinwoo Kim"},"dateModified":"2024-05-28T19:16:19-04:00","datePublished":"2024-05-28T19:16:19-04:00","description":"BeSocial is a Social Networking System for the University of Pittsburgh which uses a PostgreSQL database as the backend and Java (using JDBC) as the front end. This app uses SQL functions and triggers for all major functionalities. The Java front end is purely used to provide an optimized interface for the user. Supported Features Creating and Removing Profiles Automatically generates user IDs of new accounts Automatically removes users from friend relations and groups when accounts are deleted Automatically removes user messages when accounts are deleted Login/Logout Logs in as the user when a valid information is provided Automatically updates the last login time Manage Friends Supports making and accepting friend requests Supports displaying friends Manage Groups Supports making join request for groups Supports leaving groups Supports confirming group memberships (as group manager) Send and Recieve Messages Supports for direct and group messages Miscellaneous Supports searching for profile given a string query (for name, email, etc.) Supports ranking groups based on the number of members Supports ranking user profiles based on the number of friends Supports ranking user profiles based on the number of messages Supports Three Degrees — calculating a path from a user to another with at most 3 hops between them Code Available Upon Request","headline":"BeSocial","image":"https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://sites.pitt.edu/~shk148/projects/BeSocial.html"},"url":"https://sites.pitt.edu/~shk148/projects/BeSocial.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- End Metadata -->
+
+  <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/~shk148/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="/~shk148/assets/favicon/favicon.ico">
+<link rel="manifest" href="/~shk148/assets/favicon/manifest.json">
+
+<!-- End Styles-->
+
+<!-- <link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css" /> -->
+</head>
+
+<body>
+  <button type="button" class="toggle-theme" id="color-selecter"></button>
+  <div class="container mt-5">
+	<div class="row pt-5">
+		<div class="col-md">
+			<header class="text-md-end text-center">
+    <div class="display-3 my-0">
+        <a class="nav-link no-tufte-underline text-md-end fw-bolder autography" href="/~shk148/">Shinwoo<br>Kim</a>
+    </div>
+    <div class="w-100 my-0">
+        <code class="h2">
+            <span class="typed" data-typed-items="Software Engineer, Developer, Pitt Panther, Educator"></span>
+        </code>
+    </div>
+    <div class="mb-0">
+        <a class="no-tufte-underline h3" href="mailto:shinwookim@pitt.edu"><i class="fas fa-envelope"></i></a>
+        <a class="no-tufte-underline h3" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+        <a class="no-tufte-underline h3" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a>
+        <a class="no-tufte-underline h3" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a>
+    </div>
+</header>
+<!-- Site Navigation-->
+<nav class="d-block navbar navbar-expand-md mb-4 p-0 text-center">
+    <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed mt-3" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar">
+        <ul class="flex-column ms-md-auto nav mt-3 text-center">
+            <li>
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/about/">About Me
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/resume/">Résumé
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end fw-bold" href="/~shk148/projects/">Projects
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/teaching/">Teaching
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/contact/">Contact Me
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="/~shk148/assets/js/typed.js"></script>
+		</div>
+		<div class="col-md-8">
+			<style>
+  img {
+    transition: 0.5s ease;
+    margin: auto;
+    border-radius: var(--bs-border-radius) !important;
+  }
+
+  table {
+    margin: auto;
+  }
+
+  img:hover {
+    scale: 1.01;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+<h1>
+  
+  
+    BeSocial
+  
+  
+</h1>
+    
+<p class="subtitle mb-3 mt-0">Collaborative project for Database Management Systems at the University of Pittsburgh</p>
+<div class="mb-2">
+  
+  <span class="badge rounded-pill text-bg-info mx-1">PostgreSQL</span>
+  
+  <span class="badge rounded-pill text-bg-info mx-1">Java</span>
+  
+  <span class="badge rounded-pill text-bg-info mx-1">JDBC</span>
+  
+</div>
+
+<p>BeSocial is a Social Networking System for the University of Pittsburgh which uses a PostgreSQL database as the backend and Java (using JDBC) as the front end. This app uses SQL functions and triggers for all major functionalities. The Java front end is purely used to provide an optimized interface for the user.</p>
+<h2 id="supported-features">
+  
+  
+    
+  
+  
+    Supported Features <a href="#supported-features" class="anchor-link">¶</a>
+  
+  
+ <a href="#supported-features" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+    
+<ul>
+  <li>
+<strong>Creating and Removing Profiles</strong>
+    <ul>
+      <li>Automatically generates user IDs of new accounts</li>
+      <li>Automatically removes users from friend relations and groups when accounts are deleted</li>
+      <li>Automatically removes user messages when accounts are deleted</li>
+    </ul>
+  </li>
+  <li>
+<strong>Login/Logout</strong>
+    <ul>
+      <li>Logs in as the user when a valid information is provided</li>
+      <li>Automatically updates the last login time</li>
+    </ul>
+  </li>
+  <li>
+<strong>Manage Friends</strong>
+    <ul>
+      <li>Supports making and accepting friend requests</li>
+      <li>Supports displaying friends</li>
+    </ul>
+  </li>
+  <li>
+<strong>Manage Groups</strong>
+    <ul>
+      <li>Supports making join request for groups</li>
+      <li>Supports leaving groups</li>
+      <li>Supports confirming group memberships (as group manager)</li>
+    </ul>
+  </li>
+  <li>
+<strong>Send and Recieve Messages</strong>
+    <ul>
+      <li>Supports for direct and group messages</li>
+    </ul>
+  </li>
+  <li>
+<strong>Miscellaneous</strong>
+    <ul>
+      <li>Supports searching for profile given a string query (for name, email, etc.)</li>
+      <li>Supports ranking groups based on the number of members</li>
+      <li>Supports ranking user profiles based on the number of friends</li>
+      <li>Supports ranking user profiles based on the number of messages</li>
+      <li>Supports <em>Three Degrees</em> — calculating a path from a user to another with at most 3 hops between them</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="../assets/img/projects/BeSocial.png"><img src="../assets/img/projects/BeSocial.png" alt="Screenshot of the BeSocial App"></a></p>
+
+<p class="text-center"><strong>Code Available Upon Request</strong></p>
+
+		</div>
+	</div>
+</div>
+  <div class="container">
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class=" d-flex align-middle">
+			<a class="no-tufte-underline text-md-end fw-bolder autography h3 mx-2" href="/~shk148/">Shinwoo
+				Kim</a>
+			<span class="mb-3 mb-md-0 text-body-secondary"> © 2020 - 2024,
+				<a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>. All Rights Reserved.
+			</span>
+
+		</div>
+		<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+			<li class="ms-3"><a class="no-tufte-underline" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a></li>
+			<li class="ms-3"><a class="no-tufte-underline" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a></li>
+			<li class="ms-3">
+<a class="no-tufte-underline" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+			</li>
+		</ul>
+	</footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+<script data-name="BMC-Widget" data-cfasync="false" src="/~shk148/assets/js/coffee.js" data-id="shinwookim" data-description="Support me on Buy me a coffee!" data-message="" data-color="#fff" data-position="Right" data-x_margin="12" data-y_margin="12"></script>
+<script>
+  // Enable Bootstrap Tooltips
+  // See: https://getbootstrap.com/docs/5.3/components/tooltips/
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+</script>
+</body>
+
+</html>

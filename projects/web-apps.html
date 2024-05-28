@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Course Projects for Programming for Web Applications | Shinwoo Kim</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Course Projects for Programming for Web Applications">
+<meta name="author" content="Shinwoo Kim">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Below are some of my projects for the CS 1520: Programming Languages for Web Applications course that I took in Spring 2022 with Dr. Nicholas Farnan. BattleShip Battleship is a strategy type guessing game for two players. The game dates back to World War I and was traditionally played as a pencil-and-paper game. In the 1960s, American board game manufacturer, Milton Bradley, released a plastic version to wide success.1 This app is a recreation of that classic board game with rules identical to the original (ten-by-ten grids with 3 types of game pieces). The game supports full hotseat multiplayer mode with each player passing the computer back-and-forth.   The entire game logic is written in vanilla JavaScript using only traditional DOM manipulation. As such, there are no dependencies or reliance on outside libraries. Similarly, the entire styling is done using manually written HTML and CSS. Panther Catering PantherCatering is a web application that is designed to help manage a catering company. The application supports a full featured login system (for the owner, employees, and customers) and provides an interface where: customers can request events on given days (and cancel previous requests) employees can sign up to work on certain events, and give the owner a rundown of what events are scheduled and which employees are staffed for the particular events.   The application is backed by an SQLite database and is served server-side using Python’s Flask framework. PantherChat PantherChat is a web application that hosts and manages chat rooms. The application supports a full featured login system, multi-user chatrooms, and AJAX/JSON-polling. The application is backed by an SQLite database and is served server-side using Python’s Flask framework.   PantherBudget PantherBudget is a very simple budget application for a single user. The application supports storing: several budget categories with a set monthly limit for each category (e.g., \$825 for rent, \$400 for groceries, \$130 for gas, etc.) purchases with associated date and price (with purchases that are over the budget for the month highlighted in red) The backend is implemented in Python Flask with SQLite as the underlying database. This backend can be accessed via a RESTful API using the standard HTTP methods.   The frontend is implemented in REACT and uses AJAX to interact with the Flask backend. https://en.wikipedia.org/wiki/Battleship_(game) ↩">
+<meta property="og:description" content="Below are some of my projects for the CS 1520: Programming Languages for Web Applications course that I took in Spring 2022 with Dr. Nicholas Farnan. BattleShip Battleship is a strategy type guessing game for two players. The game dates back to World War I and was traditionally played as a pencil-and-paper game. In the 1960s, American board game manufacturer, Milton Bradley, released a plastic version to wide success.1 This app is a recreation of that classic board game with rules identical to the original (ten-by-ten grids with 3 types of game pieces). The game supports full hotseat multiplayer mode with each player passing the computer back-and-forth.   The entire game logic is written in vanilla JavaScript using only traditional DOM manipulation. As such, there are no dependencies or reliance on outside libraries. Similarly, the entire styling is done using manually written HTML and CSS. Panther Catering PantherCatering is a web application that is designed to help manage a catering company. The application supports a full featured login system (for the owner, employees, and customers) and provides an interface where: customers can request events on given days (and cancel previous requests) employees can sign up to work on certain events, and give the owner a rundown of what events are scheduled and which employees are staffed for the particular events.   The application is backed by an SQLite database and is served server-side using Python’s Flask framework. PantherChat PantherChat is a web application that hosts and manages chat rooms. The application supports a full featured login system, multi-user chatrooms, and AJAX/JSON-polling. The application is backed by an SQLite database and is served server-side using Python’s Flask framework.   PantherBudget PantherBudget is a very simple budget application for a single user. The application supports storing: several budget categories with a set monthly limit for each category (e.g., \$825 for rent, \$400 for groceries, \$130 for gas, etc.) purchases with associated date and price (with purchases that are over the budget for the month highlighted in red) The backend is implemented in Python Flask with SQLite as the underlying database. This backend can be accessed via a RESTful API using the standard HTTP methods.   The frontend is implemented in REACT and uses AJAX to interact with the Flask backend. https://en.wikipedia.org/wiki/Battleship_(game) ↩">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/projects/web-apps.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/projects/web-apps.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2024-05-28T19:16:19-04:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="twitter:title" content="Course Projects for Programming for Web Applications">
+<meta name="twitter:site" content="@_shinwookim">
+<meta name="twitter:creator" content="@Shinwoo Kim">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shinwoo Kim"},"dateModified":"2024-05-28T19:16:19-04:00","datePublished":"2024-05-28T19:16:19-04:00","description":"Below are some of my projects for the CS 1520: Programming Languages for Web Applications course that I took in Spring 2022 with Dr. Nicholas Farnan. BattleShip Battleship is a strategy type guessing game for two players. The game dates back to World War I and was traditionally played as a pencil-and-paper game. In the 1960s, American board game manufacturer, Milton Bradley, released a plastic version to wide success.1 This app is a recreation of that classic board game with rules identical to the original (ten-by-ten grids with 3 types of game pieces). The game supports full hotseat multiplayer mode with each player passing the computer back-and-forth.   The entire game logic is written in vanilla JavaScript using only traditional DOM manipulation. As such, there are no dependencies or reliance on outside libraries. Similarly, the entire styling is done using manually written HTML and CSS. Panther Catering PantherCatering is a web application that is designed to help manage a catering company. The application supports a full featured login system (for the owner, employees, and customers) and provides an interface where: customers can request events on given days (and cancel previous requests) employees can sign up to work on certain events, and give the owner a rundown of what events are scheduled and which employees are staffed for the particular events.   The application is backed by an SQLite database and is served server-side using Python’s Flask framework. PantherChat PantherChat is a web application that hosts and manages chat rooms. The application supports a full featured login system, multi-user chatrooms, and AJAX/JSON-polling. The application is backed by an SQLite database and is served server-side using Python’s Flask framework.   PantherBudget PantherBudget is a very simple budget application for a single user. The application supports storing: several budget categories with a set monthly limit for each category (e.g., \\$825 for rent, \\$400 for groceries, \\$130 for gas, etc.) purchases with associated date and price (with purchases that are over the budget for the month highlighted in red) The backend is implemented in Python Flask with SQLite as the underlying database. This backend can be accessed via a RESTful API using the standard HTTP methods.   The frontend is implemented in REACT and uses AJAX to interact with the Flask backend. https://en.wikipedia.org/wiki/Battleship_(game) &#8617;","headline":"Course Projects for Programming for Web Applications","image":"https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://sites.pitt.edu/~shk148/projects/web-apps.html"},"url":"https://sites.pitt.edu/~shk148/projects/web-apps.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- End Metadata -->
+
+  <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/~shk148/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="/~shk148/assets/favicon/favicon.ico">
+<link rel="manifest" href="/~shk148/assets/favicon/manifest.json">
+
+<!-- End Styles-->
+
+<!-- <link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css" /> -->
+<script>MathJax={"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"svg":{"fontCache":"global"}}</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <button type="button" class="toggle-theme" id="color-selecter"></button>
+  <div class="container mt-5">
+	<div class="row pt-5">
+		<div class="col-md">
+			<header class="text-md-end text-center">
+    <div class="display-3 my-0">
+        <a class="nav-link no-tufte-underline text-md-end fw-bolder autography" href="/~shk148/">Shinwoo<br>Kim</a>
+    </div>
+    <div class="w-100 my-0">
+        <code class="h2">
+            <span class="typed" data-typed-items="Software Engineer, Developer, Pitt Panther, Educator"></span>
+        </code>
+    </div>
+    <div class="mb-0">
+        <a class="no-tufte-underline h3" href="mailto:shinwookim@pitt.edu"><i class="fas fa-envelope"></i></a>
+        <a class="no-tufte-underline h3" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+        <a class="no-tufte-underline h3" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a>
+        <a class="no-tufte-underline h3" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a>
+    </div>
+</header>
+<!-- Site Navigation-->
+<nav class="d-block navbar navbar-expand-md mb-4 p-0 text-center">
+    <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed mt-3" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar">
+        <ul class="flex-column ms-md-auto nav mt-3 text-center">
+            <li>
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/about/">About Me
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/resume/">Résumé
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end fw-bold" href="/~shk148/projects/">Projects
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/teaching/">Teaching
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/contact/">Contact Me
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="/~shk148/assets/js/typed.js"></script>
+		</div>
+		<div class="col-md-8">
+			<style>
+  img {
+    transition: 0.5s ease;
+    margin: auto;
+    border-radius: var(--bs-border-radius) !important;
+  }
+
+  table {
+    margin: auto;
+  }
+
+  img:hover {
+    scale: 1.01;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+<h1>
+  
+  
+    Course Projects for Programming for Web Applications
+  
+  
+</h1>
+    
+<p class="subtitle mb-3 mt-0">Battleship, PantherChat, PantherCatering, and PantherBudget</p>
+<div class="mb-2">
+  
+  <span class="badge rounded-pill text-bg-info mx-1">React</span>
+  
+  <span class="badge rounded-pill text-bg-info mx-1">Python</span>
+  
+  <span class="badge rounded-pill text-bg-info mx-1">Flask</span>
+  
+  <span class="badge rounded-pill text-bg-info mx-1">SQLite (SQLAlchemy)</span>
+  
+  <span class="badge rounded-pill text-bg-info mx-1">JavaScript</span>
+  
+  <span class="badge rounded-pill text-bg-info mx-1">HTML</span>
+  
+</div>
+
+<p>Below are some of my projects for the CS 1520: Programming Languages for Web Applications course that I took in Spring 2022 with Dr. Nicholas Farnan.</p>
+<h2 id="battleship">
+  
+  
+    
+  
+  
+    BattleShip <a href="#battleship" class="anchor-link">¶</a>
+  
+  
+ <a href="#battleship" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+    
+<p>Battleship is a strategy type guessing game for two players. The game dates back to World War I and was traditionally played as a <em>pencil-and-paper game</em>. In the 1960s, American board game manufacturer, Milton Bradley, released a plastic version to wide success.<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></p>
+
+<p>This app is a recreation of that classic board game with rules identical to the original (ten-by-ten grids with 3 types of game pieces). The game supports full <a href="https://en.wikipedia.org/wiki/Hotseat_(multiplayer_mode)"><em>hotseat multiplayer mode</em></a> with each player passing the computer back-and-forth.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><a href="../assets/img/projects/Battleship.png"><img src="../assets/img/projects/Battleship.png" alt="Screenshot of BattleShip Game"></a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The entire game logic is written in vanilla JavaScript using only traditional DOM manipulation. As such, there are no dependencies or reliance on outside libraries. Similarly, the entire styling is done using manually written HTML and CSS.</p>
+<h2 id="panther-catering">
+  
+  
+    
+  
+  
+    Panther Catering <a href="#panther-catering" class="anchor-link">¶</a>
+  
+  
+ <a href="#panther-catering" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+    
+<p>PantherCatering is a web application that is designed to help manage a catering company. The application supports a full featured login system (for the owner, employees, and customers) and provides an interface where:</p>
+<ol>
+  <li>customers can request events on given days (and cancel previous requests)</li>
+  <li>employees can sign up to work on certain events, and</li>
+  <li>give the owner a rundown of what events are scheduled and which employees are staffed for the particular events.</li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><a href="../assets/img/projects/PantherCatering.png"><img src="../assets/img/projects/PantherCatering.png" alt="Screenshot of PantherCatering"></a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The application is backed by an SQLite database and is served server-side using Python’s Flask framework.</p>
+<h2 id="pantherchat">
+  
+  
+    
+  
+  
+    PantherChat <a href="#pantherchat" class="anchor-link">¶</a>
+  
+  
+ <a href="#pantherchat" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+    
+<p>PantherChat is a web application that hosts and manages chat rooms. The application supports a full featured login system, multi-user chatrooms, and AJAX/JSON-polling. The application is backed by an SQLite database and is served server-side using Python’s Flask framework.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><a href="../assets/img/projects/PantherChat.png"><img src="../assets/img/projects/PantherChat.png" alt="Screenshot of PantherChat Program"></a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"> </td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="pantherbudget">
+  
+  
+    
+  
+  
+    PantherBudget <a href="#pantherbudget" class="anchor-link">¶</a>
+  
+  
+ <a href="#pantherbudget" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+    
+<p>PantherBudget is a very simple budget application for a single user. The application supports storing:</p>
+<ul>
+  <li>several budget categories with a set monthly limit for each category (e.g., \$825 for rent, \$400 for groceries, \$130 for gas, etc.)</li>
+  <li>purchases with associated date and price (with purchases that are over the budget for the month highlighted in red)</li>
+</ul>
+
+<p>The backend is implemented in Python Flask with SQLite as the underlying database. This backend can be accessed via a RESTful API using the standard HTTP methods.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><a href="../assets/img/projects/pantherbudget.png"><img src="../assets/img/projects/pantherbudget.png" alt="Screenshot of PantherBudget Program"></a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The frontend is implemented in REACT and uses AJAX to interact with the Flask backend.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://en.wikipedia.org/wiki/Battleship_(game)">https://en.wikipedia.org/wiki/Battleship_(game)</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+		</div>
+	</div>
+</div>
+  <div class="container">
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class=" d-flex align-middle">
+			<a class="no-tufte-underline text-md-end fw-bolder autography h3 mx-2" href="/~shk148/">Shinwoo
+				Kim</a>
+			<span class="mb-3 mb-md-0 text-body-secondary"> © 2020 - 2024,
+				<a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>. All Rights Reserved.
+			</span>
+
+		</div>
+		<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+			<li class="ms-3"><a class="no-tufte-underline" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a></li>
+			<li class="ms-3"><a class="no-tufte-underline" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a></li>
+			<li class="ms-3">
+<a class="no-tufte-underline" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+			</li>
+		</ul>
+	</footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+<script data-name="BMC-Widget" data-cfasync="false" src="/~shk148/assets/js/coffee.js" data-id="shinwookim" data-description="Support me on Buy me a coffee!" data-message="" data-color="#fff" data-position="Right" data-x_margin="12" data-y_margin="12"></script>
+<script>
+  // Enable Bootstrap Tooltips
+  // See: https://getbootstrap.com/docs/5.3/components/tooltips/
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+</script>
+</body>
+
+</html>

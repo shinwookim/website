@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Which Paint is the Best? | Shinwoo Kim</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Which Paint is the Best?">
+<meta name="author" content="Shinwoo Kim">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="This comprehensive project used various machine learning methods—from simple linear regression to support vector machines and random forest—on a moderate-size paint detail dataset provided by PPG Industries, Inc. Abstract Although it is sometimes difficult distinguish between the variety of paint colors with the human eye, each shade of paint has various properties which can be quantified and analyzed. For a company like PPG, the largest coatings company in the world, it is very important to study their library of paint colors for these properties as slight modifications may result in a significant change in their sales. In this analysis, we aim to use machine learning techniques to learn patterns associated with PPG’s top selling paint colors. We have been provided with the RGB and HSL color data (to be used as inputs) and two output variables (denoted response and outcome) of PPG’s top selling paint colors. The response is a continuous output associated with an important paint property and the outcome is a binary output associated with the popularity of the paint. Our analysis will take two main approaches: Regression: We will train models to predict the important paint property, response, as a function of the color model inputs. Classification: We will train models to classify if the paint is among the popular paint products sold by PPG based just on color models inputs. In this sense, we will use the following tools, technologies, and techniques: R programming language with the Tidyverse package, Caret package, and many other libraries specific to different parts of project Simple Linear Regression (with and without basis functions), Logistic Regression, Generalized Linear Regression, Regularized Regression with Elastic net, Random Forest, Gradient Boosted Tree, Support Vector Machines, and Multivariate Additive Regression Splines (MARS). Throughout our analysis, we will attempt to answer relevant question such as: “Are the inputs from one color model more influential on predicting the important paint property”, “Are the inputs from one color model more influential on the probability the paint is popular?” Project Details Available Upon Request (Report cannot be made public as it contains data proprietary to PPG Industries Inc.) Sample Visualizations Multivariate Additive Regression Splines Result XGBoost Model Result Classifier Result Regularization Result">
+<meta property="og:description" content="This comprehensive project used various machine learning methods—from simple linear regression to support vector machines and random forest—on a moderate-size paint detail dataset provided by PPG Industries, Inc. Abstract Although it is sometimes difficult distinguish between the variety of paint colors with the human eye, each shade of paint has various properties which can be quantified and analyzed. For a company like PPG, the largest coatings company in the world, it is very important to study their library of paint colors for these properties as slight modifications may result in a significant change in their sales. In this analysis, we aim to use machine learning techniques to learn patterns associated with PPG’s top selling paint colors. We have been provided with the RGB and HSL color data (to be used as inputs) and two output variables (denoted response and outcome) of PPG’s top selling paint colors. The response is a continuous output associated with an important paint property and the outcome is a binary output associated with the popularity of the paint. Our analysis will take two main approaches: Regression: We will train models to predict the important paint property, response, as a function of the color model inputs. Classification: We will train models to classify if the paint is among the popular paint products sold by PPG based just on color models inputs. In this sense, we will use the following tools, technologies, and techniques: R programming language with the Tidyverse package, Caret package, and many other libraries specific to different parts of project Simple Linear Regression (with and without basis functions), Logistic Regression, Generalized Linear Regression, Regularized Regression with Elastic net, Random Forest, Gradient Boosted Tree, Support Vector Machines, and Multivariate Additive Regression Splines (MARS). Throughout our analysis, we will attempt to answer relevant question such as: “Are the inputs from one color model more influential on predicting the important paint property”, “Are the inputs from one color model more influential on the probability the paint is popular?” Project Details Available Upon Request (Report cannot be made public as it contains data proprietary to PPG Industries Inc.) Sample Visualizations Multivariate Additive Regression Splines Result XGBoost Model Result Classifier Result Regularization Result">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/projects/PPG-Machine-Learning.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/projects/PPG-Machine-Learning.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2024-05-28T19:16:19-04:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="twitter:title" content="Which Paint is the Best?">
+<meta name="twitter:site" content="@_shinwookim">
+<meta name="twitter:creator" content="@Shinwoo Kim">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shinwoo Kim"},"dateModified":"2024-05-28T19:16:19-04:00","datePublished":"2024-05-28T19:16:19-04:00","description":"This comprehensive project used various machine learning methods—from simple linear regression to support vector machines and random forest—on a moderate-size paint detail dataset provided by PPG Industries, Inc. Abstract Although it is sometimes difficult distinguish between the variety of paint colors with the human eye, each shade of paint has various properties which can be quantified and analyzed. For a company like PPG, the largest coatings company in the world, it is very important to study their library of paint colors for these properties as slight modifications may result in a significant change in their sales. In this analysis, we aim to use machine learning techniques to learn patterns associated with PPG’s top selling paint colors. We have been provided with the RGB and HSL color data (to be used as inputs) and two output variables (denoted response and outcome) of PPG’s top selling paint colors. The response is a continuous output associated with an important paint property and the outcome is a binary output associated with the popularity of the paint. Our analysis will take two main approaches: Regression: We will train models to predict the important paint property, response, as a function of the color model inputs. Classification: We will train models to classify if the paint is among the popular paint products sold by PPG based just on color models inputs. In this sense, we will use the following tools, technologies, and techniques: R programming language with the Tidyverse package, Caret package, and many other libraries specific to different parts of project Simple Linear Regression (with and without basis functions), Logistic Regression, Generalized Linear Regression, Regularized Regression with Elastic net, Random Forest, Gradient Boosted Tree, Support Vector Machines, and Multivariate Additive Regression Splines (MARS). Throughout our analysis, we will attempt to answer relevant question such as: “Are the inputs from one color model more influential on predicting the important paint property”, “Are the inputs from one color model more influential on the probability the paint is popular?” Project Details Available Upon Request (Report cannot be made public as it contains data proprietary to PPG Industries Inc.) Sample Visualizations Multivariate Additive Regression Splines Result XGBoost Model Result Classifier Result Regularization Result","headline":"Which Paint is the Best?","image":"https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://sites.pitt.edu/~shk148/projects/PPG-Machine-Learning.html"},"url":"https://sites.pitt.edu/~shk148/projects/PPG-Machine-Learning.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- End Metadata -->
+
+  <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/~shk148/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="/~shk148/assets/favicon/favicon.ico">
+<link rel="manifest" href="/~shk148/assets/favicon/manifest.json">
+
+<!-- End Styles-->
+
+<!-- <link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css" /> -->
+</head>
+
+<body>
+  <button type="button" class="toggle-theme" id="color-selecter"></button>
+  <div class="container mt-5">
+	<div class="row pt-5">
+		<div class="col-md">
+			<header class="text-md-end text-center">
+    <div class="display-3 my-0">
+        <a class="nav-link no-tufte-underline text-md-end fw-bolder autography" href="/~shk148/">Shinwoo<br>Kim</a>
+    </div>
+    <div class="w-100 my-0">
+        <code class="h2">
+            <span class="typed" data-typed-items="Software Engineer, Developer, Pitt Panther, Educator"></span>
+        </code>
+    </div>
+    <div class="mb-0">
+        <a class="no-tufte-underline h3" href="mailto:shinwookim@pitt.edu"><i class="fas fa-envelope"></i></a>
+        <a class="no-tufte-underline h3" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+        <a class="no-tufte-underline h3" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a>
+        <a class="no-tufte-underline h3" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a>
+    </div>
+</header>
+<!-- Site Navigation-->
+<nav class="d-block navbar navbar-expand-md mb-4 p-0 text-center">
+    <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler collapsed mt-3" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar">
+        <ul class="flex-column ms-md-auto nav mt-3 text-center">
+            <li>
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/about/">About Me
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/resume/">Résumé
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end fw-bold" href="/~shk148/projects/">Projects
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/teaching/">Teaching
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link no-tufte-underline float-md-end " href="/~shk148/contact/">Contact Me
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="/~shk148/assets/js/typed.js"></script>
+		</div>
+		<div class="col-md-8">
+			<style>
+  img {
+    transition: 0.5s ease;
+    margin: auto;
+    border-radius: var(--bs-border-radius) !important;
+  }
+
+  table {
+    margin: auto;
+  }
+
+  img:hover {
+    scale: 1.01;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+<h1>
+  
+  
+    Which Paint is the Best?
+  
+  
+</h1>
+    
+<p class="subtitle mb-3 mt-0">Utilizing Machine Learning to Analyze Paint Colors for PPG Industries</p>
+<div class="mb-2">
+  
+  <span class="badge rounded-pill text-bg-info mx-1">R</span>
+  
+  <span class="badge rounded-pill text-bg-info mx-1">Machine Learning</span>
+  
+  <span class="badge rounded-pill text-bg-info mx-1">Caret</span>
+  
+</div>
+
+<p>This comprehensive project used various machine learning methods—from simple linear regression to support vector machines and random forest—on a moderate-size paint detail dataset provided by <a href="https://www.ppg.com/en-US">PPG Industries, Inc</a>.</p>
+<h2 id="abstract">
+  
+  
+    
+  
+  
+    Abstract <a href="#abstract" class="anchor-link">¶</a>
+  
+  
+ <a href="#abstract" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+    
+
+<p>Although it is sometimes difficult distinguish between the variety of paint colors with the human eye, each shade of paint has various properties which can be quantified and analyzed. For a company like <a href="https://www.ppg.com/">PPG</a>, the largest coatings company in the world, it is very important to study their library of paint colors for these properties as slight modifications may result in a significant change in their sales.</p>
+
+<p>In this analysis, we aim to use machine learning techniques to learn patterns associated with PPG’s top selling paint colors. We have been provided with the <a href="https://en.wikipedia.org/wiki/RGB_color_model">RGB</a> and <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSL</a> color data (to be used as inputs) and two output variables (denoted <code class="language-plaintext highlighter-rouge">response</code> and <code class="language-plaintext highlighter-rouge">outcome</code>) of PPG’s top selling paint colors. The <code class="language-plaintext highlighter-rouge">response</code> is a continuous output associated with an important paint property and the <code class="language-plaintext highlighter-rouge">outcome</code> is a binary output associated with the popularity of the paint.</p>
+
+<p>Our analysis will take two main approaches:</p>
+
+<ol>
+  <li>
+<strong>Regression</strong>: We will train models to predict the important paint property, <code class="language-plaintext highlighter-rouge">response</code>, as a function of the color model inputs.</li>
+  <li>
+<strong>Classification</strong>: We will train models to classify if the paint is among the popular paint products sold by PPG based just on color models inputs.</li>
+</ol>
+
+<p>In this sense, we will use the following tools, technologies, and techniques:</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">R</code> programming language with the <code class="language-plaintext highlighter-rouge">Tidyverse</code> package, <code class="language-plaintext highlighter-rouge">Caret</code> package, and many other libraries specific to different parts of project</li>
+  <li>Simple Linear Regression (with and without basis functions), Logistic Regression, Generalized Linear Regression, Regularized Regression with Elastic net, Random Forest, Gradient Boosted Tree, Support Vector Machines, and Multivariate Additive Regression Splines (MARS).</li>
+</ul>
+
+<p>Throughout our analysis, we will attempt to answer relevant question such as:</p>
+<ul>
+  <li>“<em>Are the inputs from one color model more influential on predicting the important paint property</em>”,</li>
+  <li>“<em>Are the inputs from one color model more influential on the probability the paint is popular?</em>”</li>
+</ul>
+
+<div class="text-center my-3">
+<strong>Project Details Available Upon Request</strong><br>
+(Report cannot be made public as it contains data proprietary to PPG Industries Inc.)
+</div>
+<h2 id="sample-visualizations">
+  
+  
+    
+  
+  
+    Sample Visualizations <a href="#sample-visualizations" class="anchor-link">¶</a>
+  
+  
+ <a href="#sample-visualizations" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+    
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><a href="../assets/img/projects/PPG-ML1.png"><img src="../assets/img/projects/PPG-ML1.png" alt="Multivariate Additive Regression Splines Result"></a></th>
+      <th style="text-align: center"><a href="../assets/img/projects/PPG-ML2.png"><img src="../assets/img/projects/PPG-ML2.png" alt="XGBoost Model Result"></a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Multivariate Additive Regression Splines Result</td>
+      <td style="text-align: center">XGBoost Model Result</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><a href="../assets/img/projects/PPG-ML3.png"><img src="../assets/img/projects/PPG-ML3.png" alt="Classifier Result"></a></th>
+      <th style="text-align: center"><a href="../assets/img/projects/PPG-ML4.png"><img src="../assets/img/projects/PPG-ML4.png" alt="Regularization Result"></a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Classifier Result</td>
+      <td style="text-align: center">Regularization Result</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+table{
+    width: 100% !important;
+    margin-bottom: 1.5em;
+}
+table a img{
+    height: 200px;
+}
+</style>
+
+		</div>
+	</div>
+</div>
+  <div class="container">
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class=" d-flex align-middle">
+			<a class="no-tufte-underline text-md-end fw-bolder autography h3 mx-2" href="/~shk148/">Shinwoo
+				Kim</a>
+			<span class="mb-3 mb-md-0 text-body-secondary"> © 2020 - 2024,
+				<a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>. All Rights Reserved.
+			</span>
+
+		</div>
+		<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+			<li class="ms-3"><a class="no-tufte-underline" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a></li>
+			<li class="ms-3"><a class="no-tufte-underline" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a></li>
+			<li class="ms-3">
+<a class="no-tufte-underline" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+			</li>
+		</ul>
+	</footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+<script data-name="BMC-Widget" data-cfasync="false" src="/~shk148/assets/js/coffee.js" data-id="shinwookim" data-description="Support me on Buy me a coffee!" data-message="" data-color="#fff" data-position="Right" data-x_margin="12" data-y_margin="12"></script>
+<script>
+  // Enable Bootstrap Tooltips
+  // See: https://getbootstrap.com/docs/5.3/components/tooltips/
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+</script>
+</body>
+
+</html>

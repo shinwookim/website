@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Valgrind Lab | Shinwoo Kim</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Valgrind Lab">
+<meta name="author" content="Shinwoo Kim">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.">
+<meta property="og:description" content="Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0449-2241/valgrind-lab.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0449-2241/valgrind-lab.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="twitter:title" content="Valgrind Lab">
+<meta name="twitter:site" content="@_shinwookim">
+<meta name="twitter:creator" content="@Shinwoo Kim">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Shinwoo Kim"},"description":"Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.","headline":"Valgrind Lab","image":"https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg","url":"https://sites.pitt.edu/~shk148/teaching/CS0449-2241/valgrind-lab.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- End Metadata -->
+
+  <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/tufte.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/~shk148/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="/~shk148/assets/favicon/favicon.ico">
+<link rel="manifest" href="/~shk148/assets/favicon/manifest.json">
+
+<!-- End Styles-->
+
+<!-- <link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css" /> -->
+</head>
+
+<body>
+  <button type="button" class="toggle-theme" id="color-selecter"></button>
+  <section>
+  <p class="mb-0">
+    
+    <a href=".."><em>← Back to Home</em></a>
+    
+  </p>
+</section>
+<article style="box-sizing: inherit;">
+  <h1 class="title">Valgrind Lab</h1>
+<p class="byline">
+     
+  </p>
+  <div class="text-center">
+  <p><mark class="h4"><strong>There is no submission for this lab.</strong></mark><br>
+Thanks to Dr. Jonathan Misurda and Dr. Wonsun Ahn for providing the lab!</p>
+</div>
+<h2 id="background">
+  
+  
+    Background <a href="#background" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<p>The <a href="https://valgrind.org/">Valgrind tool suite</a> provides a number of debugging and profiling tools that help you make your programs faster and more correct. The most popular of these tools is called <code class="language-plaintext highlighter-rouge">Memcheck</code>. It can detect many memory-related errors that are common in C and C++ programs and that can lead to crashes and unpredictable behavior. This lab is meant to familiarize you with Valgrind so that you can use it for future projects while debugging.</p>
+<h2 id="introduction">
+  
+  
+    Introduction <a href="#introduction" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<ol>
+  <li>Login via SSH to <code class="language-plaintext highlighter-rouge">thoth.cs.pitt.edu</code>
+</li>
+  <li>Change directories to the one we created for the work for this class</li>
+  <li>Follow below directions while reading: <a href="http://valgrind.org/docs/manual/quick-start.html">The Valgrind Quick Start Guide</a>.</li>
+</ol>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> ~wahn/public/cs449/valgrind/quick-start.c ./
+gcc <span class="nt">-g</span> quick-start.c <span class="nt">-o</span> ./quick-start
+valgrind <span class="nt">--leak-check</span><span class="o">=</span><span class="nb">yes</span> ./quick-start
+</code></pre></div></div>
+<h2 start="4" id="part-1-errors-detected-by-valgrind">
+  
+  
+    Part 1: Errors detected by Valgrind <a href="#part-1-errors-detected-by-valgrind" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<ol>
+  <li>Follow below directions while reading: <a href="http://valgrind.org/docs/manual/mc-manual.html">http://valgrind.org/docs/manual/mc-manual.html</a>.<br>
+Focus on Section 4.2: Explanation of error messages from MemCheck.</li>
+</ol>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> ~wahn/public/cs449/valgrind/very-buggy.c ./
+gcc <span class="nt">-g</span> very-buggy.c <span class="nt">-o</span> ./very-buggy
+valgrind <span class="nt">--leak-check</span><span class="o">=</span>full <span class="nt">--track-origins</span><span class="o">=</span><span class="nb">yes</span> ./very-buggy
+</code></pre></div></div>
+
+<ol>
+  <li>Valgrind should report 7 errors. The URL given above describes 8 types of errors discovered by MemCheck.<br>
+Write how many errors of each type valgrind discovers in the above example code.</li>
+</ol>
+<div class="code-box">
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>    - [ ] Illegal read / Illegal write errors
+    - [ ] Use of uninitialised values
+    - [ ] Uninitialised values in system calls
+    - [ ] Illegal frees
+    - [ ] Inappropriate deallocation function
+    - [ ] Overlapping source and destination blocks
+    - [ ] Fishy argument values
+    - [ ] Memory leak detection
+</code></pre></div>  </div>
+</div>
+
+<ol>
+  <li>Make reasonable modifications to <code class="language-plaintext highlighter-rouge">very-buggy.c</code> as to remove all memory errors.
+    <ul>
+      <li>If buffers overflow, they should be extended.</li>
+      <li>If values are not initialized, they should be initialized to 0.</li>
+      <li>If there is a leak the memory should be freed appropriately, etc.</li>
+      <li>Once you are done, valgrind should not display any errors when run.</li>
+    </ul>
+  </li>
+</ol>
+<h2 start="7" id="part-2-memory-leak-analysis">
+  
+  
+    Part 2: Memory Leak Analysis <a href="#part-2-memory-leak-analysis" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<ol>
+  <li>Copy over <code class="language-plaintext highlighter-rouge">leak.c</code> to the work directory and follow below directions</li>
+</ol>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> ~wahn/public/cs449/valgrind/leak.c ./
+gcc <span class="nt">-g</span> leak.c <span class="nt">-o</span> ./leak
+valgrind <span class="nt">--leak-check</span><span class="o">=</span>full <span class="nt">--show-reachable</span><span class="o">=</span><span class="nb">yes</span> ./leak
+</code></pre></div></div>
+
+<ol>
+  <li>Look at the <strong>LEAK SUMMARY</strong> section reported by valgrind.
+    <ul>
+      <li>Note that there are 7 blocks leaked in total categorized into: definitely lost, indirectly lost, and still reachable. Those 7 blocks correspond to the 7 nodes in the tree created by leak.c.</li>
+      <li>On a piece of paper, draw a pictorial diagram of the tree. On the diagram, mark nodes that are definitely lost with the letter ‘<code class="language-plaintext highlighter-rouge">D</code>’, nodes that are indirectly lost with the letter ‘<code class="language-plaintext highlighter-rouge">I</code>’, and nodes that are still reachable with the letter ‘<code class="language-plaintext highlighter-rouge">S</code>’.</li>
+      <li>Read Section 4.2.8 of the manual to get a description of each type of leak.</li>
+    </ul>
+  </li>
+  <li>Make modifications to <code class="language-plaintext highlighter-rouge">leak.c</code> to insert appropriate <code class="language-plaintext highlighter-rouge">free()</code> calls to remove all direct and indirect memory leaks. Once you are done, valgrind should not display any errors when run.</li>
+</ol>
+<h2 id="what-to-hand-in">
+  
+  
+    What to Hand In <a href="#what-to-hand-in" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<p><strong>No submission</strong></p>
+
+</article>
+  <div class="container">
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class=" d-flex align-middle">
+			<a class="no-tufte-underline text-md-end fw-bolder autography h3 mx-2" href="/~shk148/">Shinwoo
+				Kim</a>
+			<span class="mb-3 mb-md-0 text-body-secondary"> © 2020 - 2024,
+				<a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>. All Rights Reserved.
+			</span>
+
+		</div>
+		<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+			<li class="ms-3"><a class="no-tufte-underline" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a></li>
+			<li class="ms-3"><a class="no-tufte-underline" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a></li>
+			<li class="ms-3">
+<a class="no-tufte-underline" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+			</li>
+		</ul>
+	</footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+<script data-name="BMC-Widget" data-cfasync="false" src="/~shk148/assets/js/coffee.js" data-id="shinwookim" data-description="Support me on Buy me a coffee!" data-message="" data-color="#fff" data-position="Right" data-x_margin="12" data-y_margin="12"></script>
+<script>
+  // Enable Bootstrap Tooltips
+  // See: https://getbootstrap.com/docs/5.3/components/tooltips/
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+</script>
+</body>
+
+</html>

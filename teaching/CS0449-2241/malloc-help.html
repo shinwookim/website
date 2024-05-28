@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Supplemental Notes on Malloc Project | Shinwoo Kim</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Supplemental Notes on Malloc Project">
+<meta name="author" content="Shinwoo Kim">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.">
+<meta property="og:description" content="Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0449-2241/malloc-help.html">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0449-2241/malloc-help.html">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="twitter:title" content="Supplemental Notes on Malloc Project">
+<meta name="twitter:site" content="@_shinwookim">
+<meta name="twitter:creator" content="@Shinwoo Kim">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Shinwoo Kim"},"description":"Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.","headline":"Supplemental Notes on Malloc Project","image":"https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg","url":"https://sites.pitt.edu/~shk148/teaching/CS0449-2241/malloc-help.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- End Metadata -->
+
+  <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/tufte.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/~shk148/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="/~shk148/assets/favicon/favicon.ico">
+<link rel="manifest" href="/~shk148/assets/favicon/manifest.json">
+
+<!-- End Styles-->
+
+<!-- <link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css" /> -->
+</head>
+
+<body>
+  <button type="button" class="toggle-theme" id="color-selecter"></button>
+  <section>
+  <p class="mb-0">
+    
+    <a href=".."><em>← Back to Home</em></a>
+    
+  </p>
+</section>
+<article style="box-sizing: inherit;">
+  <h1 class="title">Supplemental Notes on Malloc Project</h1>
+  <p class="subtitle">Writing Custom Test Cases (Traces) + Project Hints</p>
+  <p class="byline">
+     
+  </p>
+  <p>Testing software while developing is a crucial and indispensable aspect of the software development process. For this project, you are provided a set of <em>traces</em> (found in the <code class="language-plaintext highlighter-rouge">./traces/</code> directory) which are used to test your heap allocator implementation (<code class="language-plaintext highlighter-rouge">mm_malloc()</code>) for correctness, space utilization, and throughput. Each <em>trace file</em> contains a sequence of allocate and free instructions that direct the driver program (<code class="language-plaintext highlighter-rouge">mdriver.c</code>) to call your <code class="language-plaintext highlighter-rouge">mm_malloc()</code> and <code class="language-plaintext highlighter-rouge">mm_free()</code> functions in some order<label for="grading" class="margin-toggle sidenote-number"></label><input type="checkbox" id="grading" class="margin-toggle" checked><span class="sidenote">The provided driver and trace files are the same ones we will use when we grade your handin <code class="language-plaintext highlighter-rouge">mm.c</code> file, although we may change the order in which the traces are used. </span>.</p>
+
+<p>However, throughout the development of your malloc implementation, you may find it beneficial to write your own custom <em>trace files</em> (especially since the ones provided are rather long). Doing so will (hopefully) help you better understand how the other trace files and the driver program operate.</p>
+<h2 id="creating-a-new-trace-file">
+  
+  
+    Creating a New Trace File <a href="#creating-a-new-trace-file" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<p>To write your own trace, make a copy of the trace <code class="language-plaintext highlighter-rouge">short1-bal.rep</code> from the <code class="language-plaintext highlighter-rouge">./traces/</code> directory and rename it to <code class="language-plaintext highlighter-rouge">custom-trace.rep</code>, or another name of your choosing.<label for="extension" class="margin-toggle sidenote-number"></label><input type="checkbox" id="extension" class="margin-toggle" checked><span class="sidenote">A trace file technically does not need to use the <code class="language-plaintext highlighter-rouge">.rep</code> file extension to be recognized by the driver program. However, it is often wise to follow pre-existing conventions for file names (and also function/variables names, etc.) of your project. </span>. If you open this file in your text-editor, you should see somthing like:</p>
+<div class="border div-55">
+
+  <div class="language-c highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="mi">20000</span>
+<span class="mi">6</span>
+<span class="mi">12</span>
+<span class="mi">1</span>
+<span class="n">a</span> <span class="mi">0</span> <span class="mi">2040</span>
+<span class="n">a</span> <span class="mi">1</span> <span class="mi">2040</span>
+<span class="cm">/* ... */</span>
+<span class="n">f</span> <span class="mi">4</span>
+<span class="n">f</span> <span class="mi">5</span>
+</code></pre></div>  </div>
+</div>
+<h3 id="line-1-20000-suggested-heap-size">
+  
+  
+    Line 1: <code class="language-plaintext highlighter-rouge">20000</code> (Suggested Heap Size) <a href="#line-1-20000-suggested-heap-size" class="anchor-link">¶</a>
+  
+  
+</h3>
+    
+<p>The first line in your trace file sets a variable in driver program called the <code class="language-plaintext highlighter-rouge">sugg_heapsize</code> (<em>suggested heap size</em>). However, it turns out, this variable is not actually used and we can ignore it.<label for="sugg_heapsize" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sugg_heapsize" class="margin-toggle" checked><span class="sidenote"><strong>NOTE</strong>. Although unused, this line must still appear in your trace file. </span></p>
+<h3 id="line-2-6-number-of-allocation-ids">
+  
+  
+    Line 2: <code class="language-plaintext highlighter-rouge">6</code> (Number of Allocation IDs) <a href="#line-2-6-number-of-allocation-ids" class="anchor-link">¶</a>
+  
+  
+</h3>
+    
+<p>The next line denotes the number of allocation IDs. In essence, it is asking how many different blocks the trace file will allocate.</p>
+<h3 id="line-3-12-number-of-operations">
+  
+  
+    Line 3: <code class="language-plaintext highlighter-rouge">12</code> (Number of Operations) <a href="#line-3-12-number-of-operations" class="anchor-link">¶</a>
+  
+  
+</h3>
+    
+<p>The third line sets the number of total operations performed by the trace file. This number should be equal to the number of allocations + number of frees that appear in remained the trace file.</p>
+<h3 id="line-4-1-weight-of-trace">
+  
+  
+    Line 4: <code class="language-plaintext highlighter-rouge">1</code> (Weight of Trace) <a href="#line-4-1-weight-of-trace" class="anchor-link">¶</a>
+  
+  
+</h3>
+    
+<p>Before the sequence of allocates (<code class="language-plaintext highlighter-rouge">a</code>) and frees(<code class="language-plaintext highlighter-rouge">f</code>) begins, the fourth line of the trace file sets the weight of trace. However, much like the first line, this parameter is not used and can be ignored. (<strong>This  line, however, must still exists in the trace file</strong>)</p>
+<h3 id="line-5---n-allocations-and-frees">
+  
+  
+    Line 5 - N: Allocations and Frees <a href="#line-5---n-allocations-and-frees" class="anchor-link">¶</a>
+  
+  
+</h3>
+    
+<p>The remainder of the trace file should contain the sequence of allocations and frees. An allocation is denoted using the <code class="language-plaintext highlighter-rouge">a</code> keyword and is written like</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="mi">0</span> <span class="mi">16</span>
+</code></pre></div></div>
+<p>whichinstructs the driver to call <code class="language-plaintext highlighter-rouge">mm_malloc(16)</code> and assign the resulting pointer to ID <code class="language-plaintext highlighter-rouge">0</code>. Similarly, a free is denoted using the <code class="language-plaintext highlighter-rouge">f</code> keyword and is written like</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">f</span> <span class="mi">0</span>
+</code></pre></div></div>
+<p>which instructs the driver to call <code class="language-plaintext highlighter-rouge">mm_free()</code> with the the pointer with ID <code class="language-plaintext highlighter-rouge">0</code> as the argument. 
+Be sure to free all blocks before reaching the end of the trace and only free blocks that have already been allocated.</p>
+
+<p>In summary, your trace file must conform to the following format:</p>
+
+<div class="border div-55">
+
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>1024100       /* Unused number */
+12000         /* Number of IDs (how many allocations?) */
+16000         /* Number of operations (# of allocation + # of free) */
+1             /* Unused number */
+a 0 16        /* allocate 16 bytes. Assign pointer to ID 0 */
+a 1 112       /* allocate 112 bytes. Assign pointer to ID 1 */
+(...)
+</code></pre></div>  </div>
+</div>
+<h2 id="project-hints">
+  
+  
+    Project Hints <a href="#project-hints" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<ol>
+  <li>
+    <p>During the inital phases of development, using tiny trace file will immensely simply debugging and testing. Use the following commandline to test your implementation on a specific trace:</p>
+
+    <div class="language-sh highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>make
+ <span class="nv">$ </span>./mdriver <span class="nt">-f</span> &lt;tracefile&gt; <span class="c"># Runs one particular tracefile instead of the </span>
+                         <span class="c"># default set of tracefiles for testing correctness and performance </span>
+</code></pre></div>    </div>
+  </li>
+  <li>Using the <code class="language-plaintext highlighter-rouge">-V</code> option with the <code class="language-plaintext highlighter-rouge">mdriver</code> will indicate when each trace file is processed which may help you isolate errors.</li>
+  <li>Using a debugger such as <code class="language-plaintext highlighter-rouge">gdb</code> will help you easily isolate and identify memory errors. If you are unsure how to use <code class="language-plaintext highlighter-rouge">gdb</code>, refer back to lab 0. The <code class="language-plaintext highlighter-rouge">watch</code> command in <code class="language-plaintext highlighter-rouge">gdb</code> may be useful in figuring out which values changed unexpectedly.</li>
+  <li>C preprocessors macros are provided to help you with pointer arithmetic. Use them! Pointer arithmetic in memory managers is confusing and error-prone because of all the casting that is necessary. You can reduce the complexity significantly by using macros or inline functions.</li>
+  <li>Remember that wre are working with 64-bit machines. Pointers (which store memory addresses) take up 8 bytes of space. Notably, the following fact may be useful: <code class="language-plaintext highlighter-rouge">sizeof(size_t) == 8</code>.</li>
+  <li>The started code comes with helper functions called <code class="language-plaintext highlighter-rouge">check_heap()</code> and <code class="language-plaintext highlighter-rouge">examine_heap()</code>.  A good heap consistency checker will save you hours and hours when debugging your malloc package. You can use your heap checker to find out where exactly things are going wrong in your implementation (hopefully not in too many places!). Every time you change your implementation, one of the first things
+you should do is think about how your <code class="language-plaintext highlighter-rouge">check_heap()</code> will change, what sort of tests need to be performed, and so on.</li>
+  <li>
+<strong>Keep backups</strong>. Whenever you have a working allocator and are considering making changes to it, keep a backup copy of the last working version. It is very common to make changes that inadvertently break the code and then have trouble undoing them. Better yet, consider adopting a version control system such as git!</li>
+  <li>
+<strong>Start early!</strong> It is possible to write an efficient malloc package with a few pages of code. However, we can guarantee that it will be some of the most difficult and sophisticated code you have written so far in your career. So start early, and good luck!</li>
+</ol>
+
+</article>
+  <div class="container">
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class=" d-flex align-middle">
+			<a class="no-tufte-underline text-md-end fw-bolder autography h3 mx-2" href="/~shk148/">Shinwoo
+				Kim</a>
+			<span class="mb-3 mb-md-0 text-body-secondary"> © 2020 - 2024,
+				<a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>. All Rights Reserved.
+			</span>
+
+		</div>
+		<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+			<li class="ms-3"><a class="no-tufte-underline" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a></li>
+			<li class="ms-3"><a class="no-tufte-underline" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a></li>
+			<li class="ms-3">
+<a class="no-tufte-underline" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+			</li>
+		</ul>
+	</footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+<script data-name="BMC-Widget" data-cfasync="false" src="/~shk148/assets/js/coffee.js" data-id="shinwookim" data-description="Support me on Buy me a coffee!" data-message="" data-color="#fff" data-position="Right" data-x_margin="12" data-y_margin="12"></script>
+<script>
+  // Enable Bootstrap Tooltips
+  // See: https://getbootstrap.com/docs/5.3/components/tooltips/
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+</script>
+</body>
+
+</html>

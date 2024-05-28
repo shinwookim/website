@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Metadata -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Introduction to Systems Software | Shinwoo Kim</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Introduction to Systems Software">
+<meta name="author" content="Shinwoo Kim">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.">
+<meta property="og:description" content="Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.">
+<link rel="canonical" href="https://sites.pitt.edu/~shk148/teaching/CS0449-2234/">
+<meta property="og:url" content="https://sites.pitt.edu/~shk148/teaching/CS0449-2234/">
+<meta property="og:site_name" content="Shinwoo Kim">
+<meta property="og:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:image" content="https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg">
+<meta property="twitter:title" content="Introduction to Systems Software">
+<meta name="twitter:site" content="@_shinwookim">
+<meta name="twitter:creator" content="@Shinwoo Kim">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Shinwoo Kim"},"description":"Shinwoo Kim is a MS student studying Computer Science at the University of Pittsburgh.","headline":"Introduction to Systems Software","image":"https://lp-cms-production.imgix.net/2019-06/b620bbff71a0adb8fd86ee311fdba089-cathedral-of-learning.jpg","url":"https://sites.pitt.edu/~shk148/teaching/CS0449-2234/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<!-- End Metadata -->
+
+  <!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-et-book.css">
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-autography.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/tufte.css">
+
+<link rel="stylesheet" type="text/css" href="/~shk148/assets/css/lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/~shk148/assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/~shk148/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/~shk148/assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="/~shk148/assets/favicon/favicon.ico">
+<link rel="manifest" href="/~shk148/assets/favicon/manifest.json">
+
+<!-- End Styles-->
+
+<!-- <link rel="stylesheet" type="text/css" href="/~shk148/assets/css/fonts-lato.css" /> -->
+</head>
+
+<body>
+  <button type="button" class="toggle-theme" id="color-selecter"></button>
+  <section>
+  <p class="mb-0">
+    
+    <a href=".."><em>← Back to Home</em></a>
+    
+  </p>
+</section>
+<article style="box-sizing: inherit;">
+  <h1 class="title">Introduction to Systems Software</h1>
+  <p class="subtitle">CS 0449 (Spring 2023, Term 2234)</p>
+  <p class="byline">
+     
+  </p>
+  <p><label for="mf-mem" class="margin-toggle">†</label><input type="checkbox" id="mf-mem" class="margin-toggle"><span class="marginnote"><img class="fullwidth" src="https://imgs.xkcd.com/comics/pointers.png"><br>Pointers, <a href="https://xkcd.com/138/">XKCD 138</a></span>
+This page will provide any information for the class that I go over in recitation. Please check back for updates regularly, especially if you miss a recitation.</p>
+<h2 id="course-description">
+  
+  
+    Course Description <a href="#course-description" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<p>A <em>Computer System</em> is comprised of both hardware and software working in concert to accomplish useful work. In this course, we will explore the issues of programming a real computer system by examining the abstractions, interfaces, and design decisions that influence the way that software runs. This includes the role the Operating System has in communication and resource management.</p>
+
+<p>The perspective we will take is one of the lifecycle of a program from implementation to execution. The simple act of compiling and running a program, a sequence of events we often take for granted, is a complex interaction of many different components that work together to manage the computer’s resources and perform the desired task. Together, these components form a working computer system.</p>
+<h2 id="recitation-information">
+  
+  
+    Recitation Information <a href="#recitation-information" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+
+<p><em>Most up-to-date information is on <a href="https://canvas.pitt.edu">Canvas</a>, and <a href="https://cs0449.gitlab.io/sp2023/">Course Website</a></em> <label for="Accompany" class="margin-toggle"> †</label><input type="checkbox" id="Accompany" class="margin-toggle" checked><span class="marginnote">Accompanies professor <strong>Luis Oliveira</strong>’s lecture section <code class="language-plaintext highlighter-rouge">1090</code> which meets <strong>Tue/Thu, 2:30–3:45pm at 405 Information Science Building</strong></span><br>
+<strong>CRN:</strong> 23985<br>
+<strong>Meets:</strong> <em>Fridays 12:00 PM</em> at <em>5502 <a href="https://map.concept3d.com/?id=1315#!m/376171">Sennott Square</a></em></p>
+<h2 id="ta-information">
+  
+  
+    TA Information <a href="#ta-information" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+
+<p><strong>TA</strong>: Shinwoo Kim<br>
+<strong>E-mail</strong>: <a href="mailto:shiwookim@pitt.edu"><code class="language-plaintext highlighter-rouge">shinwookim@pitt.edu</code></a><br>
+<strong>Home Page:</strong> <a href="https://sites.pitt.edu/~shk148/">https://sites.pitt.edu/~shk148</a><br>
+<strong>TA Office Hours:</strong> <a href="https://sites.pitt.edu/~shk148/teaching/#OH">Spring 2023 Office Hours</a></p>
+
+<p class="mb-0"><strong>Note when E-mailing:</strong></p>
+
+<ul>
+  <li>Email<label for="discord" class="margin-toggle sidenote-number"></label><input type="checkbox" id="discord" class="margin-toggle" checked><span class="sidenote">You will receive a faster reply if you message me via Discord </span> subjects should be prefaced with <code class="language-plaintext highlighter-rouge">[CS0449]</code>
+</li>
+  <li>For official communication, messages should be sent using your official <strong>Pitt E-Mail</strong>(<code class="language-plaintext highlighter-rouge">ABC123@pitt.edu</code>).</li>
+  <li>Email body should include your <strong>name</strong> and the <strong>section</strong> you’re enrolled in.</li>
+  <li>Students should allow at least 24 business hours before following up<label for="Hours" class="margin-toggle sidenote-number"></label><input type="checkbox" id="Hours" class="margin-toggle" checked><span class="sidenote">Generally, my working hours are between 8AM and 6PM </span>.<span class="endmark"></span>
+</li>
+</ul>
+<hr>
+<h2 id="handouts">
+  
+  
+    Schedule <em>&amp;</em> Handout <a href="#handouts" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+<p><label for="video" class="margin-toggle"> †</label><input type="checkbox" id="video" class="margin-toggle" checked><span class="marginnote">If you require access to Zoom, or the recitation recording, please contact me <strong>prior</strong> to the start of recitation</span></p>
+<style>
+  table tr td, table tr th{
+    background-color: rgba(0,0,0, 0) !important;
+  }
+  td a {
+    text-shadow: none !important;
+  }
+</style>
+
+<div class="table-responsive">
+<table class="table table-hover bg-none">
+  <thead>
+<tr>
+<th class="text-center">Week</th>
+<th class="text-center">Date</th>
+<th>Topic</th>
+<th class="text-center">Handout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="text-center">00</td>
+<td class="text-center">January 13</td>
+<td><strong>No Recitation</strong></td>
+<td class="text-center">n/a</td>
+</tr>
+<tr>
+<td class="text-center">01</td>
+<td class="text-center">January 20</td>
+<td>
+<strong>Hello Lab</strong><br>Getting up to speed with the environment</td>
+<td class="text-center">
+<a href="rec01.pptx">slides</a> <br> <a href="code/hello.c">hello.c</a>
+</td>
+</tr>
+<tr>
+<td class="text-center">02</td>
+<td class="text-center">January 27</td>
+      <td>
+<strong>Data &amp; Pointer Lab</strong><br>Practice with data and input</td>
+      <td class="text-center">
+<a href="rec02.pptx">slides</a> <br> <a href="vs_code.pdf">VS Code guide</a> <br> <a href="code/scan.c">scan.c</a>
+</td>
+    </tr>
+    <tr>
+      <td class="text-center">03</td>
+      <td class="text-center">February 3</td>
+      <td>
+<strong>Project 1: BMP Steganography</strong><br>Hiding data and reading files</td>
+      <td class="text-center"><a href="rec03.pdf">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">04</td>
+      <td class="text-center">February 10</td>
+      <td>
+<strong>Pointer Lab</strong><br>Looking at pointers</td>
+      <td class="text-center"><a href="rec04.pdf">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">05</td>
+      <td class="text-center">February 17</td>
+      <td>
+<strong>Queue Lab</strong><br>Linking those nodes</td>
+      <td class="text-center"><a href="rec05.pdf">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">06</td>
+      <td class="text-center">
+<strong>Wednesday</strong><br>February 22 5:45 PM<br>(5502 SENSQ)</td>
+      <td>
+<strong>Project 2: Implementing a Heap Allocator</strong><br>Malloc Project Boot Camp</td>
+      <td class="text-center">
+<a href="Project_2_Help_Session.pdf">slides</a><br><a href="code/malloc_example.c">malloc_example.c</a>
+</td>
+    </tr>
+    <tr>
+      <td class="text-center">06</td>
+      <td class="text-center">February 24</td>
+      <td>
+<strong>Project 2: Implementing a Heap Allocator</strong><br>Implementing Phase 2 &amp; 3</td>
+      <td class="text-center"><a href="rec06.pdf">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">07</td>
+      <td class="text-center">March 3</td>
+      <td>
+<strong>Assembly Lab</strong><br>Investigating the code</td>
+      <td class="text-center">
+<a href="rec07.pdf">slides</a><br><a href="https://github.com/shinwookim/ASM-demo">Demo code (GitHub)</a><br><a href="https://en.wikibooks.org/wiki/X86_Assembly/GNU_assembly_syntax">AT&amp;T x86 Syntax</a>
+</td>
+    </tr> 
+    <tr>
+      <td class="text-center">08</td>
+      <td class="text-center">March 10</td>
+      <td><strong>Spring Break <br> No Recitation</strong></td>
+      <td class="text-center">n/a</td>
+    </tr>
+    <tr>
+      <td class="text-center">09</td>
+      <td class="text-center">March 17</td>
+      <td>
+<strong>Project 3: Assembly bombs and attack</strong> <br>Understanding the assembly</td>
+      <td class="text-center"><a href="rec08.pdf">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">10</td>
+      <td class="text-center">March 24</td>
+	    <td>
+<strong>Process Lab</strong><br>The fork-exec model &amp; Process management</td>
+      <td class="text-center">
+<a href="rec09.pdf">slides</a><br><a href="rec09-soln.html">Solutions to In-class Problems</a>
+</td>
+    </tr>
+    <tr>
+      <td class="text-center">11</td>
+      <td class="text-center">March 31</td>
+      <td>
+<strong>Project 4</strong>: The Shell<br>After the bomb, shell shock!</td>
+      <td class="text-center">
+<a href="rec10.pdf">slides</a><br><a href="code/strtok.c">strtok.c</a>
+</td>
+    </tr>
+    <tr>
+      <td class="text-center">12</td>
+      <td class="text-center">April 7</td>
+      <td>
+<strong>Multi-file Development:</strong><br>Writing Makefiles</td>
+      <td class="text-center">
+<a href="Makefile-lab.html">lab handout</a><br><a href="rec11.pdf">slides</a>
+</td>
+    </tr>
+    <tr>
+      <td class="text-center">13</td>
+      <td class="text-center">April 14</td>
+      <td>Multithreading &amp; Synchronization</td>
+      <td class="text-center"><a href="https://docs.google.com/presentation/d/e/2PACX-1vQRY_WALXixyTeEOCF6g--PUvhuEui7H6si2SMGct2gDzqkqjkwbMEwDdk0U7OvlNTMuP01-eiMfn_W/pub?start=false&loop=false&delayms=60000">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">14</td>
+      <td class="text-center">April 21</td>
+      <td>Final Recitation <br>Final Exam Review + Course Review</td>
+      <td class="text-center"><a href="rec12.pdf">slides</a></td>
+    </tr>
+    <tr>
+      <td class="text-center">15</td>
+      <td class="text-center">April 28</td>
+      <td><strong>Finals Week <br> No Recitation</strong></td>
+      <td class="text-center">-</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2 id="student-feedback">
+  
+  
+    Student Feedback <a href="#student-feedback" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+
+<p class="text-center"><a href="https://pitt.co1.qualtrics.com/jfe/form/SV_dd9suL0AkJctj2S">Please send me your anonymous feedback</a></p>
+<h2 id="helpful-links">
+  
+  
+    Helpful Links <a href="#helpful-links" class="anchor-link">¶</a>
+  
+  
+</h2>
+    
+
+<ul>
+  <li><a href="https://pitt.guide.eab.com/" target="\_blank">Sign up for <strong>Peer Tutoring</strong> on Navigate</a></li>
+  <li><a href="https://pitt.edu" target="\_blank">University of Pittsburgh</a></li>
+  <li><a href="https://cs.pitt.edu" target="\_blank">Department of Computer Science</a></li>
+</ul>
+
+</article>
+  <div class="container">
+	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class=" d-flex align-middle">
+			<a class="no-tufte-underline text-md-end fw-bolder autography h3 mx-2" href="/~shk148/">Shinwoo
+				Kim</a>
+			<span class="mb-3 mb-md-0 text-body-secondary"> © 2020 - 2024,
+				<a href="mailto:shinwookim@pitt.edu">Shinwoo Kim</a>. All Rights Reserved.
+			</span>
+
+		</div>
+		<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+			<li class="ms-3"><a class="no-tufte-underline" href="https://twitter.com/_shinwookim"><i class="fab fa-twitter"></i></a></li>
+			<li class="ms-3"><a class="no-tufte-underline" href="https://github.com/shinwookim"><i class="fab fa-github"></i></a></li>
+			<li class="ms-3">
+<a class="no-tufte-underline" href="https://linkedin.com/in/kimshinwoo"><i class="fab fa-linkedin-in"></i></a>
+			</li>
+		</ul>
+	</footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/~shk148/assets/js/darkmode.js"></script>
+<script src="/~shk148/assets/js/lightbox.js"></script>
+<script data-name="BMC-Widget" data-cfasync="false" src="/~shk148/assets/js/coffee.js" data-id="shinwookim" data-description="Support me on Buy me a coffee!" data-message="" data-color="#fff" data-position="Right" data-x_margin="12" data-y_margin="12"></script>
+<script>
+  // Enable Bootstrap Tooltips
+  // See: https://getbootstrap.com/docs/5.3/components/tooltips/
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+</script>
+</body>
+
+</html>
